@@ -1,4 +1,3 @@
-
 import { BadRequest, Forbidden } from '@feathersjs/errors'
 import { Paginated } from '@feathersjs/feathers'
 import { hooks as schemaHooks } from '@feathersjs/schema'
@@ -26,10 +25,7 @@ import {
 import { routePath } from '@xrengine/common/src/schemas/route/route.schema'
 import { locationPath } from '@xrengine/common/src/schemas/social/location.schema'
 import { avatarPath, AvatarType } from '@xrengine/common/src/schemas/user/avatar.schema'
-import {
-  githubRepoAccessPath,
-  GithubRepoAccessType
-} from '@xrengine/common/src/schemas/user/github-repo-access.schema'
+import { githubRepoAccessPath, GithubRepoAccessType } from '@xrengine/common/src/schemas/user/github-repo-access.schema'
 import { identityProviderPath, IdentityProviderType } from '@xrengine/common/src/schemas/user/identity-provider.schema'
 import { checkScope } from '@xrengine/common/src/utils/checkScope'
 import { cleanString } from '@xrengine/common/src/utils/cleanString'
@@ -204,7 +200,7 @@ const addDataToProjectResult = async (context: HookContext<ProjectService>) => {
   for (const item of data) {
     try {
       const manifestJson = getProjectManifest(item.name)
-      item.thumbnail = manifestJson.thumbnail || '/static/IR_thumbnail.jpg'
+      item.thumbnail = manifestJson.thumbnail || '/static/XREngine_thumbnail.jpg'
       item.version = manifestJson.version
       item.engineVersion = manifestJson.engineVersion
       item.description = manifestJson.description

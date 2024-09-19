@@ -14,9 +14,9 @@ import {
   PrototypeNotFoundError
 } from '@xrengine/spatial/src/renderer/materials/materialFunctions'
 import {
-  XRENGINEMaterialExtensionType,
   isOldXRENGINEMaterial,
-  OldXRENGINEMaterialExtensionType
+  OldXRENGINEMaterialExtensionType,
+  XRENGINEMaterialExtensionType
 } from '../../../exporters/gltf/extensions/XRENGINEMaterialExporterExtension'
 import { GLTFLoaderPlugin } from '../GLTFLoader'
 import { ImporterExtension } from './ImporterExtension'

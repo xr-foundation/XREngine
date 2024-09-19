@@ -65,7 +65,7 @@ const OFFICIAL_PROJECTS_DATA = [
   //   id: '1570ae12-889a-11ec-886e-b126f7590685',
   //   name: 'xrengine-productivity',
   //   repositoryPath: 'https://github.com/xr-foundation/xrengine-productivity',
-  //   thumbnail: '/static/IR_thumbnail.jpg',
+  //   thumbnail: '/static/XREngine_thumbnail.jpg',
   //   description: 'Utility and productivity tools for Virtual and Augmented Reality',
   //   needsRebuild: true
   // },
@@ -73,7 +73,7 @@ const OFFICIAL_PROJECTS_DATA = [
     id: '1570ae00-889a-11ec-886e-b126f7590685',
     name: 'xrengine-development-test-suite',
     repositoryPath: 'https://github.com/xr-foundation/xrengine-development-test-suite',
-    thumbnail: '/static/IR_thumbnail.jpg',
+    thumbnail: '/static/XREngine_thumbnail.jpg',
     description: 'Assets and tests for XREngine core development',
     needsRebuild: true
   },
@@ -81,7 +81,7 @@ const OFFICIAL_PROJECTS_DATA = [
   //   id: '1570ae01-889a-11ec-886e-b126f7590685',
   //   name: 'xrengine-i18n',
   //   repositoryPath: 'https://github.com/xr-foundation/xrengine-i18n',
-  //   thumbnail: '/static/IR_thumbnail.jpg',
+  //   thumbnail: '/static/XREngine_thumbnail.jpg',
   //   description: 'Complete language translations in over 100 languages',
   //   needsRebuild: true
   // },
@@ -89,7 +89,7 @@ const OFFICIAL_PROJECTS_DATA = [
     id: '1570ae02-889a-11ec-886e-b126f7590685',
     name: 'xrengine-bot',
     repositoryPath: 'https://github.com/xr-foundation/xrengine-bot',
-    thumbnail: '/static/IR_thumbnail.jpg',
+    thumbnail: '/static/XREngine_thumbnail.jpg',
     description: 'A test bot using puppeteer',
     needsRebuild: true
   }
@@ -97,7 +97,7 @@ const OFFICIAL_PROJECTS_DATA = [
   //   id: '1570ae11-889a-11ec-886e-b126f7590685',
   //   name: 'xrengine-maps  ',
   //   repositoryPath: 'https://github.com/xr-foundation/xrengine-maps',
-  //   thumbnail: '/static/IR_thumbnail.jpg',
+  //   thumbnail: '/static/XREngine_thumbnail.jpg',
   //   description: 'Procedurally generated map tiles using geojson data with mapbox and turf.js',
   //   needsRebuild: true
   // }
@@ -105,7 +105,7 @@ const OFFICIAL_PROJECTS_DATA = [
   //   id: '1570ae12-889a-11ec-886e-b126f7590685',
   //   name: 'Inventory',
   //   repositoryPath: 'https://github.com/xr-foundation/xrengine-inventory',
-  //   thumbnail: '/static/IR_thumbnail.jpg',
+  //   thumbnail: '/static/XREngine_thumbnail.jpg',
   //   description:
   //     'Item inventory, trade & virtual currency. Allow your users to use a database, IPFS, DID or blockchain backed item storage for equippables, wearables and tradable items.',
   //   needsRebuild: true
@@ -247,7 +247,7 @@ const ProjectPage = ({ studioPath }: { studioPath: string }) => {
             >
               <img
                 onError={({ currentTarget }) => {
-                  currentTarget.src = '/static/IR_thumbnail.jpg'
+                  currentTarget.src = '/static/XREngine_thumbnail.jpg'
                 }}
                 className="h-auto w-full bg-cover bg-center bg-no-repeat"
                 src={project.thumbnail}

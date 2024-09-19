@@ -2,7 +2,7 @@ import type { ProjectConfigInterface } from '@xrengine/projects/ProjectConfigInt
 
 const config: ProjectConfigInterface = {
   onEvent: './projectEventHooks.ts',
-  thumbnail: '/static/IR_thumbnail.jpg',
+  thumbnail: '/static/XREngine_thumbnail.jpg',
   routes: {
     '/': {
       component: () => import('@xrengine/client/src/pages/index'),

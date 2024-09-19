@@ -1,7 +1,7 @@
-import { XRENGINEScene } from '../profiles/eeScene'
 import { DefaultLogger, ManualLifecycleEventEmitter, registerCoreProfile } from '../profiles/ProfilesModule'
 import { registerSceneProfile } from '../profiles/scene/SceneProfileModule'
 import { registerStructProfile } from '../profiles/struct/StructProfileModule'
+import { XRENGINEScene } from '../profiles/xrengineScene'
 
 export const createBaseRegistry = () => {
   let registry = registerCoreProfile({
