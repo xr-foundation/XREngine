@@ -1,23 +1,23 @@
 {
-  "name": "@ir-engine/common",
+  "name": "@xrengine/common",
   "version": "1.6.0",
   "publishConfig": {
     "access": "public"
   },
-  "description": "Shared types for other Infinite Reality Engine packages",
+  "description": "Shared types for other XREngine packages",
   "scripts": {
     "check-errors": "tsc --noemit",
     "test": "mocha --jobs 1"
   },
-  "repository": "http://github.com/ir-engine/ir-engine",
-  "author": "Infinite Reality Engine",
+  "repository": "http://github.com/xr-foundation/xrengine",
+  "author": "XREngine",
   "license": "CPAL",
   "dependencies": {
-    "@ir-engine/hyperflux": "1.6.0",
-    "@ir-engine/ecs": "1.6.0",
-    "@ir-engine/spatial": "1.6.0",
-    "@ir-engine/network": "1.6.0",
-    "@ir-engine/engine": "1.6.0",
+    "@xrengine/hyperflux": "1.6.0",
+    "@xrengine/ecs": "1.6.0",
+    "@xrengine/spatial": "1.6.0",
+    "@xrengine/network": "1.6.0",
+    "@xrengine/engine": "1.6.0",
     "cross-fetch": "^3.1.5",
     "lru-cache": "8.0.4"
   },

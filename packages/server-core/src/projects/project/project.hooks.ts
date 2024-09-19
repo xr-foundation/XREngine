@@ -1,27 +1,4 @@
-/*
-CPAL-1.0 License
 
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
 import { BadRequest, Forbidden } from '@feathersjs/errors'
 import { Paginated } from '@feathersjs/feathers'
 import { hooks as schemaHooks } from '@feathersjs/schema'
@@ -31,12 +8,12 @@ import fs from 'fs'
 import { Knex } from 'knex'
 import path from 'path'
 
-import { ManifestJson } from '@ir-engine/common/src/interfaces/ManifestJson'
-import { GITHUB_URL_REGEX } from '@ir-engine/common/src/regex'
-import { apiJobPath } from '@ir-engine/common/src/schemas/cluster/api-job.schema'
-import { staticResourcePath, StaticResourceType } from '@ir-engine/common/src/schemas/media/static-resource.schema'
-import { ProjectBuildUpdateItemType } from '@ir-engine/common/src/schemas/projects/project-build.schema'
-import { projectPermissionPath } from '@ir-engine/common/src/schemas/projects/project-permission.schema'
+import { ManifestJson } from '@xrengine/common/src/interfaces/ManifestJson'
+import { GITHUB_URL_REGEX } from '@xrengine/common/src/regex'
+import { apiJobPath } from '@xrengine/common/src/schemas/cluster/api-job.schema'
+import { staticResourcePath, StaticResourceType } from '@xrengine/common/src/schemas/media/static-resource.schema'
+import { ProjectBuildUpdateItemType } from '@xrengine/common/src/schemas/projects/project-build.schema'
+import { projectPermissionPath } from '@xrengine/common/src/schemas/projects/project-permission.schema'
 import {
   ProjectData,
   projectDataValidator,
@@ -45,19 +22,19 @@ import {
   projectPath,
   projectQueryValidator,
   ProjectType
-} from '@ir-engine/common/src/schemas/projects/project.schema'
-import { routePath } from '@ir-engine/common/src/schemas/route/route.schema'
-import { locationPath } from '@ir-engine/common/src/schemas/social/location.schema'
-import { avatarPath, AvatarType } from '@ir-engine/common/src/schemas/user/avatar.schema'
+} from '@xrengine/common/src/schemas/projects/project.schema'
+import { routePath } from '@xrengine/common/src/schemas/route/route.schema'
+import { locationPath } from '@xrengine/common/src/schemas/social/location.schema'
+import { avatarPath, AvatarType } from '@xrengine/common/src/schemas/user/avatar.schema'
 import {
   githubRepoAccessPath,
   GithubRepoAccessType
-} from '@ir-engine/common/src/schemas/user/github-repo-access.schema'
-import { identityProviderPath, IdentityProviderType } from '@ir-engine/common/src/schemas/user/identity-provider.schema'
-import { checkScope } from '@ir-engine/common/src/utils/checkScope'
-import { cleanString } from '@ir-engine/common/src/utils/cleanString'
-import { getDateTimeSql } from '@ir-engine/common/src/utils/datetime-sql'
-import templateManifestJson from '@ir-engine/projects/template-project/manifest.json'
+} from '@xrengine/common/src/schemas/user/github-repo-access.schema'
+import { identityProviderPath, IdentityProviderType } from '@xrengine/common/src/schemas/user/identity-provider.schema'
+import { checkScope } from '@xrengine/common/src/utils/checkScope'
+import { cleanString } from '@xrengine/common/src/utils/cleanString'
+import { getDateTimeSql } from '@xrengine/common/src/utils/datetime-sql'
+import templateManifestJson from '@xrengine/projects/template-project/manifest.json'
 
 import { HookContext } from '../../../declarations'
 import config from '../../appconfig'
@@ -282,7 +259,7 @@ const checkIfProjectExists = async (context: HookContext<ProjectService>) => {
  */
 const checkIfNameIsValid = async (context: HookContext<ProjectService>) => {
   if (
-    (!config.db.forceRefresh && context.projectName === 'ir-engine/default-project') ||
+    (!config.db.forceRefresh && context.projectName === 'xrengine/default-project') ||
     context.projectName === 'template-project'
   )
     throw new Error(`[Projects]: Project name ${context.projectName} not allowed`)
@@ -565,7 +542,7 @@ const updateProjectJob = async (context: HookContext) => {
     await context.app.service(apiJobPath).patch(newJob.id, {
       name: jobBody.metadata!.name
     })
-    const jobLabelSelector = `ir-engine/projectField=${projectJobName},ir-engine/release=${process.env.RELEASE_NAME},ir-engine/autoUpdate=false`
+    const jobLabelSelector = `xrengine/projectField=${projectJobName},xrengine/release=${process.env.RELEASE_NAME},xrengine/autoUpdate=false`
     const jobFinishedPromise = createExecutorJob(context.app, jobBody, jobLabelSelector, 1000, newJob.id)
     try {
       await jobFinishedPromise

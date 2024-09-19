@@ -16,9 +16,9 @@
     {
       "name": "Fog",
       "extensions": {
-        "EE_uuid": "8703ac9c-5f42-45ae-a23f-5bcd6a3e0795",
-        "EE_visible": true,
-        "EE_fog": {
+        "XRENGINE_uuid": "8703ac9c-5f42-45ae-a23f-5bcd6a3e0795",
+        "XRENGINE_visible": true,
+        "XRENGINE_fog": {
           "type": "linear",
           "color": "#FFFFFF",
           "density": 0.005,
@@ -31,9 +31,9 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_fog",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_fog",
+    "XRENGINE_ecs"
   ]
 }

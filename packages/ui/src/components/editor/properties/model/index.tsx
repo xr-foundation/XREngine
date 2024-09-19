@@ -1,50 +1,25 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { VRM } from '@pixiv/three-vrm'
 import React, { useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { MdOutlineViewInAr } from 'react-icons/md'
 import { Object3D, Scene } from 'three'
 
-import { ProjectState } from '@ir-engine/client-core/src/common/services/ProjectService'
-import useFeatureFlags from '@ir-engine/client-core/src/hooks/useFeatureFlags'
-import config from '@ir-engine/common/src/config'
-import { FeatureFlags } from '@ir-engine/common/src/constants/FeatureFlags'
-import { useComponent } from '@ir-engine/ecs/src/ComponentFunctions'
-import ErrorPopUp from '@ir-engine/editor/src/components/popup/ErrorPopUp'
-import { EditorComponentType, commitProperty } from '@ir-engine/editor/src/components/properties/Util'
-import { exportRelativeGLTF } from '@ir-engine/editor/src/functions/exportGLTF'
-import { EditorState } from '@ir-engine/editor/src/services/EditorServices'
-import { pathJoin } from '@ir-engine/engine/src/assets/functions/miscUtils'
-import { STATIC_ASSET_REGEX } from '@ir-engine/engine/src/assets/functions/pathResolver'
-import { ResourceLoaderManager } from '@ir-engine/engine/src/assets/functions/resourceLoaderFunctions'
-import { recursiveHipsLookup } from '@ir-engine/engine/src/avatar/AvatarBoneMatching'
-import { getEntityErrors } from '@ir-engine/engine/src/scene/components/ErrorComponent'
-import { ModelComponent } from '@ir-engine/engine/src/scene/components/ModelComponent'
-import { getState, useState } from '@ir-engine/hyperflux'
+import { ProjectState } from '@xrengine/client-core/src/common/services/ProjectService'
+import useFeatureFlags from '@xrengine/client-core/src/hooks/useFeatureFlags'
+import config from '@xrengine/common/src/config'
+import { FeatureFlags } from '@xrengine/common/src/constants/FeatureFlags'
+import { useComponent } from '@xrengine/ecs/src/ComponentFunctions'
+import ErrorPopUp from '@xrengine/editor/src/components/popup/ErrorPopUp'
+import { EditorComponentType, commitProperty } from '@xrengine/editor/src/components/properties/Util'
+import { exportRelativeGLTF } from '@xrengine/editor/src/functions/exportGLTF'
+import { EditorState } from '@xrengine/editor/src/services/EditorServices'
+import { pathJoin } from '@xrengine/engine/src/assets/functions/miscUtils'
+import { STATIC_ASSET_REGEX } from '@xrengine/engine/src/assets/functions/pathResolver'
+import { ResourceLoaderManager } from '@xrengine/engine/src/assets/functions/resourceLoaderFunctions'
+import { recursiveHipsLookup } from '@xrengine/engine/src/avatar/AvatarBoneMatching'
+import { getEntityErrors } from '@xrengine/engine/src/scene/components/ErrorComponent'
+import { ModelComponent } from '@xrengine/engine/src/scene/components/ModelComponent'
+import { getState, useState } from '@xrengine/hyperflux'
 import { IoIosArrowBack, IoIosArrowDown } from 'react-icons/io'
 import Accordion from '../../../../primitives/tailwind/Accordion'
 import Button from '../../../../primitives/tailwind/Button'

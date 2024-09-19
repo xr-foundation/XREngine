@@ -1,53 +1,28 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { Intersection, Material, Mesh, Raycaster, Vector2 } from 'three'
 
-import { getContentType } from '@ir-engine/common/src/utils/getContentType'
-import { UUIDComponent } from '@ir-engine/ecs'
-import { getComponent, useOptionalComponent } from '@ir-engine/ecs/src/ComponentFunctions'
-import { Engine } from '@ir-engine/ecs/src/Engine'
-import { Entity, EntityUUID } from '@ir-engine/ecs/src/Entity'
-import { defineQuery } from '@ir-engine/ecs/src/QueryFunctions'
-import { AssetLoaderState } from '@ir-engine/engine/src/assets/state/AssetLoaderState'
-import { PositionalAudioComponent } from '@ir-engine/engine/src/audio/components/PositionalAudioComponent'
-import { EnvmapComponent } from '@ir-engine/engine/src/scene/components/EnvmapComponent'
-import { ImageComponent } from '@ir-engine/engine/src/scene/components/ImageComponent'
-import { MediaComponent } from '@ir-engine/engine/src/scene/components/MediaComponent'
-import { ModelComponent } from '@ir-engine/engine/src/scene/components/ModelComponent'
-import { ShadowComponent } from '@ir-engine/engine/src/scene/components/ShadowComponent'
-import { VideoComponent } from '@ir-engine/engine/src/scene/components/VideoComponent'
-import { VolumetricComponent } from '@ir-engine/engine/src/scene/components/VolumetricComponent'
-import { ComponentJsonType } from '@ir-engine/engine/src/scene/types/SceneTypes'
-import { getState, startReactor, useImmediateEffect } from '@ir-engine/hyperflux'
-import { CameraComponent } from '@ir-engine/spatial/src/camera/components/CameraComponent'
-import iterateObject3D from '@ir-engine/spatial/src/common/functions/iterateObject3D'
-import { GroupComponent } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { ObjectLayerComponents } from '@ir-engine/spatial/src/renderer/components/ObjectLayerComponent'
-import { ObjectLayerMasks, ObjectLayers } from '@ir-engine/spatial/src/renderer/constants/ObjectLayers'
-import { assignMaterial, createMaterialEntity } from '@ir-engine/spatial/src/renderer/materials/materialFunctions'
+import { getContentType } from '@xrengine/common/src/utils/getContentType'
+import { UUIDComponent } from '@xrengine/ecs'
+import { getComponent, useOptionalComponent } from '@xrengine/ecs/src/ComponentFunctions'
+import { Engine } from '@xrengine/ecs/src/Engine'
+import { Entity, EntityUUID } from '@xrengine/ecs/src/Entity'
+import { defineQuery } from '@xrengine/ecs/src/QueryFunctions'
+import { AssetLoaderState } from '@xrengine/engine/src/assets/state/AssetLoaderState'
+import { PositionalAudioComponent } from '@xrengine/engine/src/audio/components/PositionalAudioComponent'
+import { EnvmapComponent } from '@xrengine/engine/src/scene/components/EnvmapComponent'
+import { ImageComponent } from '@xrengine/engine/src/scene/components/ImageComponent'
+import { MediaComponent } from '@xrengine/engine/src/scene/components/MediaComponent'
+import { ModelComponent } from '@xrengine/engine/src/scene/components/ModelComponent'
+import { ShadowComponent } from '@xrengine/engine/src/scene/components/ShadowComponent'
+import { VideoComponent } from '@xrengine/engine/src/scene/components/VideoComponent'
+import { VolumetricComponent } from '@xrengine/engine/src/scene/components/VolumetricComponent'
+import { ComponentJsonType } from '@xrengine/engine/src/scene/types/SceneTypes'
+import { getState, startReactor, useImmediateEffect } from '@xrengine/hyperflux'
+import { CameraComponent } from '@xrengine/spatial/src/camera/components/CameraComponent'
+import iterateObject3D from '@xrengine/spatial/src/common/functions/iterateObject3D'
+import { GroupComponent } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { ObjectLayerComponents } from '@xrengine/spatial/src/renderer/components/ObjectLayerComponent'
+import { ObjectLayerMasks, ObjectLayers } from '@xrengine/spatial/src/renderer/constants/ObjectLayers'
+import { assignMaterial, createMaterialEntity } from '@xrengine/spatial/src/renderer/materials/materialFunctions'
 import { EditorControlFunctions } from './EditorControlFunctions'
 import { getIntersectingNodeOnScreen } from './getIntersectingNode'
 

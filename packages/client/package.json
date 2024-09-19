@@ -1,11 +1,11 @@
 {
-  "name": "@ir-engine/client",
+  "name": "@xrengine/client",
   "version": "1.6.0",
   "private": true,
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ir-engine/ir-engine.git"
+    "url": "git://github.com/xr-foundation/xrengine.git"
   },
   "engines": {
     "node": ">= 18.12.0"
@@ -33,13 +33,13 @@
   },
   "dependencies": {
     "@hookstate/core": "npm:@speigg/hookstate@4.0.1-fix-111-106.2",
-    "@ir-engine/client-core": "^1.6.0",
-    "@ir-engine/common": "^1.6.0",
-    "@ir-engine/editor": "^1.6.0",
-    "@ir-engine/engine": "^1.6.0",
-    "@ir-engine/hyperflux": "^1.6.0",
-    "@ir-engine/projects": "^1.6.0",
-    "@ir-engine/ui": "^1.6.0",
+    "@xrengine/client-core": "^1.6.0",
+    "@xrengine/common": "^1.6.0",
+    "@xrengine/editor": "^1.6.0",
+    "@xrengine/engine": "^1.6.0",
+    "@xrengine/hyperflux": "^1.6.0",
+    "@xrengine/projects": "^1.6.0",
+    "@xrengine/ui": "^1.6.0",
     "@mui/icons-material": "5.15.15",
     "@mui/material": "5.11.13",
     "@originjs/vite-plugin-commonjs": "^1.0.3",

@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import {
   BufferUtils,
   Document,
@@ -56,27 +31,27 @@ import { getPixels } from 'ndarray-pixels'
 import { LoaderUtils } from 'three'
 import { v4 as uuidv4 } from 'uuid'
 
-import { API } from '@ir-engine/common'
-import config from '@ir-engine/common/src/config'
-import { fileBrowserPath } from '@ir-engine/common/src/schema.type.module'
+import { API } from '@xrengine/common'
+import config from '@xrengine/common/src/config'
+import { fileBrowserPath } from '@xrengine/common/src/schema.type.module'
 import {
   ExtractedImageTransformParameters,
   extractParameters,
   ModelTransformParameters
-} from '@ir-engine/engine/src/assets/classes/ModelTransform'
-import { baseName, dropRoot, pathJoin } from '@ir-engine/engine/src/assets/functions/miscUtils'
-import { getMutableState, NO_PROXY } from '@ir-engine/hyperflux'
-import { KTX2Encoder } from '@ir-engine/xrui/core/textures/KTX2Encoder'
+} from '@xrengine/engine/src/assets/classes/ModelTransform'
+import { baseName, dropRoot, pathJoin } from '@xrengine/engine/src/assets/functions/miscUtils'
+import { getMutableState, NO_PROXY } from '@xrengine/hyperflux'
+import { KTX2Encoder } from '@xrengine/xrui/core/textures/KTX2Encoder'
 
 import {
-  EEMaterial,
-  EEMaterialExtension
-} from '@ir-engine/engine/src/assets/compression/extensions/EE_MaterialTransformer'
+  XRENGINEMaterial,
+  XRENGINEMaterialExtension
+} from '@xrengine/engine/src/assets/compression/extensions/XRENGINE_MaterialTransformer'
 import {
-  EEResourceID,
-  EEResourceIDExtension
-} from '@ir-engine/engine/src/assets/compression/extensions/EE_ResourceIDTransformer'
-import { UploadRequestState } from '@ir-engine/engine/src/assets/state/UploadRequestState'
+  XRENGINEResourceID,
+  XRENGINEResourceIDExtension
+} from '@xrengine/engine/src/assets/compression/extensions/XRENGINE_ResourceIDTransformer'
+import { UploadRequestState } from '@xrengine/engine/src/assets/state/UploadRequestState'
 import ModelTransformLoader from './ModelTransformLoader'
 
 /**
@@ -270,9 +245,9 @@ export async function combineMaterials(document: Document) {
   const cache: Material[] = []
   console.log('combining materials...')
   root.listMaterials().map((material) => {
-    const eeMat = material.getExtension<EEMaterial>('EE_material')
+    const eeMat = material.getExtension<XRENGINEMaterial>('XRENGINE_material')
     const dupe = cache.find((cachedMaterial) => {
-      const cachedEEMat = cachedMaterial.getExtension<EEMaterial>('EE_material')
+      const cachedEEMat = cachedMaterial.getExtension<XRENGINEMaterial>('XRENGINE_material')
       if (eeMat !== null && cachedEEMat !== null) {
         return (
           eeMat.prototype === cachedEEMat.prototype &&
@@ -570,19 +545,19 @@ export async function transformModel(
 
   const textures = root.listTextures()
 
-  const eeMaterialExtension: EEMaterialExtension | undefined = root
+  const xrengineMaterialExtension: XRENGINEMaterialExtension | undefined = root
     .listExtensionsUsed()
-    .find((ext) => ext.extensionName === 'EE_material') as EEMaterialExtension
-  if (eeMaterialExtension) {
-    for (let i = 0; i < eeMaterialExtension.textures.length; i++) {
-      const texture = eeMaterialExtension.textures[i]
-      const extensions = eeMaterialExtension.textureExtensions[i]
+    .find((ext) => ext.extensionName === 'XRENGINE_material') as XRENGINEMaterialExtension
+  if (xrengineMaterialExtension) {
+    for (let i = 0; i < xrengineMaterialExtension.textures.length; i++) {
+      const texture = xrengineMaterialExtension.textures[i]
+      const extensions = xrengineMaterialExtension.textureExtensions[i]
       for (const extension of extensions) {
         texture.setExtension(extension.extensionName, extension)
       }
     }
 
-    textures.push(...eeMaterialExtension.textures)
+    textures.push(...xrengineMaterialExtension.textures)
   }
 
   const numTextures = textures.length
@@ -746,8 +721,8 @@ export async function transformModel(
       */
     }
   }
-  if (eeMaterialExtension) {
-    for (const texture of eeMaterialExtension.textures) {
+  if (xrengineMaterialExtension) {
+    for (const texture of xrengineMaterialExtension.textures) {
       document.createTexture().copy(texture)
     }
   }

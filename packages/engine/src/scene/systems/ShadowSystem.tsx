@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import React, { useEffect } from 'react'
 import {
   Box3,
@@ -39,7 +14,7 @@ import {
   Vector3
 } from 'three'
 
-import { AnimationSystemGroup, Engine, UUIDComponent } from '@ir-engine/ecs'
+import { AnimationSystemGroup, Engine, UUIDComponent } from '@xrengine/ecs'
 import {
   getComponent,
   getOptionalComponent,
@@ -48,44 +23,44 @@ import {
   setComponent,
   useComponent,
   useOptionalComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { ECSState } from '@ir-engine/ecs/src/ECSState'
-import { Entity, UndefinedEntity } from '@ir-engine/ecs/src/Entity'
-import { createEntity, removeEntity, useEntityContext } from '@ir-engine/ecs/src/EntityFunctions'
-import { defineQuery, QueryReactor } from '@ir-engine/ecs/src/QueryFunctions'
-import { defineSystem, useExecute } from '@ir-engine/ecs/src/SystemFunctions'
-import { defineState, getMutableState, getState, isClient, NO_PROXY, useHookstate } from '@ir-engine/hyperflux'
-import { Vector3_Back } from '@ir-engine/spatial/src/common/constants/MathConstants'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { ECSState } from '@xrengine/ecs/src/ECSState'
+import { Entity, UndefinedEntity } from '@xrengine/ecs/src/Entity'
+import { createEntity, removeEntity, useEntityContext } from '@xrengine/ecs/src/EntityFunctions'
+import { defineQuery, QueryReactor } from '@xrengine/ecs/src/QueryFunctions'
+import { defineSystem, useExecute } from '@xrengine/ecs/src/SystemFunctions'
+import { defineState, getMutableState, getState, isClient, NO_PROXY, useHookstate } from '@xrengine/hyperflux'
+import { Vector3_Back } from '@xrengine/spatial/src/common/constants/MathConstants'
 import {
   createPriorityQueue,
   createSortAndApplyPriorityQueue
-} from '@ir-engine/spatial/src/common/functions/PriorityQueue'
-import { NameComponent } from '@ir-engine/spatial/src/common/NameComponent'
-import { addObjectToGroup, GroupComponent } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { DirectionalLightComponent } from '@ir-engine/spatial/src/renderer/components/lights/DirectionalLightComponent'
-import { MeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { ObjectLayerComponents } from '@ir-engine/spatial/src/renderer/components/ObjectLayerComponent'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { ObjectLayers } from '@ir-engine/spatial/src/renderer/constants/ObjectLayers'
-import { CSM } from '@ir-engine/spatial/src/renderer/csm/CSM'
-//import { CSMHelper } from '@ir-engine/spatial/src/renderer/csm/CSMHelper'
-import { getShadowsEnabled, useShadowsEnabled } from '@ir-engine/spatial/src/renderer/functions/RenderSettingsFunction'
-import { RendererState } from '@ir-engine/spatial/src/renderer/RendererState'
-import { RendererComponent } from '@ir-engine/spatial/src/renderer/WebGLRendererSystem'
-import { compareDistanceToCamera } from '@ir-engine/spatial/src/transform/components/DistanceComponents'
+} from '@xrengine/spatial/src/common/functions/PriorityQueue'
+import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'
+import { addObjectToGroup, GroupComponent } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { DirectionalLightComponent } from '@xrengine/spatial/src/renderer/components/lights/DirectionalLightComponent'
+import { MeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { ObjectLayerComponents } from '@xrengine/spatial/src/renderer/components/ObjectLayerComponent'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { ObjectLayers } from '@xrengine/spatial/src/renderer/constants/ObjectLayers'
+import { CSM } from '@xrengine/spatial/src/renderer/csm/CSM'
+//import { CSMHelper } from '@xrengine/spatial/src/renderer/csm/CSMHelper'
+import { getShadowsEnabled, useShadowsEnabled } from '@xrengine/spatial/src/renderer/functions/RenderSettingsFunction'
+import { RendererState } from '@xrengine/spatial/src/renderer/RendererState'
+import { RendererComponent } from '@xrengine/spatial/src/renderer/WebGLRendererSystem'
+import { compareDistanceToCamera } from '@xrengine/spatial/src/transform/components/DistanceComponents'
 import {
   EntityTreeComponent,
   iterateEntityNode,
   useChildWithComponents
-} from '@ir-engine/spatial/src/transform/components/EntityTree'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
-import { XRLightProbeState } from '@ir-engine/spatial/src/xr/XRLightProbeSystem'
-import { isMobileXRHeadset } from '@ir-engine/spatial/src/xr/XRState'
+} from '@xrengine/spatial/src/transform/components/EntityTree'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
+import { XRLightProbeState } from '@xrengine/spatial/src/xr/XRLightProbeSystem'
+import { isMobileXRHeadset } from '@xrengine/spatial/src/xr/XRState'
 
-import { TransformSystem } from '@ir-engine/spatial'
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
-import { RenderModes } from '@ir-engine/spatial/src/renderer/constants/RenderModes'
-import { createDisposable } from '@ir-engine/spatial/src/resources/resourceHooks'
+import { TransformSystem } from '@xrengine/spatial'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
+import { RenderModes } from '@xrengine/spatial/src/renderer/constants/RenderModes'
+import { createDisposable } from '@xrengine/spatial/src/resources/resourceHooks'
 import { useTexture } from '../../assets/functions/resourceLoaderHooks'
 import { DomainConfigState } from '../../assets/state/DomainConfigState'
 import { DropShadowComponent } from '../components/DropShadowComponent'
@@ -95,7 +70,7 @@ import { ShadowComponent } from '../components/ShadowComponent'
 import { SceneObjectSystem } from './SceneObjectSystem'
 
 export const ShadowSystemState = defineState({
-  name: 'ee.engine.scene.ShadowSystemState',
+  name: 'xrengine.engine.scene.ShadowSystemState',
   initial: () => {
     const accumulationBudget = isMobileXRHeadset ? 4 : 20
 
@@ -448,7 +423,7 @@ const reactor = () => {
   const useShadows = useShadowsEnabled()
 
   const [shadowTexture] = useTexture(
-    `${getState(DomainConfigState).cloudDomain}/projects/ir-engine/default-project/assets/drop-shadow.png`
+    `${getState(DomainConfigState).cloudDomain}/projects/xrengine/default-project/assets/drop-shadow.png`
   )
 
   useEffect(() => {
@@ -470,14 +445,14 @@ const reactor = () => {
 }
 
 export const ShadowSystem = defineSystem({
-  uuid: 'ee.engine.ShadowSystem',
+  uuid: 'xrengine.engine.ShadowSystem',
   insert: { with: AnimationSystemGroup },
   execute,
   reactor
 })
 
 export const DropShadowSystem = defineSystem({
-  uuid: 'ee.engine.DropShadowSystem',
+  uuid: 'xrengine.engine.DropShadowSystem',
   insert: { after: TransformSystem },
   execute: () => {
     if (!isClient) return

@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { VRMHumanBoneList } from '@pixiv/three-vrm'
 import { useEffect } from 'react'
 import { MathUtils, Matrix4, Quaternion, Vector3 } from 'three'
@@ -35,7 +10,7 @@ import {
   getComponent,
   getOptionalComponent,
   hasComponent
-} from '@ir-engine/ecs'
+} from '@xrengine/ecs'
 import {
   defineState,
   getMutableState,
@@ -44,20 +19,20 @@ import {
   none,
   useHookstate,
   useMutableState
-} from '@ir-engine/hyperflux'
-import { NetworkObjectComponent, NetworkState } from '@ir-engine/network'
+} from '@xrengine/hyperflux'
+import { NetworkObjectComponent, NetworkState } from '@xrengine/network'
 import {
   createPriorityQueue,
   createSortAndApplyPriorityQueue
-} from '@ir-engine/spatial/src/common/functions/PriorityQueue'
-import { RigidBodyComponent } from '@ir-engine/spatial/src/physics/components/RigidBodyComponent'
-import { compareDistanceToCamera } from '@ir-engine/spatial/src/transform/components/DistanceComponents'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
-import { TransformSystem } from '@ir-engine/spatial/src/transform/TransformModule'
-import { XRLeftHandComponent, XRRightHandComponent } from '@ir-engine/spatial/src/xr/XRComponents'
-import { XRState } from '@ir-engine/spatial/src/xr/XRState'
+} from '@xrengine/spatial/src/common/functions/PriorityQueue'
+import { RigidBodyComponent } from '@xrengine/spatial/src/physics/components/RigidBodyComponent'
+import { compareDistanceToCamera } from '@xrengine/spatial/src/transform/components/DistanceComponents'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
+import { TransformSystem } from '@xrengine/spatial/src/transform/TransformModule'
+import { XRLeftHandComponent, XRRightHandComponent } from '@xrengine/spatial/src/xr/XRComponents'
+import { XRState } from '@xrengine/spatial/src/xr/XRState'
 
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
 import React from 'react'
 import { useBatchGLTF } from '../../assets/functions/resourceLoaderHooks'
 import { GLTF } from '../../assets/loaders/gltf/GLTFLoader'
@@ -333,7 +308,7 @@ const Reactor = () => {
     animations.map((animationFile) => {
       return `${
         getState(DomainConfigState).cloudDomain
-      }/projects/ir-engine/default-project/assets/animations/${animationFile}.glb`
+      }/projects/xrengine/default-project/assets/animations/${animationFile}.glb`
     })
   )
   const manager = useMutableState(AnimationState)
@@ -376,7 +351,7 @@ const Reactor = () => {
 }
 
 export const AvatarAnimationSystem = defineSystem({
-  uuid: 'ee.engine.AvatarAnimationSystem',
+  uuid: 'xrengine.engine.AvatarAnimationSystem',
   insert: { after: AnimationSystem },
   execute,
   reactor: () => {
@@ -414,7 +389,7 @@ const updateSkinnedMeshes = () => {
 }
 
 export const SkinnedMeshTransformSystem = defineSystem({
-  uuid: 'ee.engine.SkinnedMeshTransformSystem',
+  uuid: 'xrengine.engine.SkinnedMeshTransformSystem',
   insert: { after: TransformSystem },
   execute: updateSkinnedMeshes
 })

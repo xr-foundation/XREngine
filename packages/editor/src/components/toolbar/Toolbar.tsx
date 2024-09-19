@@ -1,41 +1,16 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
-import AddEditLocationModal from '@ir-engine/client-core/src/admin/components/locations/AddEditLocationModal'
-import { NotificationService } from '@ir-engine/client-core/src/common/services/NotificationService'
-import { PopoverState } from '@ir-engine/client-core/src/common/services/PopoverState'
-import { RouterState } from '@ir-engine/client-core/src/common/services/RouterService'
-import { useProjectPermissions } from '@ir-engine/client-core/src/user/useUserProjectPermission'
-import { useUserHasAccessHook } from '@ir-engine/client-core/src/user/userHasAccess'
-import { useFind } from '@ir-engine/common'
-import { locationPath } from '@ir-engine/common/src/schema.type.module'
-import { GLTFModifiedState } from '@ir-engine/engine/src/gltf/GLTFDocumentState'
-import { getMutableState, getState, useHookstate, useMutableState } from '@ir-engine/hyperflux'
-import { ContextMenu } from '@ir-engine/ui/src/components/tailwind/ContextMenu'
-import { SidebarButton } from '@ir-engine/ui/src/components/tailwind/SidebarButton'
-import Button from '@ir-engine/ui/src/primitives/tailwind/Button'
+import AddEditLocationModal from '@xrengine/client-core/src/admin/components/locations/AddEditLocationModal'
+import { NotificationService } from '@xrengine/client-core/src/common/services/NotificationService'
+import { PopoverState } from '@xrengine/client-core/src/common/services/PopoverState'
+import { RouterState } from '@xrengine/client-core/src/common/services/RouterService'
+import { useProjectPermissions } from '@xrengine/client-core/src/user/useUserProjectPermission'
+import { useUserHasAccessHook } from '@xrengine/client-core/src/user/userHasAccess'
+import { useFind } from '@xrengine/common'
+import { locationPath } from '@xrengine/common/src/schema.type.module'
+import { GLTFModifiedState } from '@xrengine/engine/src/gltf/GLTFDocumentState'
+import { getMutableState, getState, useHookstate, useMutableState } from '@xrengine/hyperflux'
+import { ContextMenu } from '@xrengine/ui/src/components/tailwind/ContextMenu'
+import { SidebarButton } from '@xrengine/ui/src/components/tailwind/SidebarButton'
+import Button from '@xrengine/ui/src/primitives/tailwind/Button'
 import { t } from 'i18next'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
@@ -157,7 +132,7 @@ export default function Toolbar() {
       <div className="flex items-center justify-between bg-theme-primary">
         <div className="flex items-center">
           <div className="ml-3 mr-6 cursor-pointer" onClick={onCloseProject}>
-            <img src="favicon-32x32.png" alt="iR Engine Logo" className={`h-7 w-7 opacity-50`} />
+            <img src="favicon-32x32.png" alt="XREngine Logo" className={`h-7 w-7 opacity-50`} />
           </div>
           <Button
             endIcon={<MdOutlineKeyboardArrowDown size="1em" className="-ml-3 text-[#A3A3A3]" />}

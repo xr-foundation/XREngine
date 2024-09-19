@@ -6,54 +6,29 @@ import {
   getMutableComponent,
   getOptionalMutableComponent,
   hasComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { Engine } from '@ir-engine/ecs/src/Engine'
-import { Entity } from '@ir-engine/ecs/src/Entity'
-import { getState, State } from '@ir-engine/hyperflux'
-import { isMobile } from '@ir-engine/spatial/src/common/functions/isMobile'
-import { addOBCPlugin } from '@ir-engine/spatial/src/common/functions/OnBeforeCompilePlugin'
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { Engine } from '@xrengine/ecs/src/Engine'
+import { Entity } from '@xrengine/ecs/src/Entity'
+import { getState, State } from '@xrengine/hyperflux'
+import { isMobile } from '@xrengine/spatial/src/common/functions/isMobile'
+import { addOBCPlugin } from '@xrengine/spatial/src/common/functions/OnBeforeCompilePlugin'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
 import {
   addObjectToGroup,
   GroupComponent,
   removeObjectFromGroup
-} from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { MeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { DistanceFromCameraComponent } from '@ir-engine/spatial/src/transform/components/DistanceComponents'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
-import { isMobileXRHeadset } from '@ir-engine/spatial/src/xr/XRState'
+} from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { MeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { DistanceFromCameraComponent } from '@xrengine/spatial/src/transform/components/DistanceComponents'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
+import { isMobileXRHeadset } from '@xrengine/spatial/src/xr/XRState'
 
-import { STATIC_ASSET_REGEX } from '@ir-engine/engine/src/assets/functions/pathResolver'
+import { STATIC_ASSET_REGEX } from '@xrengine/engine/src/assets/functions/pathResolver'
 import { getGLTFAsync } from '../../../assets/functions/resourceLoaderHooks'
 import { InstancingComponent } from '../../components/InstancingComponent'
 import { ModelComponent } from '../../components/ModelComponent'
 import { distanceBased, Heuristic, VariantComponent, VariantLevel } from '../../components/VariantComponent'
 import getFirstMesh from '../../util/meshUtils'
-
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
 
 export function updateModelVariant(
   entity: Entity,

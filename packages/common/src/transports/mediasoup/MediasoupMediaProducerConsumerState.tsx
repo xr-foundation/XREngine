@@ -1,31 +1,6 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import React, { useEffect } from 'react'
 
-import { ChannelID } from '@ir-engine/common/src/schema.type.module'
+import { ChannelID } from '@xrengine/common/src/schema.type.module'
 import {
   NO_PROXY_STEALTH,
   NetworkID,
@@ -42,9 +17,9 @@ import {
   none,
   useHookstate,
   useMutableState
-} from '@ir-engine/hyperflux'
+} from '@xrengine/hyperflux'
 
-import { DataChannelType, MediaTagType, Network, NetworkActions, NetworkState } from '@ir-engine/network'
+import { DataChannelType, MediaTagType, Network, NetworkActions, NetworkState } from '@xrengine/network'
 import { MediaStreamAppData } from '../../interfaces/NetworkInterfaces'
 import {
   MediasoupTransportActions,
@@ -54,7 +29,7 @@ import {
 
 export class MediasoupMediaProducerActions {
   static requestProducer = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_CREATE_PRODUCER',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_CREATE_PRODUCER',
     requestID: matches.string,
     transportID: matches.string,
     kind: matches.literals('audio', 'video').optional(),
@@ -64,13 +39,13 @@ export class MediasoupMediaProducerActions {
   })
 
   static requestProducerError = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_CREATE_PRODUCER_ERROR',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_CREATE_PRODUCER_ERROR',
     requestID: matches.string,
     error: matches.string
   })
 
   static producerCreated = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_PRODUCER_CREATED',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_PRODUCER_CREATED',
     requestID: matches.string,
     producerID: matches.string,
     transportID: matches.string,
@@ -81,13 +56,13 @@ export class MediasoupMediaProducerActions {
   })
 
   static producerClosed = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_CLOSED_PRODUCER',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_CLOSED_PRODUCER',
     producerID: matches.string,
     $cache: true
   })
 
   static producerPaused = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_PRODUCER_PAUSED',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_PRODUCER_PAUSED',
     producerID: matches.string,
     paused: matches.boolean,
     globalMute: matches.boolean,
@@ -99,7 +74,7 @@ export class MediasoupMediaProducerActions {
 
 export class MediasoupMediaConsumerActions {
   static requestConsumer = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_REQUEST_CONSUMER',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_REQUEST_CONSUMER',
     peerID: matchesPeerID,
     mediaTag: matches.string as Validator<unknown, DataChannelType>,
     rtpCapabilities: matches.object,
@@ -107,7 +82,7 @@ export class MediasoupMediaConsumerActions {
   })
 
   static consumerCreated = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_CREATED_CONSUMER',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_CREATED_CONSUMER',
     consumerID: matches.string,
     transportID: matches.string,
     peerID: matchesPeerID,
@@ -122,25 +97,25 @@ export class MediasoupMediaConsumerActions {
   })
 
   static consumerLayers = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_CONSUMER_LAYERS',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_CONSUMER_LAYERS',
     consumerID: matches.string,
     layer: matches.number
   })
 
   static consumerClosed = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_CLOSED_CONSUMER',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_CLOSED_CONSUMER',
     consumerID: matches.string
   })
 
   static consumerPaused = defineAction({
-    type: 'ee.engine.network.mediasoup.MEDIA_CONSUMER_PAUSED',
+    type: 'xrengine.engine.network.mediasoup.MEDIA_CONSUMER_PAUSED',
     consumerID: matches.string,
     paused: matches.boolean
   })
 }
 
 export const MediasoupMediaProducersConsumersObjectsState = defineState({
-  name: 'ee.engine.network.mediasoup.MediasoupMediaProducersAndConsumersObjectsState',
+  name: 'xrengine.engine.network.mediasoup.MediasoupMediaProducersAndConsumersObjectsState',
 
   initial: {
     producers: {} as Record<string, any>,
@@ -173,7 +148,7 @@ export type MediasoupMediaConsumerType = {
 }
 
 export const MediasoupMediaProducerConsumerState = defineState({
-  name: 'ee.engine.network.mediasoup.MediasoupMediaProducerConsumerState',
+  name: 'xrengine.engine.network.mediasoup.MediasoupMediaProducerConsumerState',
 
   initial: {} as Record<
     NetworkID,

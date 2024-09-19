@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { DepthPass, ShaderPass } from 'postprocessing'
 import React, { useEffect } from 'react'
 import {
@@ -37,18 +12,18 @@ import {
   WebGLRenderTarget
 } from 'three'
 
-import { Entity } from '@ir-engine/ecs'
-import { defineComponent, getComponent, setComponent, useComponent } from '@ir-engine/ecs/src/ComponentFunctions'
-import { Engine } from '@ir-engine/ecs/src/Engine'
-import { createEntity, useEntityContext } from '@ir-engine/ecs/src/EntityFunctions'
-import { CameraComponent } from '@ir-engine/spatial/src/camera/components/CameraComponent'
-import { setCallback } from '@ir-engine/spatial/src/common/CallbackComponent'
-import { SDFShader } from '@ir-engine/spatial/src/renderer/effects/sdf/SDFShader'
-import { RendererComponent } from '@ir-engine/spatial/src/renderer/WebGLRendererSystem'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
+import { Entity } from '@xrengine/ecs'
+import { defineComponent, getComponent, setComponent, useComponent } from '@xrengine/ecs/src/ComponentFunctions'
+import { Engine } from '@xrengine/ecs/src/Engine'
+import { createEntity, useEntityContext } from '@xrengine/ecs/src/EntityFunctions'
+import { CameraComponent } from '@xrengine/spatial/src/camera/components/CameraComponent'
+import { setCallback } from '@xrengine/spatial/src/common/CallbackComponent'
+import { SDFShader } from '@xrengine/spatial/src/renderer/effects/sdf/SDFShader'
+import { RendererComponent } from '@xrengine/spatial/src/renderer/WebGLRendererSystem'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
 
-import { S } from '@ir-engine/ecs/src/schemas/JSONSchemas'
-import { useRendererEntity } from '@ir-engine/spatial/src/renderer/functions/useRendererEntity'
+import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
+import { useRendererEntity } from '@xrengine/spatial/src/renderer/functions/useRendererEntity'
 import { UpdatableCallback, UpdatableComponent } from './UpdatableComponent'
 
 export enum SDFMode {
@@ -60,7 +35,7 @@ export enum SDFMode {
 
 export const SDFComponent = defineComponent({
   name: 'SDFComponent',
-  jsonID: 'EE_sdf',
+  jsonID: 'XRENGINE_sdf',
 
   schema: S.Object({
     color: S.Color(0xffffff),

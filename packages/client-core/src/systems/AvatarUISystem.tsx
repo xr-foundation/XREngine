@@ -1,63 +1,38 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { Not } from 'bitecs'
 import { useEffect } from 'react'
 import { CircleGeometry, Group, Mesh, MeshBasicMaterial, Vector3 } from 'three'
 
-import multiLogger from '@ir-engine/common/src/logger'
-import { UserID } from '@ir-engine/common/src/schema.type.module'
-import { getComponent, hasComponent } from '@ir-engine/ecs/src/ComponentFunctions'
-import { ECSState } from '@ir-engine/ecs/src/ECSState'
-import { Engine } from '@ir-engine/ecs/src/Engine'
-import { Entity } from '@ir-engine/ecs/src/Entity'
-import { removeEntity } from '@ir-engine/ecs/src/EntityFunctions'
-import { defineQuery } from '@ir-engine/ecs/src/QueryFunctions'
-import { defineSystem } from '@ir-engine/ecs/src/SystemFunctions'
-import { MediaSettingsState } from '@ir-engine/engine/src/audio/MediaSettingsState'
-import { AvatarComponent } from '@ir-engine/engine/src/avatar/components/AvatarComponent'
-import { applyVideoToTexture } from '@ir-engine/engine/src/scene/functions/applyScreenshareToTexture'
-import { getMutableState, getState, none } from '@ir-engine/hyperflux'
-import { NetworkObjectComponent, NetworkObjectOwnedTag, NetworkState } from '@ir-engine/network'
-import { CameraComponent } from '@ir-engine/spatial/src/camera/components/CameraComponent'
-import { createTransitionState } from '@ir-engine/spatial/src/common/functions/createTransitionState'
-import { easeOutElastic } from '@ir-engine/spatial/src/common/functions/MathFunctions'
-import { InputPointerComponent } from '@ir-engine/spatial/src/input/components/InputPointerComponent'
-import { InputState } from '@ir-engine/spatial/src/input/state/InputState'
-import { Physics, RaycastArgs } from '@ir-engine/spatial/src/physics/classes/Physics'
-import { CollisionGroups } from '@ir-engine/spatial/src/physics/enums/CollisionGroups'
-import { getInteractionGroups } from '@ir-engine/spatial/src/physics/functions/getInteractionGroups'
-import { SceneQueryType } from '@ir-engine/spatial/src/physics/types/PhysicsTypes'
-import { addObjectToGroup } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { setVisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
-import { TransformDirtyUpdateSystem } from '@ir-engine/spatial/src/transform/systems/TransformSystem'
-import { XRUIComponent } from '@ir-engine/spatial/src/xrui/components/XRUIComponent'
+import multiLogger from '@xrengine/common/src/logger'
+import { UserID } from '@xrengine/common/src/schema.type.module'
+import { getComponent, hasComponent } from '@xrengine/ecs/src/ComponentFunctions'
+import { ECSState } from '@xrengine/ecs/src/ECSState'
+import { Engine } from '@xrengine/ecs/src/Engine'
+import { Entity } from '@xrengine/ecs/src/Entity'
+import { removeEntity } from '@xrengine/ecs/src/EntityFunctions'
+import { defineQuery } from '@xrengine/ecs/src/QueryFunctions'
+import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
+import { MediaSettingsState } from '@xrengine/engine/src/audio/MediaSettingsState'
+import { AvatarComponent } from '@xrengine/engine/src/avatar/components/AvatarComponent'
+import { applyVideoToTexture } from '@xrengine/engine/src/scene/functions/applyScreenshareToTexture'
+import { getMutableState, getState, none } from '@xrengine/hyperflux'
+import { NetworkObjectComponent, NetworkObjectOwnedTag, NetworkState } from '@xrengine/network'
+import { CameraComponent } from '@xrengine/spatial/src/camera/components/CameraComponent'
+import { createTransitionState } from '@xrengine/spatial/src/common/functions/createTransitionState'
+import { easeOutElastic } from '@xrengine/spatial/src/common/functions/MathFunctions'
+import { InputPointerComponent } from '@xrengine/spatial/src/input/components/InputPointerComponent'
+import { InputState } from '@xrengine/spatial/src/input/state/InputState'
+import { Physics, RaycastArgs } from '@xrengine/spatial/src/physics/classes/Physics'
+import { CollisionGroups } from '@xrengine/spatial/src/physics/enums/CollisionGroups'
+import { getInteractionGroups } from '@xrengine/spatial/src/physics/functions/getInteractionGroups'
+import { SceneQueryType } from '@xrengine/spatial/src/physics/types/PhysicsTypes'
+import { addObjectToGroup } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { setVisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
+import { TransformDirtyUpdateSystem } from '@xrengine/spatial/src/transform/systems/TransformSystem'
+import { XRUIComponent } from '@xrengine/spatial/src/xrui/components/XRUIComponent'
 
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
-import { InputComponent } from '@ir-engine/spatial/src/input/components/InputComponent'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
+import { InputComponent } from '@xrengine/spatial/src/input/components/InputComponent'
 import { PeerMediaChannelState } from '../media/PeerMediaChannelState'
 import AvatarContextMenu from '../user/components/UserMenu/menus/AvatarContextMenu'
 import { PopupMenuState } from '../user/components/UserMenu/PopupMenuService'
@@ -300,7 +275,7 @@ const reactor = () => {
 }
 
 export const AvatarUISystem = defineSystem({
-  uuid: 'ee.client.AvatarUISystem',
+  uuid: 'xrengine.client.AvatarUISystem',
   insert: { before: TransformDirtyUpdateSystem },
   execute,
   reactor

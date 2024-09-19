@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { GrGithub } from 'react-icons/gr'
@@ -36,21 +11,21 @@ import {
   HiOutlineUsers
 } from 'react-icons/hi2'
 
-import { NotificationService } from '@ir-engine/client-core/src/common/services/NotificationService'
-import { PopoverState } from '@ir-engine/client-core/src/common/services/PopoverState'
-import { ProjectService } from '@ir-engine/client-core/src/common/services/ProjectService'
-import { useFind, useSearch } from '@ir-engine/common'
-import config from '@ir-engine/common/src/config'
-import multiLogger from '@ir-engine/common/src/logger'
-import { ProjectType, projectPath } from '@ir-engine/common/src/schema.type.module'
-import { getMutableState, useHookstate } from '@ir-engine/hyperflux'
-import ConfirmDialog from '@ir-engine/ui/src/components/tailwind/ConfirmDialog'
-import Button from '@ir-engine/ui/src/primitives/tailwind/Button'
-import CopyText from '@ir-engine/ui/src/primitives/tailwind/CopyText'
-import Toggle from '@ir-engine/ui/src/primitives/tailwind/Toggle'
-import Tooltip from '@ir-engine/ui/src/primitives/tailwind/Tooltip'
+import { NotificationService } from '@xrengine/client-core/src/common/services/NotificationService'
+import { PopoverState } from '@xrengine/client-core/src/common/services/PopoverState'
+import { ProjectService } from '@xrengine/client-core/src/common/services/ProjectService'
+import { useFind, useSearch } from '@xrengine/common'
+import config from '@xrengine/common/src/config'
+import multiLogger from '@xrengine/common/src/logger'
+import { ProjectType, projectPath } from '@xrengine/common/src/schema.type.module'
+import { getMutableState, useHookstate } from '@xrengine/hyperflux'
+import ConfirmDialog from '@xrengine/ui/src/components/tailwind/ConfirmDialog'
+import Button from '@xrengine/ui/src/primitives/tailwind/Button'
+import CopyText from '@xrengine/ui/src/primitives/tailwind/CopyText'
+import Toggle from '@xrengine/ui/src/primitives/tailwind/Toggle'
+import Tooltip from '@xrengine/ui/src/primitives/tailwind/Tooltip'
 
-import { toDisplayDateTime } from '@ir-engine/common/src/utils/datetime-sql'
+import { toDisplayDateTime } from '@xrengine/common/src/utils/datetime-sql'
 import DataTable from '../../common/Table'
 import { ProjectRowType, projectsColumns } from '../../common/constants/project'
 import { ProjectUpdateState } from '../../services/ProjectUpdateService'
@@ -122,7 +97,7 @@ export default function ProjectTable(props: { search: string }) {
           startIcon={<HiOutlineArrowPath />}
           size="small"
           className="mr-2 h-min whitespace-pre bg-theme-blue-secondary text-[#214AA6] disabled:opacity-50 dark:text-white"
-          disabled={project.name === 'ir-engine/default-project'}
+          disabled={project.name === 'xrengine/default-project'}
           onClick={() =>
             PopoverState.showPopupover(
               <AddEditProjectModal update={true} inputProject={project} onSubmit={handleProjectUpdate} />
@@ -135,7 +110,7 @@ export default function ProjectTable(props: { search: string }) {
           startIcon={<GrGithub />}
           size="small"
           className="mr-2 h-min whitespace-pre bg-theme-blue-secondary text-[#214AA6] disabled:opacity-50 dark:text-white"
-          disabled={!project || !project.repositoryPath || project.name === 'ir-engine/default-project'}
+          disabled={!project || !project.repositoryPath || project.name === 'xrengine/default-project'}
           onClick={() => {
             PopoverState.showPopupover(
               <ConfirmDialog
@@ -202,7 +177,7 @@ export default function ProjectTable(props: { search: string }) {
           startIcon={<HiOutlineTrash />}
           size="small"
           className="h-min whitespace-pre bg-theme-blue-secondary text-[#214AA6] disabled:opacity-50 dark:text-white"
-          disabled={project.name === 'ir-engine/default-project'}
+          disabled={project.name === 'xrengine/default-project'}
           onClick={() => {
             PopoverState.showPopupover(
               <ConfirmDialog
@@ -247,7 +222,7 @@ export default function ProjectTable(props: { search: string }) {
         projectVersion: row.version,
         enabled: (
           <Toggle
-            disabled={row.name === 'ir-engine/default-project'}
+            disabled={row.name === 'xrengine/default-project'}
             value={row.enabled}
             onChange={() => handleEnabledChange(row)}
           />

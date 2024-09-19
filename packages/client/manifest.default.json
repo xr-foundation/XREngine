@@ -1,8 +1,8 @@
 {
-  "name": "Infinite Reality Engine",
+  "name": "XREngine",
   "start_url":"/",
-  "id": "IREngine",
-  "short_name": "EE",
+  "id": "XREngine",
+  "short_name": "XRENGINE",
   "description": "Connected Worlds for Everyone",
   "theme_color": "#ffffff",
   "background_color":"#ffffff",

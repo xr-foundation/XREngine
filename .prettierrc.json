@@ -12,7 +12,7 @@
   "arrowParens": "always",
   "proseWrap": "never",
   "endOfLine": "lf",
-  "importOrder": ["<THIRD_PARTY_MODULES>", "", "^@ir-engine/(.*)$", "", "^[./]"],
+  "importOrder": ["<THIRD_PARTY_MODULES>", "", "^@xrengine/(.*)$", "", "^[./]"],
   "plugins": ["prettier-plugin-organize-imports", "@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
   "tailwindFunctions": ["twMerge"]
 }

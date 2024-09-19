@@ -1,8 +1,8 @@
 {
-  "name": "@ir-engine/xrui",
+  "name": "@xrengine/xrui",
   "version": "1.6.0",
   "description": "A set of utilities for using DOM elements to create immerive user interfaces",
-  "homepage": "https://github.com/ir-engine/ir-engine#readme",
+  "homepage": "https://github.com/xr-foundation/xrengine#readme",
   "keywords": [
     "3D",
     "AR",
@@ -14,15 +14,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/ir-engine/ir-engine.git"
+    "url": "git://github.com/xr-foundation/xrengine.git"
   },
   "author": {
-    "name": "Infinite Reality Engine Collective",
-    "email": "hello@ir-engine.org",
-    "url": "http://github.com/ir-engine"
+    "name": "XREngine Collective",
+    "email": "hello@xrfoundation.org",
+    "url": "http://github.com/xr-foundation"
   },
   "bugs": {
-    "url": "https://github.com/ir-engine/ir-engine/issues"
+    "url": "https://github.com/xr-foundation/xrengine/issues"
   },
   "engines": {
     "node": ">= 18.12.0"

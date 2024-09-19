@@ -15,13 +15,13 @@
     {
       "name": "ground plane",
       "extensions": {
-        "EE_uuid": "a9bfab51-6ce7-431f-9f95-80f788f38b9f",
-        "EE_visible": true,
-        "EE_ground_plane": {
+        "XRENGINE_uuid": "a9bfab51-6ce7-431f-9f95-80f788f38b9f",
+        "XRENGINE_visible": true,
+        "XRENGINE_ground_plane": {
           "color": 16777215,
           "visible": true
         },
-        "EE_rigidbody": {
+        "XRENGINE_rigidbody": {
           "type": "fixed",
           "ccd": false,
           "allowRolling": true,
@@ -33,7 +33,7 @@
           "canSleep": true,
           "gravityScale": 1
         },
-        "EE_collider": {
+        "XRENGINE_collider": {
           "shape": "plane",
           "mass": 1,
           "massCenter": {
@@ -50,11 +50,11 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_ground_plane",
-    "EE_rigidbody",
-    "EE_collider",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_ground_plane",
+    "XRENGINE_rigidbody",
+    "XRENGINE_collider",
+    "XRENGINE_ecs"
   ]
 }

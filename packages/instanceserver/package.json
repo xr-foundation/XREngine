@@ -1,6 +1,6 @@
 {
-  "name": "@ir-engine/instanceserver",
-  "description": "Multiplayer Instanceserver for Infinite Reality Engine",
+  "name": "@xrengine/instanceserver",
+  "description": "Multiplayer Instanceserver for XREngine",
   "version": "1.6.0",
   "private": true,
   "homepage": "",
@@ -18,8 +18,8 @@
     "vr"
   ],
   "author": {
-    "name": "Infinite Reality Engine Collective",
-    "email": "hello@ir-engine.io"
+    "name": "XREngine Collective",
+    "email": "hello@xrfoundation.org"
   },
   "contributors": [],
   "bugs": {},
@@ -42,14 +42,14 @@
   },
   "types": "lib/",
   "dependencies": {
-    "@ir-engine/common": "^1.6.0",
-    "@ir-engine/ecs": "^1.6.0",
-    "@ir-engine/engine": "^1.6.0",
-    "@ir-engine/hyperflux": "^1.6.0",
-    "@ir-engine/network": "^1.6.0",
-    "@ir-engine/projects": "^1.6.0",
-    "@ir-engine/server-core": "^1.6.0",
-    "@ir-engine/spatial": "^1.6.0",
+    "@xrengine/common": "^1.6.0",
+    "@xrengine/ecs": "^1.6.0",
+    "@xrengine/engine": "^1.6.0",
+    "@xrengine/hyperflux": "^1.6.0",
+    "@xrengine/network": "^1.6.0",
+    "@xrengine/projects": "^1.6.0",
+    "@xrengine/server-core": "^1.6.0",
+    "@xrengine/spatial": "^1.6.0",
     "@feathersjs/feathers": "5.0.5",
     "@feathersjs/koa": "5.0.5",
     "@feathersjs/primus-client": "4.5.15",

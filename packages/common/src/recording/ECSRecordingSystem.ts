@@ -1,41 +1,16 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { decode, encode } from 'msgpackr'
 import { PassThrough } from 'stream'
 import matches, { Validator } from 'ts-matches'
 
-import { API } from '@ir-engine/common'
+import { API } from '@xrengine/common'
 import {
   RecordingID,
   recordingPath,
   RecordingSchemaType,
   UserID,
   userPath
-} from '@ir-engine/common/src/schema.type.module'
-import { checkScope } from '@ir-engine/common/src/utils/checkScope'
+} from '@xrengine/common/src/schema.type.module'
+import { checkScope } from '@xrengine/common/src/utils/checkScope'
 import {
   defineSystem,
   ECSState,
@@ -44,8 +19,8 @@ import {
   getComponent,
   PresentationSystemGroup,
   UUIDComponent
-} from '@ir-engine/ecs'
-import { AvatarNetworkAction } from '@ir-engine/engine/src/avatar/state/AvatarNetworkActions'
+} from '@xrengine/ecs'
+import { AvatarNetworkAction } from '@xrengine/engine/src/avatar/state/AvatarNetworkActions'
 import {
   defineAction,
   defineActionQueue,
@@ -57,7 +32,7 @@ import {
   isClient,
   PeerID,
   Topic
-} from '@ir-engine/hyperflux'
+} from '@xrengine/hyperflux'
 import {
   addDataChannelHandler,
   DataChannelRegistryState,
@@ -73,54 +48,54 @@ import {
   webcamAudioDataChannelType,
   webcamVideoDataChannelType,
   WorldNetworkAction
-} from '@ir-engine/network'
+} from '@xrengine/network'
 import {
   ECSDeserializer,
   ECSSerialization,
   ECSSerializer,
   SerializedChunk
-} from '@ir-engine/network/src/serialization/ECSSerializerSystem'
-import { PhysicsSerialization } from '@ir-engine/spatial/src/physics/PhysicsSerialization'
+} from '@xrengine/network/src/serialization/ECSSerializerSystem'
+import { PhysicsSerialization } from '@xrengine/spatial/src/physics/PhysicsSerialization'
 
-import { AvatarComponent } from '@ir-engine/engine/src/avatar/components/AvatarComponent'
-import { mocapDataChannelType } from '@ir-engine/engine/src/mocap/MotionCaptureSystem'
+import { AvatarComponent } from '@xrengine/engine/src/avatar/components/AvatarComponent'
+import { mocapDataChannelType } from '@xrengine/engine/src/mocap/MotionCaptureSystem'
 
 export class ECSRecordingActions {
   static startRecording = defineAction({
-    type: 'ee.core.motioncapture.START_RECORDING' as const,
+    type: 'xrengine.core.motioncapture.START_RECORDING' as const,
     recordingID: matches.string as Validator<unknown, RecordingID>
   })
 
   static recordingStarted = defineAction({
-    type: 'ee.core.motioncapture.RECORDING_STARTED' as const,
+    type: 'xrengine.core.motioncapture.RECORDING_STARTED' as const,
     recordingID: matches.string as Validator<unknown, RecordingID>
   })
 
   static stopRecording = defineAction({
-    type: 'ee.core.motioncapture.STOP_RECORDING' as const,
+    type: 'xrengine.core.motioncapture.STOP_RECORDING' as const,
     recordingID: matches.string as Validator<unknown, RecordingID>
   })
 
   static startPlayback = defineAction({
-    type: 'ee.core.motioncapture.PLAY_RECORDING' as const,
+    type: 'xrengine.core.motioncapture.PLAY_RECORDING' as const,
     recordingID: matches.string as Validator<unknown, RecordingID>,
     targetUser: matchesUserID.optional(),
     autoplay: matches.boolean
   })
 
   static playbackChanged = defineAction({
-    type: 'ee.core.motioncapture.PLAYBACK_CHANGED' as const,
+    type: 'xrengine.core.motioncapture.PLAYBACK_CHANGED' as const,
     recordingID: matches.string as Validator<unknown, RecordingID>,
     playing: matches.boolean
   })
 
   static stopPlayback = defineAction({
-    type: 'ee.core.motioncapture.STOP_PLAYBACK' as const,
+    type: 'xrengine.core.motioncapture.STOP_PLAYBACK' as const,
     recordingID: matches.string as Validator<unknown, RecordingID>
   })
 
   static error = defineAction({
-    type: 'ee.core.motioncapture.ERROR' as const,
+    type: 'xrengine.core.motioncapture.ERROR' as const,
     error: matches.string
   })
 }
@@ -133,7 +108,7 @@ export type RecordingConfigSchema = {
 }
 
 export const RecordingState = defineState({
-  name: 'ee.RecordingState',
+  name: 'xrengine.RecordingState',
 
   /** @todo - support multiple recording */
   initial: {
@@ -235,7 +210,7 @@ export const RecordingState = defineState({
 })
 
 export const PlaybackState = defineState({
-  name: 'ee.PlaybackState',
+  name: 'xrengine.PlaybackState',
 
   /** @todo - support multiple playback */
   initial: {
@@ -344,7 +319,7 @@ export type UploadRecordingChunkType = (args: {
 }) => Promise<void>
 
 export const RecordingAPIState = defineState({
-  name: 'ee.engine.recording.RecordingAPIState',
+  name: 'xrengine.engine.recording.RecordingAPIState',
   initial: {
     createMediaChannelRecorder: null as null | MediaChannelRecorderType,
     uploadRecordingChunk: null as null | UploadRecordingChunkType
@@ -420,7 +395,7 @@ export const onStartRecording = async (action: ReturnType<typeof ECSRecordingAct
       schema: serializationSchema,
       chunkLength,
       onCommitChunk(chunk, chunkIndex) {
-        const key = 'recordings/' + recording.id + '/entities-' + chunkIndex + '.ee'
+        const key = 'recordings/' + recording.id + '/entities-' + chunkIndex + '.xrengine'
         const buffer = encode(chunk)
         uploadRecordingChunk({
           recordingID: recording.id,
@@ -434,7 +409,7 @@ export const onStartRecording = async (action: ReturnType<typeof ECSRecordingAct
         for (const [dataChannel, data] of dataChannelsRecording.entries()) {
           if (data.frames.length) {
             const key =
-              'recordings/' + recording.id + '/' + data.fromPeerID + '_' + dataChannel + '_' + chunkIndex + '.ee'
+              'recordings/' + recording.id + '/' + data.fromPeerID + '_' + dataChannel + '_' + chunkIndex + '.xrengine'
             const buffer = encode(data)
             uploadRecordingChunk({
               recordingID: recording.id,
@@ -562,7 +537,7 @@ export const onStartPlayback = async (action: ReturnType<typeof ECSRecordingActi
   const rawFiles = recording.resources.filter(
     (resource) =>
       !resource.key.includes('entities-') &&
-      resource.key.substring(resource.key.length - 3, resource.key.length) === '.ee'
+      resource.key.substring(resource.key.length - 3, resource.key.length) === '.xrengine'
   )
 
   const entityChunks = (await Promise.all(
@@ -835,7 +810,7 @@ const execute = () => {
 }
 
 export const ECSRecordingSystem = defineSystem({
-  uuid: 'ee.engine.ECSRecordingSystem',
+  uuid: 'xrengine.engine.ECSRecordingSystem',
   insert: { after: PresentationSystemGroup },
   execute
 })

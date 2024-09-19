@@ -1,42 +1,17 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { Not } from 'bitecs'
 
-import { hasComponent, removeComponent, UUIDComponent } from '@ir-engine/ecs'
-import { getOptionalComponent } from '@ir-engine/ecs/src/ComponentFunctions'
-import { ECSState } from '@ir-engine/ecs/src/ECSState'
-import { Entity } from '@ir-engine/ecs/src/Entity'
-import { defineQuery } from '@ir-engine/ecs/src/QueryFunctions'
-import { defineSystem } from '@ir-engine/ecs/src/SystemFunctions'
-import { getState } from '@ir-engine/hyperflux'
-import { CallbackComponent } from '@ir-engine/spatial/src/common/CallbackComponent'
-import { InputComponent } from '@ir-engine/spatial/src/input/components/InputComponent'
-import { HighlightComponent } from '@ir-engine/spatial/src/renderer/components/HighlightComponent'
-import { DistanceFromCameraComponent } from '@ir-engine/spatial/src/transform/components/DistanceComponents'
-import { TransformSystem } from '@ir-engine/spatial/src/transform/systems/TransformSystem'
+import { hasComponent, removeComponent, UUIDComponent } from '@xrengine/ecs'
+import { getOptionalComponent } from '@xrengine/ecs/src/ComponentFunctions'
+import { ECSState } from '@xrengine/ecs/src/ECSState'
+import { Entity } from '@xrengine/ecs/src/Entity'
+import { defineQuery } from '@xrengine/ecs/src/QueryFunctions'
+import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
+import { getState } from '@xrengine/hyperflux'
+import { CallbackComponent } from '@xrengine/spatial/src/common/CallbackComponent'
+import { InputComponent } from '@xrengine/spatial/src/input/components/InputComponent'
+import { HighlightComponent } from '@xrengine/spatial/src/renderer/components/HighlightComponent'
+import { DistanceFromCameraComponent } from '@xrengine/spatial/src/transform/components/DistanceComponents'
+import { TransformSystem } from '@xrengine/spatial/src/transform/systems/TransformSystem'
 
 import { AvatarComponent } from '../../avatar/components/AvatarComponent'
 import { InteractableComponent } from '../components/InteractableComponent'
@@ -72,7 +47,7 @@ const execute = () => {
 }
 
 export const InteractableSystem = defineSystem({
-  uuid: 'ee.engine.InteractableSystem',
+  uuid: 'xrengine.engine.InteractableSystem',
   insert: { before: TransformSystem },
   execute
 })
@@ -163,7 +138,7 @@ const interactWithClosestInteractable = () => {
 }
 
 // export const InteractableInputSystem = defineSystem({
-//   uuid: 'ee.engine.InteractableInputSystem',
+//   uuid: 'xrengine.engine.InteractableInputSystem',
 //   insert: { after: InputSystemGroup },
 //   execute: executeInput
 // })

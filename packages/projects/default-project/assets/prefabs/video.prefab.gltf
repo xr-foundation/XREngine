@@ -15,9 +15,9 @@
     {
       "name": "video",
       "extensions": {
-        "EE_uuid": "fba0b72f-f097-47e3-be6f-d809dfa660b3",
-        "EE_visible": true,
-        "EE_video": {
+        "XRENGINE_uuid": "fba0b72f-f097-47e3-be6f-d809dfa660b3",
+        "XRENGINE_visible": true,
+        "XRENGINE_video": {
           "mediaUUID": "",
           "side": 2,
           "size": {
@@ -48,7 +48,7 @@
           "fit": "contain",
           "projection": "Flat"
         },
-        "EE_media": {
+        "XRENGINE_media": {
           "controls": false,
           "autoplay": true,
           "resources": [],
@@ -63,7 +63,7 @@
           "isMusic": false,
           "seekTime": 0
         },
-        "EE_input": {
+        "XRENGINE_input": {
           "inputSinks": [
             "Self"
           ],
@@ -73,11 +73,11 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_video",
-    "EE_media",
-    "EE_input",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_video",
+    "XRENGINE_media",
+    "XRENGINE_input",
+    "XRENGINE_ecs"
   ]
 }

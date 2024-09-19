@@ -5,7 +5,7 @@ DB_USER="server"
 DB_PASSWORD="password"
 
 # Database name to drop
-DB_NAME="ir-engine"
+DB_NAME="xrengine"
 
 # Change to the "packages/server-core" directory
 cd packages/server-core

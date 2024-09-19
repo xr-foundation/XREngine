@@ -15,9 +15,9 @@
     {
       "name": "Box_Collider",
       "extensions": {
-        "EE_uuid": "3b2ca4e3-7640-4d50-a665-5f14388a2868",
-        "EE_visible": true,
-        "EE_collider": {
+        "XRENGINE_uuid": "3b2ca4e3-7640-4d50-a665-5f14388a2868",
+        "XRENGINE_visible": true,
+        "XRENGINE_collider": {
           "shape": "box",
           "mass": 1,
           "massCenter": {
@@ -30,7 +30,7 @@
           "collisionLayer": 1,
           "collisionMask": 7
         },
-        "EE_rigidbody": {
+        "XRENGINE_rigidbody": {
           "type": "fixed",
           "ccd": false,
           "allowRolling": true,
@@ -48,15 +48,15 @@
         "useVisible": true,
         "componentJson": [
           {
-            "name": "EE_uuid",
+            "name": "XRENGINE_uuid",
             "props": "3b2ca4e3-7640-4d50-a665-5f14388a2868"
           },
           {
-            "name": "EE_visible",
+            "name": "XRENGINE_visible",
             "props": true
           },
           {
-            "name": "EE_collider",
+            "name": "XRENGINE_collider",
             "props": {
               "shape": "box",
               "mass": 1,
@@ -76,10 +76,10 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_collider",
-    "EE_rigidbody",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_collider",
+    "XRENGINE_rigidbody",
+    "XRENGINE_ecs"
   ]
 }

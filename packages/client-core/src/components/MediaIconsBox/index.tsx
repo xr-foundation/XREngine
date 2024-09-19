@@ -1,52 +1,27 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router-dom'
 
-import { useMediaNetwork } from '@ir-engine/client-core/src/common/services/MediaInstanceConnectionService'
-import { LocationState } from '@ir-engine/client-core/src/social/services/LocationService'
-import { ECSRecordingActions, PlaybackState, RecordingState } from '@ir-engine/common/src/recording/ECSRecordingSystem'
-import { Engine, defineQuery, getOptionalComponent } from '@ir-engine/ecs'
-import { AudioEffectPlayer } from '@ir-engine/engine/src/audio/systems/MediaSystem'
-import { dispatchAction, getMutableState, none, useHookstate, useMutableState } from '@ir-engine/hyperflux'
-import { NetworkState } from '@ir-engine/network'
-import { SpectateEntityState } from '@ir-engine/spatial/src/camera/systems/SpectateSystem'
-import { endXRSession, requestXRSession } from '@ir-engine/spatial/src/xr/XRSessionFunctions'
-import { XRState } from '@ir-engine/spatial/src/xr/XRState'
-import { RegisteredWidgets, WidgetAppActions } from '@ir-engine/spatial/src/xrui/WidgetAppService'
-import CircularProgress from '@ir-engine/ui/src/primitives/mui/CircularProgress'
-import Icon from '@ir-engine/ui/src/primitives/mui/Icon'
-import IconButtonWithTooltip from '@ir-engine/ui/src/primitives/mui/IconButtonWithTooltip'
+import { useMediaNetwork } from '@xrengine/client-core/src/common/services/MediaInstanceConnectionService'
+import { LocationState } from '@xrengine/client-core/src/social/services/LocationService'
+import { ECSRecordingActions, PlaybackState, RecordingState } from '@xrengine/common/src/recording/ECSRecordingSystem'
+import { Engine, defineQuery, getOptionalComponent } from '@xrengine/ecs'
+import { AudioEffectPlayer } from '@xrengine/engine/src/audio/systems/MediaSystem'
+import { dispatchAction, getMutableState, none, useHookstate, useMutableState } from '@xrengine/hyperflux'
+import { NetworkState } from '@xrengine/network'
+import { SpectateEntityState } from '@xrengine/spatial/src/camera/systems/SpectateSystem'
+import { endXRSession, requestXRSession } from '@xrengine/spatial/src/xr/XRSessionFunctions'
+import { XRState } from '@xrengine/spatial/src/xr/XRState'
+import { RegisteredWidgets, WidgetAppActions } from '@xrengine/spatial/src/xrui/WidgetAppService'
+import CircularProgress from '@xrengine/ui/src/primitives/mui/CircularProgress'
+import Icon from '@xrengine/ui/src/primitives/mui/Icon'
+import IconButtonWithTooltip from '@xrengine/ui/src/primitives/mui/IconButtonWithTooltip'
 
-import useFeatureFlags from '@ir-engine/client-core/src/hooks/useFeatureFlags'
-import { FeatureFlags } from '@ir-engine/common/src/constants/FeatureFlags'
-import multiLogger from '@ir-engine/common/src/logger'
-import { SceneSettingsComponent } from '@ir-engine/engine/src/scene/components/SceneSettingsComponent'
-import { isMobile } from '@ir-engine/spatial/src/common/functions/isMobile'
+import useFeatureFlags from '@xrengine/client-core/src/hooks/useFeatureFlags'
+import { FeatureFlags } from '@xrengine/common/src/constants/FeatureFlags'
+import multiLogger from '@xrengine/common/src/logger'
+import { SceneSettingsComponent } from '@xrengine/engine/src/scene/components/SceneSettingsComponent'
+import { isMobile } from '@xrengine/spatial/src/common/functions/isMobile'
 import { VrIcon } from '../../common/components/Icons/VrIcon'
 import { SearchParamState } from '../../common/services/RouterService'
 import { MediaStreamService, MediaStreamState } from '../../media/MediaStreamState'

@@ -9,7 +9,7 @@
       "name": "Child 0",
       "components": [
         {
-          "name": "EE_transform",
+          "name": "XRENGINE_transform",
           "props": {
             "position": { "x": 0, "y": 0, "z": 0 },
             "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
@@ -17,7 +17,7 @@
           }
         },
         {
-          "name": "EE_model",
+          "name": "XRENGINE_model",
           "props": {
             "src": "/packages/projects/default-project/assets/collisioncube.glb",
             "cameraOcclusion": true,
@@ -31,7 +31,7 @@
       "name": "Child 1",
       "components": [
         {
-          "name": "EE_transform",
+          "name": "XRENGINE_transform",
           "props": {
             "position": { "x": 1, "y": 0, "z": 0 },
             "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
@@ -45,7 +45,7 @@
       "name": "Child 2",
       "components": [
         {
-          "name": "EE_transform",
+          "name": "XRENGINE_transform",
           "props": {
             "position": { "x": 0, "y": 1, "z": 0 },
             "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
@@ -59,7 +59,7 @@
       "name": "Child 3",
       "components": [
         {
-          "name": "EE_transform",
+          "name": "XRENGINE_transform",
           "props": {
             "position": { "x": 0, "y": 0, "z": 1 },
             "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
@@ -73,7 +73,7 @@
       "name": "Child 4",
       "components": [
         {
-          "name": "EE_transform",
+          "name": "XRENGINE_transform",
           "props": {
             "position": { "x": 2, "y": 0, "z": 0 },
             "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
@@ -87,7 +87,7 @@
       "name": "Child 5",
       "components": [
         {
-          "name": "EE_transform",
+          "name": "XRENGINE_transform",
           "props": {
             "position": { "x": 0, "y": 2, "z": 0 },
             "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
@@ -101,7 +101,7 @@
       "name": "Child 2 _ 1",
       "components": [
         {
-          "name": "EE_transform",
+          "name": "XRENGINE_transform",
           "props": {
             "position": { "x": 0, "y": 0, "z": 2 },
             "rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
@@ -109,7 +109,7 @@
           }
         },
         {
-          "name": "EE_fog",
+          "name": "XRENGINE_fog",
           "props": {
             "type": "linear",
             "color": "#FFFFFF",

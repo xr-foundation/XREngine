@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { GLTF } from '@gltf-transform/core'
 import assert from 'assert'
 import { Cache, Color, Euler, MathUtils, Matrix4, Quaternion, Vector3 } from 'three'
@@ -35,16 +10,16 @@ import {
   getComponent,
   setComponent,
   UUIDComponent
-} from '@ir-engine/ecs'
-import { createEngine, destroyEngine } from '@ir-engine/ecs/src/Engine'
-import { applyIncomingActions, dispatchAction, getState } from '@ir-engine/hyperflux'
-import { HemisphereLightComponent, TransformComponent } from '@ir-engine/spatial'
-import { NameComponent } from '@ir-engine/spatial/src/common/NameComponent'
-import { Physics } from '@ir-engine/spatial/src/physics/classes/Physics'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { EntityTreeComponent } from '@ir-engine/spatial/src/transform/components/EntityTree'
+} from '@xrengine/ecs'
+import { createEngine, destroyEngine } from '@xrengine/ecs/src/Engine'
+import { applyIncomingActions, dispatchAction, getState } from '@xrengine/hyperflux'
+import { HemisphereLightComponent, TransformComponent } from '@xrengine/spatial'
+import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'
+import { Physics } from '@xrengine/spatial/src/physics/classes/Physics'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { EntityTreeComponent } from '@xrengine/spatial/src/transform/components/EntityTree'
 
-import { SceneComponent } from '@ir-engine/spatial/src/renderer/components/SceneComponents'
+import { SceneComponent } from '@xrengine/spatial/src/renderer/components/SceneComponents'
 import { SourceComponent } from '../scene/components/SourceComponent'
 import { GLTFSnapshotAction } from './GLTFDocumentState'
 import { GLTFSnapshotState, GLTFSourceState } from './GLTFState'
@@ -686,28 +661,28 @@ describe('GLTFState', () => {
         {
           name: 'test one',
           extensions: {
-            EE_uuid: '0d5a20e1-abe2-455e-9963-d5e1e19fca19',
-            EE_visible: true
+            XRENGINE_uuid: '0d5a20e1-abe2-455e-9963-d5e1e19fca19',
+            XRENGINE_visible: true
           }
         },
         {
           matrix: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.5, 5, 1],
           name: 'test two',
           extensions: {
-            EE_uuid: 'bb362197-f14d-4da7-9c3c-1ed834386423',
-            EE_visible: true
+            XRENGINE_uuid: 'bb362197-f14d-4da7-9c3c-1ed834386423',
+            XRENGINE_visible: true
           }
         },
         {
           matrix: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.5, 5, 1],
           name: 'test three',
           extensions: {
-            EE_uuid: '38793f94-0b92-4ea1-af7b-5ec0e117628d',
-            EE_visible: true
+            XRENGINE_uuid: '38793f94-0b92-4ea1-af7b-5ec0e117628d',
+            XRENGINE_visible: true
           }
         }
       ],
-      extensionsUsed: ['EE_uuid', 'EE_visible']
+      extensionsUsed: ['XRENGINE_uuid', 'XRENGINE_visible']
     }
 
     Cache.add('/test.gltf', gltf)

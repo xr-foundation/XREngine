@@ -1,27 +1,4 @@
-/*
-CPAL-1.0 License
 
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
 import assert from 'assert'
 import {
   ASSETS_REGEX,
@@ -463,9 +440,9 @@ describe('regex.test', () => {
   describe('ASSETS_REGEX', () => {
     it('should match assets URLs', () => {
       const positiveCases = [
-        'https://example.com/projects/ir-engine/default-project/assets/images/logo.png',
-        'https://example.com/projects/ir-engine/default-project/assets/animations/emotes.glb',
-        'https://example.com/projects/ir-engine/default-project/assets/animations/locomotion.glb'
+        'https://example.com/projects/xrengine/default-project/assets/images/logo.png',
+        'https://example.com/projects/xrengine/default-project/assets/animations/emotes.glb',
+        'https://example.com/projects/xrengine/default-project/assets/animations/locomotion.glb'
       ]
       positiveCases.forEach((url) => {
         assert.match(url, ASSETS_REGEX, `Expected '${url}' to match ASSETS_REGEX`)
@@ -474,9 +451,9 @@ describe('regex.test', () => {
 
     it('should not match non-assets URLs', () => {
       const negativeCases = [
-        'https://example.com/projects/ir-engine/default-project/scene.json',
-        'https://example.com/projects/ir-engine/default-project/assets',
-        'https://example.com/ir-engine/default-project/assets/animations/emotes.glb'
+        'https://example.com/projects/xrengine/default-project/scene.json',
+        'https://example.com/projects/xrengine/default-project/assets',
+        'https://example.com/xrengine/default-project/assets/animations/emotes.glb'
       ]
       negativeCases.forEach((url) => {
         assert.doesNotMatch(url, ASSETS_REGEX, `Expected '${url}' to not match ASSETS_REGEX`)
@@ -487,9 +464,9 @@ describe('regex.test', () => {
   describe('PROJECT_REGEX', () => {
     it('should match valid project paths', () => {
       const positiveCases = [
-        'projects/ir-engine/project123',
-        'projects/ir-engine/project-name',
-        'projects/ir-engine/project_name',
+        'projects/xrengine/project123',
+        'projects/xrengine/project-name',
+        'projects/xrengine/project_name',
         'projects/project/123',
         'projects/project/abc_def'
       ]
@@ -512,9 +489,9 @@ describe('regex.test', () => {
   describe('PROJECT_PUBLIC_REGEX', () => {
     it('should match valid project paths', () => {
       const positiveCases = [
-        'projects/ir-engine/project123/public/',
-        'projects/ir-engine/project-name/public/',
-        'projects/ir-engine/project_name/public/',
+        'projects/xrengine/project123/public/',
+        'projects/xrengine/project-name/public/',
+        'projects/xrengine/project_name/public/',
         'projects/project/123/public/',
         'projects/project/abc_def/public/'
       ]
@@ -525,10 +502,10 @@ describe('regex.test', () => {
 
     it('should not match invalid project paths', () => {
       const negativeCases = [
-        'projects/ir-engine/project123/public', // (missing trailing slash)
-        'projects/ir-engine/project-name/private/', // (incorrect folder private instead of public)
-        'projects/ir-engine/project$name/public/', // (contains invalid character $)
-        'projects/ir-engine/project-@name/public/', // (contains invalid character @)
+        'projects/xrengine/project123/public', // (missing trailing slash)
+        'projects/xrengine/project-name/private/', // (incorrect folder private instead of public)
+        'projects/xrengine/project$name/public/', // (contains invalid character $)
+        'projects/xrengine/project-@name/public/', // (contains invalid character @)
         'projects/' // (missing project name and /public/)
       ]
       negativeCases.forEach((value) => {
@@ -540,9 +517,9 @@ describe('regex.test', () => {
   describe('PROJECT_THUMBNAIL_REGEX', () => {
     it('should match valid project thumbnail paths', () => {
       const positiveCases = [
-        'projects/ir-engine/project123/thumbnails/',
-        'projects/ir-engine/project-name/thumbnails/',
-        'projects/ir-engine/project_name/thumbnails/',
+        'projects/xrengine/project123/thumbnails/',
+        'projects/xrengine/project-name/thumbnails/',
+        'projects/xrengine/project_name/thumbnails/',
         'projects/project/123/thumbnails/',
         'projects/project/abc_def/thumbnails/'
       ]
@@ -553,10 +530,10 @@ describe('regex.test', () => {
 
     it('should not match invalid project thumbnail paths', () => {
       const negativeCases = [
-        'projects/ir-engine/project123/thumbnails', // (missing trailing slash)
-        'projects/ir-engine/project-name/private/', // (incorrect folder private instead of public)
-        'projects/ir-engine/project$name/thumbnails/', // (contains invalid character $)
-        'projects/ir-engine/project-@name/thumbnails/', // (contains invalid character @)
+        'projects/xrengine/project123/thumbnails', // (missing trailing slash)
+        'projects/xrengine/project-name/private/', // (incorrect folder private instead of public)
+        'projects/xrengine/project$name/thumbnails/', // (contains invalid character $)
+        'projects/xrengine/project-@name/thumbnails/', // (contains invalid character @)
         'projects/' // (missing project name and /thumbnail/)
       ]
       negativeCases.forEach((value) => {
@@ -599,23 +576,23 @@ describe('regex.test', () => {
     it('should match valid charts', () => {
       const positiveCases = [
         {
-          chart: 'ir-engine-1.0.0',
+          chart: 'xrengine-1.0.0',
           version: '1.0.0'
         },
         {
-          chart: 'ir-engine-10.11.12',
+          chart: 'xrengine-10.11.12',
           version: '10.11.12'
         },
         {
-          chart: 'ir-engine-123.456.789',
+          chart: 'xrengine-123.456.789',
           version: '123.456.789'
         },
         {
-          chart: 'ir-engine-0.0.1',
+          chart: 'xrengine-0.0.1',
           version: '0.0.1'
         },
         {
-          chart: 'ir-engine-9.99.999',
+          chart: 'xrengine-9.99.999',
           version: '9.99.999'
         }
       ]
@@ -633,13 +610,13 @@ describe('regex.test', () => {
 
     it('should not match invalid charts', () => {
       const negativeCases = [
-        'ir-engine-1.0', // only two groups of digits
-        'ir-engine-1.0.a', // non-digit character in version
-        'ir-engine-1.0_0', // underscore instead of period
+        'xrengine-1.0', // only two groups of digits
+        'xrengine-1.0.a', // non-digit character in version
+        'xrengine-1.0_0', // underscore instead of period
         'etheralengine-1.0.0', // misspelled prefix
-        'ir-engine 1.0.0', // space instead of hyphen
-        'ir-engine-.0.0', // missing first group of digits
-        '1.0.0-ir-engine' // version string not in the correct place
+        'xrengine 1.0.0', // space instead of hyphen
+        'xrengine-.0.0', // missing first group of digits
+        '1.0.0-xrengine' // version string not in the correct place
       ]
       negativeCases.forEach((chart) => {
         const matches = chart.matchAll(MAIN_CHART_REGEX)
@@ -653,23 +630,23 @@ describe('regex.test', () => {
     it('should match valid charts', () => {
       const positiveCases = [
         {
-          chart: 'ir-engine-builder-1.0.0',
+          chart: 'xrengine-builder-1.0.0',
           version: '1.0.0'
         },
         {
-          chart: 'ir-engine-builder-10.11.12',
+          chart: 'xrengine-builder-10.11.12',
           version: '10.11.12'
         },
         {
-          chart: 'ir-engine-builder-123.456.789',
+          chart: 'xrengine-builder-123.456.789',
           version: '123.456.789'
         },
         {
-          chart: 'ir-engine-builder-0.0.1',
+          chart: 'xrengine-builder-0.0.1',
           version: '0.0.1'
         },
         {
-          chart: 'ir-engine-builder-9.99.999',
+          chart: 'xrengine-builder-9.99.999',
           version: '9.99.999'
         }
       ]
@@ -687,13 +664,13 @@ describe('regex.test', () => {
 
     it('should not match invalid charts', () => {
       const negativeCases = [
-        'ir-engine-builder-1.0', // only two groups of digits
-        'ir-engine-builder-1.0.a', // non-digit character in version
-        'ir-engine-builder-1.0_0', // underscore instead of period
+        'xrengine-builder-1.0', // only two groups of digits
+        'xrengine-builder-1.0.a', // non-digit character in version
+        'xrengine-builder-1.0_0', // underscore instead of period
         'etheralengine-1.0.0', // misspelled prefix
-        'ir-engine-builder 1.0.0', // space instead of hyphen
-        'ir-engine-builder-.0.0', // missing first group of digits
-        '1.0.0-ir-engine-builder' // version string not in the correct place
+        'xrengine-builder 1.0.0', // space instead of hyphen
+        'xrengine-builder-.0.0', // missing first group of digits
+        '1.0.0-xrengine-builder' // version string not in the correct place
       ]
       negativeCases.forEach((chart) => {
         const matches = chart.matchAll(BUILDER_CHART_REGEX)

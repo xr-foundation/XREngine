@@ -1,50 +1,25 @@
-/*
-CPAL-1.0 License
+import AddEditProjectModal from '@xrengine/client-core/src/admin/components/project/AddEditProjectModal'
+import ManageUserPermissionModal from '@xrengine/client-core/src/admin/components/project/ManageUserPermissionModal'
+import { ProjectUpdateState } from '@xrengine/client-core/src/admin/services/ProjectUpdateService'
+import { NotificationService } from '@xrengine/client-core/src/common/services/NotificationService'
+import { PopoverState } from '@xrengine/client-core/src/common/services/PopoverState'
+import { ProjectService } from '@xrengine/client-core/src/common/services/ProjectService'
+import { AuthState } from '@xrengine/client-core/src/user/services/AuthService'
+import { userHasAccess } from '@xrengine/client-core/src/user/userHasAccess'
+import { useFind } from '@xrengine/common'
+import multiLogger from '@xrengine/common/src/logger'
+import { ProjectType, projectPath } from '@xrengine/common/src/schema.type.module'
+import { getMutableState, useHookstate, useMutableState } from '@xrengine/hyperflux'
 
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
-import AddEditProjectModal from '@ir-engine/client-core/src/admin/components/project/AddEditProjectModal'
-import ManageUserPermissionModal from '@ir-engine/client-core/src/admin/components/project/ManageUserPermissionModal'
-import { ProjectUpdateState } from '@ir-engine/client-core/src/admin/services/ProjectUpdateService'
-import { NotificationService } from '@ir-engine/client-core/src/common/services/NotificationService'
-import { PopoverState } from '@ir-engine/client-core/src/common/services/PopoverState'
-import { ProjectService } from '@ir-engine/client-core/src/common/services/ProjectService'
-import { AuthState } from '@ir-engine/client-core/src/user/services/AuthService'
-import { userHasAccess } from '@ir-engine/client-core/src/user/userHasAccess'
-import { useFind } from '@ir-engine/common'
-import multiLogger from '@ir-engine/common/src/logger'
-import { ProjectType, projectPath } from '@ir-engine/common/src/schema.type.module'
-import { getMutableState, useHookstate, useMutableState } from '@ir-engine/hyperflux'
-
-import { ContextMenu } from '@ir-engine/ui/src/components/tailwind/ContextMenu'
-import Accordion from '@ir-engine/ui/src/primitives/tailwind/Accordion'
-import Button from '@ir-engine/ui/src/primitives/tailwind/Button'
-import Checkbox from '@ir-engine/ui/src/primitives/tailwind/Checkbox'
-import Input from '@ir-engine/ui/src/primitives/tailwind/Input'
-import LoadingView from '@ir-engine/ui/src/primitives/tailwind/LoadingView'
-import PopupMenu from '@ir-engine/ui/src/primitives/tailwind/PopupMenu'
-import Text from '@ir-engine/ui/src/primitives/tailwind/Text'
-import Tooltip from '@ir-engine/ui/src/primitives/tailwind/Tooltip'
+import { ContextMenu } from '@xrengine/ui/src/components/tailwind/ContextMenu'
+import Accordion from '@xrengine/ui/src/primitives/tailwind/Accordion'
+import Button from '@xrengine/ui/src/primitives/tailwind/Button'
+import Checkbox from '@xrengine/ui/src/primitives/tailwind/Checkbox'
+import Input from '@xrengine/ui/src/primitives/tailwind/Input'
+import LoadingView from '@xrengine/ui/src/primitives/tailwind/LoadingView'
+import PopupMenu from '@xrengine/ui/src/primitives/tailwind/PopupMenu'
+import Text from '@xrengine/ui/src/primitives/tailwind/Text'
+import Tooltip from '@xrengine/ui/src/primitives/tailwind/Tooltip'
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
@@ -80,48 +55,48 @@ function clipText(text: string, length: number, clipFrom: 'start' | 'end' = 'end
 const OFFICIAL_PROJECTS_DATA = [
   // {
   //   id: '1570ae14-889a-11ec-886e-b126f7590685',
-  //   name: 'ee-ethereal-village',
-  //   repositoryPath: 'https://github.com/ir-engine/ee-ethereal-village',
-  //   thumbnail: 'https://media.githubusercontent.com/media/ir-engine/ee-ethereal-village/dev/thumbnail.png',
+  //   name: 'xrengine-xrengine-village',
+  //   repositoryPath: 'https://github.com/xr-foundation/xrengine-xrengine-village',
+  //   thumbnail: 'https://media.githubusercontent.com/media/xrengine/xrengine-xrengine-village/dev/thumbnail.png',
   //   description: 'A medieval world showcasing advanced open world multiplayer features',
   //   needsRebuild: true
   // },
   // {
   //   id: '1570ae12-889a-11ec-886e-b126f7590685',
-  //   name: 'ee-productivity',
-  //   repositoryPath: 'https://github.com/ir-engine/ee-productivity',
+  //   name: 'xrengine-productivity',
+  //   repositoryPath: 'https://github.com/xr-foundation/xrengine-productivity',
   //   thumbnail: '/static/IR_thumbnail.jpg',
   //   description: 'Utility and productivity tools for Virtual and Augmented Reality',
   //   needsRebuild: true
   // },
   {
     id: '1570ae00-889a-11ec-886e-b126f7590685',
-    name: 'ir-development-test-suite',
-    repositoryPath: 'https://github.com/ir-engine/ir-development-test-suite',
+    name: 'xrengine-development-test-suite',
+    repositoryPath: 'https://github.com/xr-foundation/xrengine-development-test-suite',
     thumbnail: '/static/IR_thumbnail.jpg',
-    description: 'Assets and tests for Infinite Reality Engine core development',
+    description: 'Assets and tests for XREngine core development',
     needsRebuild: true
   },
   // {
   //   id: '1570ae01-889a-11ec-886e-b126f7590685',
-  //   name: 'ee-i18n',
-  //   repositoryPath: 'https://github.com/ir-engine/ee-i18n',
+  //   name: 'xrengine-i18n',
+  //   repositoryPath: 'https://github.com/xr-foundation/xrengine-i18n',
   //   thumbnail: '/static/IR_thumbnail.jpg',
   //   description: 'Complete language translations in over 100 languages',
   //   needsRebuild: true
   // },
   {
     id: '1570ae02-889a-11ec-886e-b126f7590685',
-    name: 'ir-bot',
-    repositoryPath: 'https://github.com/ir-engine/ir-bot',
+    name: 'xrengine-bot',
+    repositoryPath: 'https://github.com/xr-foundation/xrengine-bot',
     thumbnail: '/static/IR_thumbnail.jpg',
     description: 'A test bot using puppeteer',
     needsRebuild: true
   }
   // {
   //   id: '1570ae11-889a-11ec-886e-b126f7590685',
-  //   name: 'ee-maps  ',
-  //   repositoryPath: 'https://github.com/ir-engine/ee-maps',
+  //   name: 'xrengine-maps  ',
+  //   repositoryPath: 'https://github.com/xr-foundation/xrengine-maps',
   //   thumbnail: '/static/IR_thumbnail.jpg',
   //   description: 'Procedurally generated map tiles using geojson data with mapbox and turf.js',
   //   needsRebuild: true
@@ -129,7 +104,7 @@ const OFFICIAL_PROJECTS_DATA = [
   // {
   //   id: '1570ae12-889a-11ec-886e-b126f7590685',
   //   name: 'Inventory',
-  //   repositoryPath: 'https://github.com/ir-engine/ee-inventory',
+  //   repositoryPath: 'https://github.com/xr-foundation/xrengine-inventory',
   //   thumbnail: '/static/IR_thumbnail.jpg',
   //   description:
   //     'Item inventory, trade & virtual currency. Allow your users to use a database, IPFS, DID or blockchain backed item storage for equippables, wearables and tradable items.',
@@ -284,7 +259,7 @@ const ProjectPage = ({ studioPath }: { studioPath: string }) => {
                 <Text component="h3">{clipText(project.name.replace(/-/g, ' '), 25, 'start')}</Text>
               </Tooltip>
 
-              {project.name !== 'ir-engine/default-project' && (
+              {project.name !== 'xrengine/default-project' && (
                 <button
                   className="absolute right-2"
                   onClick={(e: any) => {

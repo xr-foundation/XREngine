@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { GLTF } from '@gltf-transform/core'
 import React, { useEffect, useLayoutEffect } from 'react'
 import { Group, MathUtils, Matrix4, Quaternion, Vector3 } from 'three'
@@ -41,7 +16,7 @@ import {
   UndefinedEntity,
   useComponent,
   UUIDComponent
-} from '@ir-engine/ecs'
+} from '@xrengine/ecs'
 import {
   defineState,
   dispatchAction,
@@ -54,25 +29,25 @@ import {
   Topic,
   useHookstate,
   useMutableState
-} from '@ir-engine/hyperflux'
-import { TransformComponent } from '@ir-engine/spatial'
-import { NameComponent } from '@ir-engine/spatial/src/common/NameComponent'
-import { addObjectToGroup } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { MeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { Object3DComponent } from '@ir-engine/spatial/src/renderer/components/Object3DComponent'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { EntityTreeComponent } from '@ir-engine/spatial/src/transform/components/EntityTree'
+} from '@xrengine/hyperflux'
+import { TransformComponent } from '@xrengine/spatial'
+import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'
+import { addObjectToGroup } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { MeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { Object3DComponent } from '@xrengine/spatial/src/renderer/components/Object3DComponent'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { EntityTreeComponent } from '@xrengine/spatial/src/transform/components/EntityTree'
 
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
-import { Physics } from '@ir-engine/spatial/src/physics/classes/Physics'
-import { SceneComponent } from '@ir-engine/spatial/src/renderer/components/SceneComponents'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
+import { Physics } from '@xrengine/spatial/src/physics/classes/Physics'
+import { SceneComponent } from '@xrengine/spatial/src/renderer/components/SceneComponents'
 import { SourceComponent } from '../scene/components/SourceComponent'
 import { proxifyParentChildRelationships } from '../scene/functions/loadGLTFModel'
 import { GLTFComponent } from './GLTFComponent'
 import { GLTFDocumentState, GLTFModifiedState, GLTFNodeState, GLTFSnapshotAction } from './GLTFDocumentState'
 
 export const GLTFAssetState = defineState({
-  name: 'ee.engine.gltf.GLTFAssetState',
+  name: 'xrengine.engine.gltf.GLTFAssetState',
   initial: {} as Record<string, Entity>, // sceneID => entity
 
   loadScene: (sceneURL: string, uuid: string) => {
@@ -88,7 +63,7 @@ export const GLTFAssetState = defineState({
 })
 
 export const GLTFSourceState = defineState({
-  name: 'ee.engine.gltf.GLTFSourceState',
+  name: 'xrengine.engine.gltf.GLTFSourceState',
   initial: {} as Record<string, Entity>,
 
   /**
@@ -123,7 +98,7 @@ export const GLTFSourceState = defineState({
 })
 
 export const GLTFSnapshotState = defineState({
-  name: 'ee.engine.gltf.GLTFSnapshotState',
+  name: 'xrengine.engine.gltf.GLTFSnapshotState',
   initial: {} as Record<
     string,
     {

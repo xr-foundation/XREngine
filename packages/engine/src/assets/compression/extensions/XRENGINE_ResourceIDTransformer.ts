@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import {
   Extension,
   ExtensionProperty,
@@ -33,19 +8,19 @@ import {
   WriterContext
 } from '@gltf-transform/core'
 
-import { ResourceID } from '@ir-engine/engine/src/assets/classes/ModelTransform'
+import { ResourceID } from '@xrengine/engine/src/assets/classes/ModelTransform'
 
-const EXTENSION_NAME = 'EE_resourceId'
+const EXTENSION_NAME = 'XRENGINE_resourceId'
 
-interface IEEResourceID extends IProperty {
+interface IXRENGINEResourceID extends IProperty {
   resourceId: ResourceID
 }
 
-interface EEResourceIDDef {
+interface XRENGINEResourceIDDef {
   resourceId?: ResourceID
 }
 
-export class EEResourceID extends ExtensionProperty<IEEResourceID> {
+export class XRENGINEResourceID extends ExtensionProperty<IEEResourceID> {
   public static EXTENSION_NAME: string = EXTENSION_NAME
   public declare extensionName: typeof EXTENSION_NAME
   public declare propertyType: 'EEResourceID'
@@ -72,7 +47,7 @@ export class EEResourceID extends ExtensionProperty<IEEResourceID> {
   }
 }
 
-export class EEResourceIDExtension extends Extension {
+export class XRENGINEResourceIDExtension extends Extension {
   public readonly extensionName: string = EXTENSION_NAME
   public static readonly EXTENSION_NAME: string = EXTENSION_NAME
 
@@ -80,9 +55,9 @@ export class EEResourceIDExtension extends Extension {
     const jsonDoc = readerContext.jsonDoc
     ;(jsonDoc.json.textures || []).map((def, idx) => {
       if (def.extensions?.[EXTENSION_NAME]) {
-        const eeResourceID = new EEResourceID(this.document.getGraph())
+        const eeResourceID = new XRENGINEResourceID(this.document.getGraph())
         readerContext.textures[idx].setExtension(EXTENSION_NAME, eeResourceID)
-        const eeDef = def.extensions[EXTENSION_NAME] as EEResourceIDDef
+        const eeDef = def.extensions[EXTENSION_NAME] as XRENGINEResourceIDDef
         eeDef.resourceId && (eeResourceID.resourceId = eeDef.resourceId)
       }
     })
@@ -95,7 +70,7 @@ export class EEResourceIDExtension extends Extension {
       .getRoot()
       .listTextures()
       .map((texture, index) => {
-        const eeResourceID = texture.getExtension(EXTENSION_NAME) as EEResourceID
+        const eeResourceID = texture.getExtension(EXTENSION_NAME) as XRENGINEResourceID
         if (!eeResourceID) return
         const textureDef = jsonDoc.json.textures![index]
       })

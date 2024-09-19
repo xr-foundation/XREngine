@@ -16,9 +16,9 @@
     {
       "name": "Postprocessing",
       "extensions": {
-        "EE_uuid": "10eb1bb2-5cf2-4b4e-abab-3132b3a995fa",
-        "EE_visible": true,
-        "EE_postprocessing": {
+        "XRENGINE_uuid": "10eb1bb2-5cf2-4b4e-abab-3132b3a995fa",
+        "XRENGINE_visible": true,
+        "XRENGINE_postprocessing": {
           "effects": {
             "SSREffect": {
               "isActive": false,
@@ -176,9 +176,9 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_postprocessing",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_postprocessing",
+    "XRENGINE_ecs"
   ]
 }

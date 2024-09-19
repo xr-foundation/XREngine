@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import React, { useEffect } from 'react'
 import {
   Light,
@@ -37,7 +12,7 @@ import {
   Texture
 } from 'three'
 
-import { entityExists, useEntityContext, UUIDComponent } from '@ir-engine/ecs'
+import { entityExists, useEntityContext, UUIDComponent } from '@xrengine/ecs'
 import {
   getComponent,
   getOptionalComponent,
@@ -46,33 +21,33 @@ import {
   serializeComponent,
   setComponent,
   useOptionalComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { ECSState } from '@ir-engine/ecs/src/ECSState'
-import { Entity, EntityUUID } from '@ir-engine/ecs/src/Entity'
-import { defineQuery, QueryReactor } from '@ir-engine/ecs/src/QueryFunctions'
-import { defineSystem } from '@ir-engine/ecs/src/SystemFunctions'
-import { AnimationSystemGroup } from '@ir-engine/ecs/src/SystemGroups'
-import { getMutableState, getState, useHookstate, useImmediateEffect } from '@ir-engine/hyperflux'
-import { CallbackComponent } from '@ir-engine/spatial/src/common/CallbackComponent'
-import { ColliderComponent } from '@ir-engine/spatial/src/physics/components/ColliderComponent'
-import { RigidBodyComponent } from '@ir-engine/spatial/src/physics/components/RigidBodyComponent'
-import { ThreeToPhysics } from '@ir-engine/spatial/src/physics/types/PhysicsTypes'
-import { GroupComponent, GroupQueryReactor } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { MeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { RendererState } from '@ir-engine/spatial/src/renderer/RendererState'
-import { ResourceManager } from '@ir-engine/spatial/src/resources/ResourceState'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { ECSState } from '@xrengine/ecs/src/ECSState'
+import { Entity, EntityUUID } from '@xrengine/ecs/src/Entity'
+import { defineQuery, QueryReactor } from '@xrengine/ecs/src/QueryFunctions'
+import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
+import { AnimationSystemGroup } from '@xrengine/ecs/src/SystemGroups'
+import { getMutableState, getState, useHookstate, useImmediateEffect } from '@xrengine/hyperflux'
+import { CallbackComponent } from '@xrengine/spatial/src/common/CallbackComponent'
+import { ColliderComponent } from '@xrengine/spatial/src/physics/components/ColliderComponent'
+import { RigidBodyComponent } from '@xrengine/spatial/src/physics/components/RigidBodyComponent'
+import { ThreeToPhysics } from '@xrengine/spatial/src/physics/types/PhysicsTypes'
+import { GroupComponent, GroupQueryReactor } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { MeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { RendererState } from '@xrengine/spatial/src/renderer/RendererState'
+import { ResourceManager } from '@xrengine/spatial/src/resources/ResourceState'
 import {
   DistanceFromCameraComponent,
   FrustumCullCameraComponent
-} from '@ir-engine/spatial/src/transform/components/DistanceComponents'
-import { isMobileXRHeadset } from '@ir-engine/spatial/src/xr/XRState'
+} from '@xrengine/spatial/src/transform/components/DistanceComponents'
+import { isMobileXRHeadset } from '@xrengine/spatial/src/xr/XRState'
 
 import {
   MaterialInstanceComponent,
   MaterialStateComponent
-} from '@ir-engine/spatial/src/renderer/materials/MaterialComponent'
-import { createAndAssignMaterial } from '@ir-engine/spatial/src/renderer/materials/materialFunctions'
+} from '@xrengine/spatial/src/renderer/materials/MaterialComponent'
+import { createAndAssignMaterial } from '@xrengine/spatial/src/renderer/materials/materialFunctions'
 import { EnvmapComponent } from '../components/EnvmapComponent'
 import { ModelComponent } from '../components/ModelComponent'
 import { ShadowComponent } from '../components/ShadowComponent'
@@ -288,7 +263,7 @@ const reactor = () => {
 }
 //<QueryReactor Components={[SourceComponent]} ChildEntityReactor={SceneObjectEntityReactor} />
 export const SceneObjectSystem = defineSystem({
-  uuid: 'ee.engine.SceneObjectSystem',
+  uuid: 'xrengine.engine.SceneObjectSystem',
   insert: { after: AnimationSystemGroup },
   execute,
   reactor

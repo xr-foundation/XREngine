@@ -1,9 +1,9 @@
 {
-  "name": "@ir-engine/matchmaking",
+  "name": "@xrengine/matchmaking",
   "version": "1.6.0",
   "author": {
-    "name": "Infinite Reality Engine Collective",
-    "email": "hello@ir-engine.org"
+    "name": "XREngine Collective",
+    "email": "hello@xrfoundation.org"
   },
   "publishConfig": {
     "access": "public"
@@ -16,7 +16,7 @@
   "npmClient": "npm",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ir-engine/ir-engine.git"
+    "url": "git+https://github.com/xr-foundation/xrengine.git"
   },
   "scripts": {
     "check-errors": "tsc --noemit",

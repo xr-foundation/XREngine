@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import detect from 'detect-port'
 import { createWorker } from 'mediasoup'
 import {
@@ -38,35 +13,35 @@ import {
 import { decode } from 'msgpackr'
 import os from 'os'
 
-import { API } from '@ir-engine/common'
-import { dispatchAction, getMutableState, getState, Identifiable, none, PeerID, State } from '@ir-engine/hyperflux'
-import { DataChannelRegistryState, DataChannelType, NetworkState } from '@ir-engine/network'
-import config from '@ir-engine/server-core/src/appconfig'
-import { config as mediaConfig, sctpParameters } from '@ir-engine/server-core/src/config'
-import multiLogger from '@ir-engine/server-core/src/ServerLogger'
-import { ServerState } from '@ir-engine/server-core/src/ServerState'
-import { WebRtcTransportParams } from '@ir-engine/server-core/src/types/WebRtcTransportParams'
+import { API } from '@xrengine/common'
+import { dispatchAction, getMutableState, getState, Identifiable, none, PeerID, State } from '@xrengine/hyperflux'
+import { DataChannelRegistryState, DataChannelType, NetworkState } from '@xrengine/network'
+import config from '@xrengine/server-core/src/appconfig'
+import { config as mediaConfig, sctpParameters } from '@xrengine/server-core/src/config'
+import multiLogger from '@xrengine/server-core/src/ServerLogger'
+import { ServerState } from '@xrengine/server-core/src/ServerState'
+import { WebRtcTransportParams } from '@xrengine/server-core/src/types/WebRtcTransportParams'
 
-import { CREDENTIAL_OFFSET, HASH_ALGORITHM } from '@ir-engine/common/src/constants/DefaultWebRTCSettings'
-import { PUBLIC_STUN_SERVERS } from '@ir-engine/common/src/constants/STUNServers'
-import { MediaStreamAppData } from '@ir-engine/common/src/interfaces/NetworkInterfaces'
-import { IceServerType, instanceServerSettingPath } from '@ir-engine/common/src/schema.type.module'
+import { CREDENTIAL_OFFSET, HASH_ALGORITHM } from '@xrengine/common/src/constants/DefaultWebRTCSettings'
+import { PUBLIC_STUN_SERVERS } from '@xrengine/common/src/constants/STUNServers'
+import { MediaStreamAppData } from '@xrengine/common/src/interfaces/NetworkInterfaces'
+import { IceServerType, instanceServerSettingPath } from '@xrengine/common/src/schema.type.module'
 import {
   MediasoupDataConsumerActions,
   MediasoupDataProducerActions,
   MediasoupDataProducersConsumersObjectsState
-} from '@ir-engine/common/src/transports/mediasoup/MediasoupDataProducerConsumerState'
+} from '@xrengine/common/src/transports/mediasoup/MediasoupDataProducerConsumerState'
 import {
   MediasoupMediaConsumerActions,
   MediasoupMediaProducerActions,
   MediasoupMediaProducerConsumerState,
   MediasoupMediaProducersConsumersObjectsState
-} from '@ir-engine/common/src/transports/mediasoup/MediasoupMediaProducerConsumerState'
+} from '@xrengine/common/src/transports/mediasoup/MediasoupMediaProducerConsumerState'
 import {
   MediasoupTransportActions,
   MediasoupTransportObjectsState,
   MediasoupTransportState
-} from '@ir-engine/common/src/transports/mediasoup/MediasoupTransportState'
+} from '@xrengine/common/src/transports/mediasoup/MediasoupTransportState'
 import crypto from 'crypto'
 import { InstanceServerState } from './InstanceServerState'
 import { MediasoupInternalWebRTCDataChannelState } from './MediasoupInternalWebRTCDataChannelState'

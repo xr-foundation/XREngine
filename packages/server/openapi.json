@@ -1,7 +1,7 @@
 {
     "info": {
-      "title": "iR Engine API Surface",
-      "description": "APIs for the iR Engine application",
+      "title": "XREngine API Surface",
+      "description": "APIs for the XREngine application",
       "version": "1.0.0"
     },
     "paths": {

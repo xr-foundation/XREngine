@@ -113,7 +113,7 @@
             if (document.cookie)
                 data = JSON.parse(document.cookie
                     .split("; ")
-                    .find((row) => row.startsWith('ir.hyperflux.AuthState.authUser='))
+                    .find((row) => row.startsWith('xrengine.hyperflux.AuthState.authUser='))
                     ?.split("=")[1])
             if (data) {
                 const token = data.accessToken
@@ -132,7 +132,7 @@
     </script>
 </head>
 <body>
-    <h2 id="mainText">This site runs on IR Engine. To automatically use your login across all IR Engine-powered sites, please confirm below. If you decline, then each IR Engine-powered site will log in separately, and you will receive this prompt on each site.</h2>
+    <h2 id="mainText">This site runs on XREngine. To automatically use your login across all XREngine-powered sites, please confirm below. If you decline, then each XREngine-powered site will log in separately, and you will receive this prompt on each site.</h2>
     <div class="button-container">
         <button id="confirmButton">Share my login across sites</button>
         <button id="cancelButton">Do not share my login across sites</button>

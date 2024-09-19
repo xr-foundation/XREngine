@@ -15,9 +15,9 @@
     {
       "name": "body",
       "extensions": {
-        "EE_uuid": "1e614ec3-201c-4cfd-95da-07b905257315",
-        "EE_visible": true,
-        "EE_text_spatial": {
+        "XRENGINE_uuid": "1e614ec3-201c-4cfd-95da-07b905257315",
+        "XRENGINE_visible": true,
+        "XRENGINE_text_spatial": {
           "text": "Body",
           "textOpacity": 100,
           "textWidth": null,
@@ -67,9 +67,9 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_text_spatial",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_text_spatial",
+    "XRENGINE_ecs"
   ]
 }

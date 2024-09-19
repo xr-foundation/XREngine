@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import packagejson from '../../package.json'
 
 const engineVersion = packagejson.version
@@ -82,12 +57,12 @@ export const getTestRepoCommit = () => ({
   node_id: 'C_kwDOJOElGdoAKDkxNTdkYmEwMTdlZGU1NTg1YmVhY2ZmZTc2NTI2MDE0M2M5ZDYyMTI',
   commit: {
     author: {
-      name: 'HexaField',
+      name: 'lalalune',
       email: 'fakeemail@github.com',
       date: '2023-10-13T02:23:53Z'
     },
     committer: {
-      name: 'HexaField',
+      name: 'lalalune',
       email: 'fakeemail@github.com',
       date: '2023-10-13T02:23:53Z'
     },
@@ -110,42 +85,42 @@ export const getTestRepoCommit = () => ({
   comments_url:
     'https://api.github.com/repos/MyOrg/my-first-project/commits/9157dba017ede5585beacffe765260143c9d6212/comments',
   author: {
-    login: 'HexaField',
+    login: 'lalalune',
     id: 10372036,
     node_id: 'MDQ6VXNlcjEwMzcyMDM2',
     avatar_url: 'https://avatars.githubusercontent.com/u/10372036?v=4',
     gravatar_id: '',
-    url: 'https://api.github.com/users/HexaField',
-    html_url: 'https://github.com/HexaField',
-    followers_url: 'https://api.github.com/users/HexaField/followers',
-    following_url: 'https://api.github.com/users/HexaField/following{/other_user}',
-    gists_url: 'https://api.github.com/users/HexaField/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/HexaField/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/HexaField/subscriptions',
-    organizations_url: 'https://api.github.com/users/HexaField/orgs',
-    repos_url: 'https://api.github.com/users/HexaField/repos',
-    events_url: 'https://api.github.com/users/HexaField/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/HexaField/received_events',
+    url: 'https://api.github.com/users/lalalune',
+    html_url: 'https://github.com/lalalune',
+    followers_url: 'https://api.github.com/users/lalalune/followers',
+    following_url: 'https://api.github.com/users/lalalune/following{/other_user}',
+    gists_url: 'https://api.github.com/users/lalalune/gists{/gist_id}',
+    starred_url: 'https://api.github.com/users/lalalune/starred{/owner}{/repo}',
+    subscriptions_url: 'https://api.github.com/users/lalalune/subscriptions',
+    organizations_url: 'https://api.github.com/users/lalalune/orgs',
+    repos_url: 'https://api.github.com/users/lalalune/repos',
+    events_url: 'https://api.github.com/users/lalalune/events{/privacy}',
+    received_events_url: 'https://api.github.com/users/lalalune/received_events',
     type: 'User',
     site_admin: false
   },
   committer: {
-    login: 'HexaField',
+    login: 'lalalune',
     id: 10372036,
     node_id: 'MDQ6VXNlcjEwMzcyMDM2',
     avatar_url: 'https://avatars.githubusercontent.com/u/10372036?v=4',
     gravatar_id: '',
-    url: 'https://api.github.com/users/HexaField',
-    html_url: 'https://github.com/HexaField',
-    followers_url: 'https://api.github.com/users/HexaField/followers',
-    following_url: 'https://api.github.com/users/HexaField/following{/other_user}',
-    gists_url: 'https://api.github.com/users/HexaField/gists{/gist_id}',
-    starred_url: 'https://api.github.com/users/HexaField/starred{/owner}{/repo}',
-    subscriptions_url: 'https://api.github.com/users/HexaField/subscriptions',
-    organizations_url: 'https://api.github.com/users/HexaField/orgs',
-    repos_url: 'https://api.github.com/users/HexaField/repos',
-    events_url: 'https://api.github.com/users/HexaField/events{/privacy}',
-    received_events_url: 'https://api.github.com/users/HexaField/received_events',
+    url: 'https://api.github.com/users/lalalune',
+    html_url: 'https://github.com/lalalune',
+    followers_url: 'https://api.github.com/users/lalalune/followers',
+    following_url: 'https://api.github.com/users/lalalune/following{/other_user}',
+    gists_url: 'https://api.github.com/users/lalalune/gists{/gist_id}',
+    starred_url: 'https://api.github.com/users/lalalune/starred{/owner}{/repo}',
+    subscriptions_url: 'https://api.github.com/users/lalalune/subscriptions',
+    organizations_url: 'https://api.github.com/users/lalalune/orgs',
+    repos_url: 'https://api.github.com/users/lalalune/repos',
+    events_url: 'https://api.github.com/users/lalalune/events{/privacy}',
+    received_events_url: 'https://api.github.com/users/lalalune/received_events',
     type: 'User',
     site_admin: false
   },
@@ -315,12 +290,12 @@ export const getTestRepoCommits = () => [
     node_id: 'C_kwDOJOElGdoAKDkxNTdkYmEwMTdlZGU1NTg1YmVhY2ZmZTc2NTI2MDE0M2M5ZDYyMTI',
     commit: {
       author: {
-        name: 'HexaField',
+        name: 'lalalune',
         email: 'fakeemail@github.com',
         date: '2023-10-13T02:23:53Z'
       },
       committer: {
-        name: 'HexaField',
+        name: 'lalalune',
         email: 'fakeemail@github.com',
         date: '2023-10-13T02:23:53Z'
       },
@@ -343,42 +318,42 @@ export const getTestRepoCommits = () => [
     comments_url:
       'https://api.github.com/repos/MyOrg/my-first-project/commits/9157dba017ede5585beacffe765260143c9d6212/comments',
     author: {
-      login: 'HexaField',
+      login: 'lalalune',
       id: 10372036,
       node_id: 'MDQ6VXNlcjEwMzcyMDM2',
       avatar_url: 'https://avatars.githubusercontent.com/u/10372036?v=4',
       gravatar_id: '',
-      url: 'https://api.github.com/users/HexaField',
-      html_url: 'https://github.com/HexaField',
-      followers_url: 'https://api.github.com/users/HexaField/followers',
-      following_url: 'https://api.github.com/users/HexaField/following{/other_user}',
-      gists_url: 'https://api.github.com/users/HexaField/gists{/gist_id}',
-      starred_url: 'https://api.github.com/users/HexaField/starred{/owner}{/repo}',
-      subscriptions_url: 'https://api.github.com/users/HexaField/subscriptions',
-      organizations_url: 'https://api.github.com/users/HexaField/orgs',
-      repos_url: 'https://api.github.com/users/HexaField/repos',
-      events_url: 'https://api.github.com/users/HexaField/events{/privacy}',
-      received_events_url: 'https://api.github.com/users/HexaField/received_events',
+      url: 'https://api.github.com/users/lalalune',
+      html_url: 'https://github.com/lalalune',
+      followers_url: 'https://api.github.com/users/lalalune/followers',
+      following_url: 'https://api.github.com/users/lalalune/following{/other_user}',
+      gists_url: 'https://api.github.com/users/lalalune/gists{/gist_id}',
+      starred_url: 'https://api.github.com/users/lalalune/starred{/owner}{/repo}',
+      subscriptions_url: 'https://api.github.com/users/lalalune/subscriptions',
+      organizations_url: 'https://api.github.com/users/lalalune/orgs',
+      repos_url: 'https://api.github.com/users/lalalune/repos',
+      events_url: 'https://api.github.com/users/lalalune/events{/privacy}',
+      received_events_url: 'https://api.github.com/users/lalalune/received_events',
       type: 'User',
       site_admin: false
     },
     committer: {
-      login: 'HexaField',
+      login: 'lalalune',
       id: 10372036,
       node_id: 'MDQ6VXNlcjEwMzcyMDM2',
       avatar_url: 'https://avatars.githubusercontent.com/u/10372036?v=4',
       gravatar_id: '',
-      url: 'https://api.github.com/users/HexaField',
-      html_url: 'https://github.com/HexaField',
-      followers_url: 'https://api.github.com/users/HexaField/followers',
-      following_url: 'https://api.github.com/users/HexaField/following{/other_user}',
-      gists_url: 'https://api.github.com/users/HexaField/gists{/gist_id}',
-      starred_url: 'https://api.github.com/users/HexaField/starred{/owner}{/repo}',
-      subscriptions_url: 'https://api.github.com/users/HexaField/subscriptions',
-      organizations_url: 'https://api.github.com/users/HexaField/orgs',
-      repos_url: 'https://api.github.com/users/HexaField/repos',
-      events_url: 'https://api.github.com/users/HexaField/events{/privacy}',
-      received_events_url: 'https://api.github.com/users/HexaField/received_events',
+      url: 'https://api.github.com/users/lalalune',
+      html_url: 'https://github.com/lalalune',
+      followers_url: 'https://api.github.com/users/lalalune/followers',
+      following_url: 'https://api.github.com/users/lalalune/following{/other_user}',
+      gists_url: 'https://api.github.com/users/lalalune/gists{/gist_id}',
+      starred_url: 'https://api.github.com/users/lalalune/starred{/owner}{/repo}',
+      subscriptions_url: 'https://api.github.com/users/lalalune/subscriptions',
+      organizations_url: 'https://api.github.com/users/lalalune/orgs',
+      repos_url: 'https://api.github.com/users/lalalune/repos',
+      events_url: 'https://api.github.com/users/lalalune/events{/privacy}',
+      received_events_url: 'https://api.github.com/users/lalalune/received_events',
       type: 'User',
       site_admin: false
     },
@@ -395,12 +370,12 @@ export const getTestRepoCommits = () => [
     node_id: 'C_kwDOJOElGdoAKGJkOGU0MTU0MjAwNTIyMjJhNzk1M2QxNDliMWQ1YmE5MTUzYmM4NGE',
     commit: {
       author: {
-        name: 'HexaField',
+        name: 'lalalune',
         email: 'fakeemail@github.com',
         date: '2023-10-03T10:40:09Z'
       },
       committer: {
-        name: 'HexaField',
+        name: 'lalalune',
         email: 'fakeemail@github.com',
         date: '2023-10-03T10:40:09Z'
       },
@@ -423,42 +398,42 @@ export const getTestRepoCommits = () => [
     comments_url:
       'https://api.github.com/repos/MyOrg/my-first-project/commits/bd8e415420052222a7953d149b1d5ba9153bc84a/comments',
     author: {
-      login: 'HexaField',
+      login: 'lalalune',
       id: 10372036,
       node_id: 'MDQ6VXNlcjEwMzcyMDM2',
       avatar_url: 'https://avatars.githubusercontent.com/u/10372036?v=4',
       gravatar_id: '',
-      url: 'https://api.github.com/users/HexaField',
-      html_url: 'https://github.com/HexaField',
-      followers_url: 'https://api.github.com/users/HexaField/followers',
-      following_url: 'https://api.github.com/users/HexaField/following{/other_user}',
-      gists_url: 'https://api.github.com/users/HexaField/gists{/gist_id}',
-      starred_url: 'https://api.github.com/users/HexaField/starred{/owner}{/repo}',
-      subscriptions_url: 'https://api.github.com/users/HexaField/subscriptions',
-      organizations_url: 'https://api.github.com/users/HexaField/orgs',
-      repos_url: 'https://api.github.com/users/HexaField/repos',
-      events_url: 'https://api.github.com/users/HexaField/events{/privacy}',
-      received_events_url: 'https://api.github.com/users/HexaField/received_events',
+      url: 'https://api.github.com/users/lalalune',
+      html_url: 'https://github.com/lalalune',
+      followers_url: 'https://api.github.com/users/lalalune/followers',
+      following_url: 'https://api.github.com/users/lalalune/following{/other_user}',
+      gists_url: 'https://api.github.com/users/lalalune/gists{/gist_id}',
+      starred_url: 'https://api.github.com/users/lalalune/starred{/owner}{/repo}',
+      subscriptions_url: 'https://api.github.com/users/lalalune/subscriptions',
+      organizations_url: 'https://api.github.com/users/lalalune/orgs',
+      repos_url: 'https://api.github.com/users/lalalune/repos',
+      events_url: 'https://api.github.com/users/lalalune/events{/privacy}',
+      received_events_url: 'https://api.github.com/users/lalalune/received_events',
       type: 'User',
       site_admin: false
     },
     committer: {
-      login: 'HexaField',
+      login: 'lalalune',
       id: 10372036,
       node_id: 'MDQ6VXNlcjEwMzcyMDM2',
       avatar_url: 'https://avatars.githubusercontent.com/u/10372036?v=4',
       gravatar_id: '',
-      url: 'https://api.github.com/users/HexaField',
-      html_url: 'https://github.com/HexaField',
-      followers_url: 'https://api.github.com/users/HexaField/followers',
-      following_url: 'https://api.github.com/users/HexaField/following{/other_user}',
-      gists_url: 'https://api.github.com/users/HexaField/gists{/gist_id}',
-      starred_url: 'https://api.github.com/users/HexaField/starred{/owner}{/repo}',
-      subscriptions_url: 'https://api.github.com/users/HexaField/subscriptions',
-      organizations_url: 'https://api.github.com/users/HexaField/orgs',
-      repos_url: 'https://api.github.com/users/HexaField/repos',
-      events_url: 'https://api.github.com/users/HexaField/events{/privacy}',
-      received_events_url: 'https://api.github.com/users/HexaField/received_events',
+      url: 'https://api.github.com/users/lalalune',
+      html_url: 'https://github.com/lalalune',
+      followers_url: 'https://api.github.com/users/lalalune/followers',
+      following_url: 'https://api.github.com/users/lalalune/following{/other_user}',
+      gists_url: 'https://api.github.com/users/lalalune/gists{/gist_id}',
+      starred_url: 'https://api.github.com/users/lalalune/starred{/owner}{/repo}',
+      subscriptions_url: 'https://api.github.com/users/lalalune/subscriptions',
+      organizations_url: 'https://api.github.com/users/lalalune/orgs',
+      repos_url: 'https://api.github.com/users/lalalune/repos',
+      events_url: 'https://api.github.com/users/lalalune/events{/privacy}',
+      received_events_url: 'https://api.github.com/users/lalalune/received_events',
       type: 'User',
       site_admin: false
     },
@@ -475,12 +450,12 @@ export const getTestRepoCommits = () => [
     node_id: 'C_kwDOJOElGdoAKGY1ZTBmNzE3NWY0MzMyYmZlZmQzNTg0ODhlNmJjNjE4NjhlZmQ5MGE',
     commit: {
       author: {
-        name: 'HexaField',
+        name: 'lalalune',
         email: 'fakeemail@github.com',
         date: '2023-09-25T05:06:03Z'
       },
       committer: {
-        name: 'HexaField',
+        name: 'lalalune',
         email: 'fakeemail@github.com',
         date: '2023-09-25T05:06:03Z'
       },
@@ -503,42 +478,42 @@ export const getTestRepoCommits = () => [
     comments_url:
       'https://api.github.com/repos/MyOrg/my-first-project/commits/f5e0f7175f4332bfefd358488e6bc61868efd90a/comments',
     author: {
-      login: 'HexaField',
+      login: 'lalalune',
       id: 10372036,
       node_id: 'MDQ6VXNlcjEwMzcyMDM2',
       avatar_url: 'https://avatars.githubusercontent.com/u/10372036?v=4',
       gravatar_id: '',
-      url: 'https://api.github.com/users/HexaField',
-      html_url: 'https://github.com/HexaField',
-      followers_url: 'https://api.github.com/users/HexaField/followers',
-      following_url: 'https://api.github.com/users/HexaField/following{/other_user}',
-      gists_url: 'https://api.github.com/users/HexaField/gists{/gist_id}',
-      starred_url: 'https://api.github.com/users/HexaField/starred{/owner}{/repo}',
-      subscriptions_url: 'https://api.github.com/users/HexaField/subscriptions',
-      organizations_url: 'https://api.github.com/users/HexaField/orgs',
-      repos_url: 'https://api.github.com/users/HexaField/repos',
-      events_url: 'https://api.github.com/users/HexaField/events{/privacy}',
-      received_events_url: 'https://api.github.com/users/HexaField/received_events',
+      url: 'https://api.github.com/users/lalalune',
+      html_url: 'https://github.com/lalalune',
+      followers_url: 'https://api.github.com/users/lalalune/followers',
+      following_url: 'https://api.github.com/users/lalalune/following{/other_user}',
+      gists_url: 'https://api.github.com/users/lalalune/gists{/gist_id}',
+      starred_url: 'https://api.github.com/users/lalalune/starred{/owner}{/repo}',
+      subscriptions_url: 'https://api.github.com/users/lalalune/subscriptions',
+      organizations_url: 'https://api.github.com/users/lalalune/orgs',
+      repos_url: 'https://api.github.com/users/lalalune/repos',
+      events_url: 'https://api.github.com/users/lalalune/events{/privacy}',
+      received_events_url: 'https://api.github.com/users/lalalune/received_events',
       type: 'User',
       site_admin: false
     },
     committer: {
-      login: 'HexaField',
+      login: 'lalalune',
       id: 10372036,
       node_id: 'MDQ6VXNlcjEwMzcyMDM2',
       avatar_url: 'https://avatars.githubusercontent.com/u/10372036?v=4',
       gravatar_id: '',
-      url: 'https://api.github.com/users/HexaField',
-      html_url: 'https://github.com/HexaField',
-      followers_url: 'https://api.github.com/users/HexaField/followers',
-      following_url: 'https://api.github.com/users/HexaField/following{/other_user}',
-      gists_url: 'https://api.github.com/users/HexaField/gists{/gist_id}',
-      starred_url: 'https://api.github.com/users/HexaField/starred{/owner}{/repo}',
-      subscriptions_url: 'https://api.github.com/users/HexaField/subscriptions',
-      organizations_url: 'https://api.github.com/users/HexaField/orgs',
-      repos_url: 'https://api.github.com/users/HexaField/repos',
-      events_url: 'https://api.github.com/users/HexaField/events{/privacy}',
-      received_events_url: 'https://api.github.com/users/HexaField/received_events',
+      url: 'https://api.github.com/users/lalalune',
+      html_url: 'https://github.com/lalalune',
+      followers_url: 'https://api.github.com/users/lalalune/followers',
+      following_url: 'https://api.github.com/users/lalalune/following{/other_user}',
+      gists_url: 'https://api.github.com/users/lalalune/gists{/gist_id}',
+      starred_url: 'https://api.github.com/users/lalalune/starred{/owner}{/repo}',
+      subscriptions_url: 'https://api.github.com/users/lalalune/subscriptions',
+      organizations_url: 'https://api.github.com/users/lalalune/orgs',
+      repos_url: 'https://api.github.com/users/lalalune/repos',
+      events_url: 'https://api.github.com/users/lalalune/events{/privacy}',
+      received_events_url: 'https://api.github.com/users/lalalune/received_events',
       type: 'User',
       site_admin: false
     },

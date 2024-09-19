@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { useEffect } from 'react'
 import {
   AdditiveBlending,
@@ -40,27 +15,27 @@ import {
   Vector3
 } from 'three'
 
-import { getComponent, setComponent } from '@ir-engine/ecs/src/ComponentFunctions'
-import { ECSState } from '@ir-engine/ecs/src/ECSState'
-import { Entity } from '@ir-engine/ecs/src/Entity'
-import { createEntity, removeEntity } from '@ir-engine/ecs/src/EntityFunctions'
-import { defineQuery } from '@ir-engine/ecs/src/QueryFunctions'
-import { defineSystem } from '@ir-engine/ecs/src/SystemFunctions'
-import { defineState, dispatchAction, getMutableState, getState } from '@ir-engine/hyperflux'
-import { CameraActions } from '@ir-engine/spatial/src/camera/CameraState'
-import checkPositionIsValid from '@ir-engine/spatial/src/common/functions/checkPositionIsValid'
-import { createTransitionState } from '@ir-engine/spatial/src/common/functions/createTransitionState'
-import { easeOutCubic, normalizeRange } from '@ir-engine/spatial/src/common/functions/MathFunctions'
-import { NameComponent } from '@ir-engine/spatial/src/common/NameComponent'
-import { InputSourceComponent } from '@ir-engine/spatial/src/input/components/InputSourceComponent'
-import { addObjectToGroup } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { setVisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
-import { ReferenceSpace, XRAction, XRState } from '@ir-engine/spatial/src/xr/XRState'
+import { getComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'
+import { ECSState } from '@xrengine/ecs/src/ECSState'
+import { Entity } from '@xrengine/ecs/src/Entity'
+import { createEntity, removeEntity } from '@xrengine/ecs/src/EntityFunctions'
+import { defineQuery } from '@xrengine/ecs/src/QueryFunctions'
+import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
+import { defineState, dispatchAction, getMutableState, getState } from '@xrengine/hyperflux'
+import { CameraActions } from '@xrengine/spatial/src/camera/CameraState'
+import checkPositionIsValid from '@xrengine/spatial/src/common/functions/checkPositionIsValid'
+import { createTransitionState } from '@xrengine/spatial/src/common/functions/createTransitionState'
+import { easeOutCubic, normalizeRange } from '@xrengine/spatial/src/common/functions/MathFunctions'
+import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'
+import { InputSourceComponent } from '@xrengine/spatial/src/input/components/InputSourceComponent'
+import { addObjectToGroup } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { setVisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
+import { ReferenceSpace, XRAction, XRState } from '@xrengine/spatial/src/xr/XRState'
 
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
-import { Physics } from '@ir-engine/spatial/src/physics/classes/Physics'
-import { EntityTreeComponent } from '@ir-engine/spatial/src/transform/components/EntityTree'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
+import { Physics } from '@xrengine/spatial/src/physics/classes/Physics'
+import { EntityTreeComponent } from '@xrengine/spatial/src/transform/components/EntityTree'
 import { AvatarTeleportComponent } from '.././components/AvatarTeleportComponent'
 import { teleportAvatar } from '.././functions/moveAvatar'
 import { AvatarComponent } from '../components/AvatarComponent'
@@ -319,7 +294,7 @@ const reactor = () => {
 }
 
 export const AvatarTeleportSystem = defineSystem({
-  uuid: 'ee.engine.AvatarTeleportSystem',
+  uuid: 'xrengine.engine.AvatarTeleportSystem',
   insert: { after: AvatarAnimationSystem },
   execute,
   reactor

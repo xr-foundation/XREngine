@@ -16,24 +16,24 @@
     {
       "name": "3D Model",
       "extensions": {
-        "EE_uuid": "9a88d4b8-1605-4ecf-b0a2-b083d0231c4f",
-        "EE_visible": true,
-        "EE_model": {
+        "XRENGINE_uuid": "9a88d4b8-1605-4ecf-b0a2-b083d0231c4f",
+        "XRENGINE_visible": true,
+        "XRENGINE_model": {
           "src": "",
           "cameraOcclusion": true,
           "convertToVRM": false
         },
-        "EE_input": {
+        "XRENGINE_input": {
           "inputSinks": [
             "9a88d4b8-1605-4ecf-b0a2-b083d0231c4f"
           ],
           "activationDistance": 2
         },
-        "EE_shadow": {
+        "XRENGINE_shadow": {
           "cast": true,
           "receive": true
         },
-        "EE_loop_animation": {
+        "XRENGINE_loop_animation": {
           "activeClipIndex": -1,
           "animationPack": "",
           "paused": false,
@@ -46,7 +46,7 @@
           "zeroSlopeAtEnd": true,
           "weight": 1
         },
-        "EE_envmap": {
+        "XRENGINE_envmap": {
           "type": "Skybox",
           "envMapTextureType": "Equirectangular",
           "envMapSourceColor": 4095,
@@ -58,13 +58,13 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_model",
-    "EE_input",
-    "EE_shadow",
-    "EE_loop_animation",
-    "EE_envmap",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_model",
+    "XRENGINE_input",
+    "XRENGINE_shadow",
+    "XRENGINE_loop_animation",
+    "XRENGINE_envmap",
+    "XRENGINE_ecs"
   ]
 }

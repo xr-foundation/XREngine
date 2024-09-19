@@ -1,27 +1,4 @@
-/*
-CPAL-1.0 License
 
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
 import '../../..'
 
 import { RigidBodyType, ShapeType, TempContactForceEvent, Vector, World } from '@dimforge/rapier3d-compat'
@@ -36,12 +13,12 @@ import {
   hasComponent,
   removeComponent,
   setComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { destroyEngine } from '@ir-engine/ecs/src/Engine'
-import { createEntity } from '@ir-engine/ecs/src/EntityFunctions'
-import { getState } from '@ir-engine/hyperflux'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { destroyEngine } from '@xrengine/ecs/src/Engine'
+import { createEntity } from '@xrengine/ecs/src/EntityFunctions'
+import { getState } from '@xrengine/hyperflux'
 
-import { createEngine } from '@ir-engine/ecs/src/Engine'
+import { createEngine } from '@xrengine/ecs/src/Engine'
 import { ObjectDirection, Vector3_Zero } from '../../common/constants/MathConstants'
 import { TransformComponent } from '../../transform/components/TransformComponent'
 import { computeTransformMatrix } from '../../transform/systems/TransformSystem'
@@ -56,7 +33,7 @@ import { TriggerComponent } from '../components/TriggerComponent'
 import { AllCollisionMask, CollisionGroups, DefaultCollisionMask } from '../enums/CollisionGroups'
 import { getInteractionGroups } from '../functions/getInteractionGroups'
 
-import { Entity, EntityUUID, SystemDefinitions, UUIDComponent, UndefinedEntity, removeEntity } from '@ir-engine/ecs'
+import { Entity, EntityUUID, SystemDefinitions, UUIDComponent, UndefinedEntity, removeEntity } from '@xrengine/ecs'
 import { act, render } from '@testing-library/react'
 import React from 'react'
 import { MeshComponent } from '../../renderer/components/MeshComponent'

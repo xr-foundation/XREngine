@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { Easing, Tween } from '@tweenjs/tween.js'
 import { useEffect } from 'react'
 import { AdditiveBlending, DoubleSide, Mesh, MeshBasicMaterial, PlaneGeometry, Vector3 } from 'three'
@@ -33,21 +8,21 @@ import {
   getMutableComponent,
   removeComponent,
   setComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { Entity } from '@ir-engine/ecs/src/Entity'
-import { createEntity, removeEntity, useEntityContext } from '@ir-engine/ecs/src/EntityFunctions'
-import { S } from '@ir-engine/ecs/src/schemas/JSONSchemas'
-import { NameComponent } from '@ir-engine/spatial/src/common/NameComponent'
-import { ObjectDirection, Vector3_Right, Vector3_Up } from '@ir-engine/spatial/src/common/constants/MathConstants'
-import { Physics, RaycastArgs } from '@ir-engine/spatial/src/physics/classes/Physics'
-import { AvatarCollisionMask, CollisionGroups } from '@ir-engine/spatial/src/physics/enums/CollisionGroups'
-import { getInteractionGroups } from '@ir-engine/spatial/src/physics/functions/getInteractionGroups'
-import { SceneQueryType } from '@ir-engine/spatial/src/physics/types/PhysicsTypes'
-import { addObjectToGroup } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { VisibleComponent, setVisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { EntityTreeComponent } from '@ir-engine/spatial/src/transform/components/EntityTree'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
-import { TweenComponent } from '@ir-engine/spatial/src/transform/components/TweenComponent'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { Entity } from '@xrengine/ecs/src/Entity'
+import { createEntity, removeEntity, useEntityContext } from '@xrengine/ecs/src/EntityFunctions'
+import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
+import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'
+import { ObjectDirection, Vector3_Right, Vector3_Up } from '@xrengine/spatial/src/common/constants/MathConstants'
+import { Physics, RaycastArgs } from '@xrengine/spatial/src/physics/classes/Physics'
+import { AvatarCollisionMask, CollisionGroups } from '@xrengine/spatial/src/physics/enums/CollisionGroups'
+import { getInteractionGroups } from '@xrengine/spatial/src/physics/functions/getInteractionGroups'
+import { SceneQueryType } from '@xrengine/spatial/src/physics/types/PhysicsTypes'
+import { addObjectToGroup } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { VisibleComponent, setVisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { EntityTreeComponent } from '@xrengine/spatial/src/transform/components/EntityTree'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
+import { TweenComponent } from '@xrengine/spatial/src/transform/components/TweenComponent'
 
 export const SpawnEffectComponent = defineComponent({
   name: 'SpawnEffectComponent',

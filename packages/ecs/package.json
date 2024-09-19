@@ -1,20 +1,20 @@
 {
-  "name": "@ir-engine/ecs",
+  "name": "@xrengine/ecs",
   "version": "1.6.0",
   "main": "index.ts",
   "publishConfig": {
     "access": "public"
   },
-  "description": "Core execution context for the Infinite Reality Engine",
+  "description": "Core execution context for the XREngine",
   "scripts": {
     "check-errors": "tsc --noemit",
     "test": "mocha --jobs 1"
   },
-  "repository": "http://github.com/ir-engine/ir-engine",
-  "author": "Infinite Reality Engine",
+  "repository": "http://github.com/xr-foundation/xrengine",
+  "author": "XREngine",
   "license": "CPAL",
   "dependencies": {
-    "@ir-engine/hyperflux": "^1.6.0",
+    "@xrengine/hyperflux": "^1.6.0",
     "bitecs": "0.3.40",
     "uuid": "9.0.0"
   },

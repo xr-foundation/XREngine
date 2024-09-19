@@ -1,33 +1,8 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import type Hls from 'hls.js'
 import { useEffect, useLayoutEffect } from 'react'
 import { DoubleSide, MeshBasicMaterial, PlaneGeometry } from 'three'
 
-import { ComponentType, Engine } from '@ir-engine/ecs'
+import { ComponentType, Engine } from '@xrengine/ecs'
 import {
   defineComponent,
   getComponent,
@@ -38,17 +13,17 @@ import {
   setComponent,
   useComponent,
   useOptionalComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { Entity } from '@ir-engine/ecs/src/Entity'
-import { entityExists, useEntityContext } from '@ir-engine/ecs/src/EntityFunctions'
-import { State, getMutableState, getState, isClient, useHookstate } from '@ir-engine/hyperflux'
-import { DebugMeshComponent } from '@ir-engine/spatial/src/common/debug/DebugMeshComponent'
-import { InputComponent } from '@ir-engine/spatial/src/input/components/InputComponent'
-import { RendererState } from '@ir-engine/spatial/src/renderer/RendererState'
-import { RendererComponent } from '@ir-engine/spatial/src/renderer/WebGLRendererSystem'
-import { BoundingBoxComponent } from '@ir-engine/spatial/src/transform/components/BoundingBoxComponents'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { Entity } from '@xrengine/ecs/src/Entity'
+import { entityExists, useEntityContext } from '@xrengine/ecs/src/EntityFunctions'
+import { State, getMutableState, getState, isClient, useHookstate } from '@xrengine/hyperflux'
+import { DebugMeshComponent } from '@xrengine/spatial/src/common/debug/DebugMeshComponent'
+import { InputComponent } from '@xrengine/spatial/src/input/components/InputComponent'
+import { RendererState } from '@xrengine/spatial/src/renderer/RendererState'
+import { RendererComponent } from '@xrengine/spatial/src/renderer/WebGLRendererSystem'
+import { BoundingBoxComponent } from '@xrengine/spatial/src/transform/components/BoundingBoxComponents'
 
-import { S } from '@ir-engine/ecs/src/schemas/JSONSchemas'
+import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
 import { AssetLoader } from '../../assets/classes/AssetLoader'
 import { useTexture } from '../../assets/functions/resourceLoaderHooks'
 import { AudioState } from '../../audio/AudioState'
@@ -130,7 +105,7 @@ export const MediaElementComponent = defineComponent({
 
 export const MediaComponent = defineComponent({
   name: 'MediaComponent',
-  jsonID: 'EE_media',
+  jsonID: 'XRENGINE_media',
 
   schema: S.Object({
     controls: S.Bool(false),

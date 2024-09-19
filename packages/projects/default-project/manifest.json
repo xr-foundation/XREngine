@@ -1,7 +1,7 @@
 {
-  "name": "ir-engine/default-project",
+  "name": "xrengine/default-project",
   "version": "0.0.0",
   "engineVersion": "1.6.0",
-  "description": "The default project for iR Engine",
+  "description": "The default project for XREngine",
   "thumbnail": "/static/IR_thumbnail.jpg"
 }

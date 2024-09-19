@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apiName="${RELEASE_NAME}-ir-engine-api"
-clientName="${RELEASE_NAME}-ir-engine-client"
+apiName="${RELEASE_NAME}-xrengine-api"
+clientName="${RELEASE_NAME}-xrengine-client"
 instanceserverName="${RELEASE_NAME}-instanceserver"
 
 apiCount=$(kubectl get deploy $apiName -o jsonpath='{.status.availableReplicas}')
@@ -49,5 +49,5 @@ until [ "${instanceserverCount}" -ge 1 ]; do
     echo "Instanceserver ready count: $instanceserverCount"
 done
 
-echo "Infinite Reality Engine is now ready"
+echo "XREngine is now ready"
 exit 0

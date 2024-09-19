@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { useEffect } from 'react'
 import { MathUtils } from 'three'
 
@@ -35,24 +10,24 @@ import {
   UndefinedEntity,
   useComponent,
   useEntityContext
-} from '@ir-engine/ecs'
+} from '@xrengine/ecs'
 import {
   SnapMode,
   TransformAxis,
   TransformMode,
   TransformSpace
-} from '@ir-engine/engine/src/scene/constants/transformConstants'
-import { getState, useImmediateEffect, useMutableState } from '@ir-engine/hyperflux'
-import { InputComponent, InputExecutionOrder } from '@ir-engine/spatial/src/input/components/InputComponent'
-import { addObjectToGroup } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { RendererComponent } from '@ir-engine/spatial/src/renderer/WebGLRendererSystem'
-import { TransformGizmoTagComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
+} from '@xrengine/engine/src/scene/constants/transformConstants'
+import { getState, useImmediateEffect, useMutableState } from '@xrengine/hyperflux'
+import { InputComponent, InputExecutionOrder } from '@xrengine/spatial/src/input/components/InputComponent'
+import { addObjectToGroup } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { RendererComponent } from '@xrengine/spatial/src/renderer/WebGLRendererSystem'
+import { TransformGizmoTagComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
 
-import { S } from '@ir-engine/ecs/src/schemas/JSONSchemas'
-import { InputPointerComponent } from '@ir-engine/spatial/src/input/components/InputPointerComponent'
-import { InputState } from '@ir-engine/spatial/src/input/state/InputState'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { ObjectLayers } from '@ir-engine/spatial/src/renderer/constants/ObjectLayers'
+import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
+import { InputPointerComponent } from '@xrengine/spatial/src/input/components/InputPointerComponent'
+import { InputState } from '@xrengine/spatial/src/input/state/InputState'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { ObjectLayers } from '@xrengine/spatial/src/renderer/constants/ObjectLayers'
 import { gizmoPlane } from '../constants/GizmoPresets'
 import {
   onGizmoCommit,

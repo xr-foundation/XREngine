@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import {
   Extension,
   ExtensionProperty,
@@ -37,48 +12,48 @@ import {
 } from '@gltf-transform/core'
 import { KHRTextureTransform } from '@gltf-transform/extensions'
 
-const EXTENSION_NAME = 'EE_material'
+const EXTENSION_NAME = 'XRENGINE_material'
 
-interface IEEArgEntry extends IProperty {
+interface IXRENGINEArgEntry extends IProperty {
   type: string
   contents: any
 }
 
-interface IEEArgs extends IProperty {
+interface IXRENGINEArgs extends IProperty {
   [field: string]: any
 }
 
-interface IEEMaterial extends IProperty {
+interface IXRENGINEMaterial extends IProperty {
   uuid: string
   name: string
   prototype: string
-  args: EEMaterialArgs
+  args: XRENGINEMaterialArgs
   plugins: string[]
 }
 
-interface EEArgsDef {
+interface XRENGINEArgsDef {
   type?: string
   contents?: any
 }
 
-interface EEArgs {
-  [field: string]: EEArgsDef
+interface XRENGINEArgs {
+  [field: string]: XRENGINEArgsDef
 }
 
-interface EEMaterialDef {
+interface XRENGINEMaterialDef {
   uuid?: string
   name?: string
   prototype?: string
-  args?: EEArgs
+  args?: XRENGINEArgs
   plugins?: string[]
 }
 
-export class EEMaterialArgs extends Property<IEEArgs> {
-  public declare propertyType: 'EEMaterialArgs'
-  public declare parentTypes: ['EEMaterial']
+export class XRENGINEMaterialArgs extends Property<IEEArgs> {
+  public declare propertyType: 'XRENGINEMaterialArgs'
+  public declare parentTypes: ['XRENGINEMaterial']
   protected init(): void {
-    this.propertyType = 'EEMaterialArgs'
-    this.parentTypes = ['EEMaterial']
+    this.propertyType = 'XRENGINEMaterialArgs'
+    this.parentTypes = ['XRENGINEMaterial']
   }
 
   protected getDefaults(): Nullable<IEEArgs> {
@@ -103,12 +78,12 @@ export class EEMaterialArgs extends Property<IEEArgs> {
   }
 }
 
-export class EEArgEntry extends Property<IEEArgEntry> {
-  public declare propertyType: 'EEMaterialArgEntry'
-  public declare parentTypes: ['EEMaterialArgs']
+export class XRENGINEArgEntry extends Property<IEEArgEntry> {
+  public declare propertyType: 'XRENGINEMaterialArgEntry'
+  public declare parentTypes: ['XRENGINEMaterialArgs']
   protected init(): void {
-    this.propertyType = 'EEMaterialArgEntry'
-    this.parentTypes = ['EEMaterialArgs']
+    this.propertyType = 'XRENGINEMaterialArgEntry'
+    this.parentTypes = ['XRENGINEMaterialArgs']
   }
 
   protected getDefaults(): Nullable<IEEArgEntry> {
@@ -134,19 +109,19 @@ export class EEArgEntry extends Property<IEEArgEntry> {
   }
 }
 
-export class EEMaterial extends ExtensionProperty<IEEMaterial> {
+export class XRENGINEMaterial extends ExtensionProperty<IXRENGINEMaterial> {
   public static EXTENSION_NAME = EXTENSION_NAME
   public declare extensionName: typeof EXTENSION_NAME
-  public declare propertyType: 'EEMaterial'
+  public declare propertyType: 'XRENGINEMaterial'
   public declare parentTypes: [PropertyType.MATERIAL]
 
   protected init(): void {
     this.extensionName = EXTENSION_NAME
-    this.propertyType = 'EEMaterial'
+    this.propertyType = 'XRENGINEMaterial'
     this.parentTypes = [PropertyType.MATERIAL]
   }
 
-  protected getDefaults(): Nullable<IEEMaterial> {
+  protected getDefaults(): Nullable<IXRENGINEMaterial> {
     return Object.assign(super.getDefaults() as IProperty, {
       uuid: '',
       name: '',
@@ -188,7 +163,7 @@ export class EEMaterial extends ExtensionProperty<IEEMaterial> {
   }
 }
 
-export class EEMaterialExtension extends Extension {
+export class XRENGINEMaterialExtension extends Extension {
   public readonly extensionName = EXTENSION_NAME
   public static readonly EXTENSION_NAME = EXTENSION_NAME
 
@@ -203,30 +178,30 @@ export class EEMaterialExtension extends Extension {
     let materialUuidIndex = 0
     materialDefs.map((def, idx) => {
       if (def.extensions?.[EXTENSION_NAME]) {
-        const eeMaterial = new EEMaterial(this.document.getGraph())
-        readerContext.materials[idx].setExtension(EXTENSION_NAME, eeMaterial)
+        const xrengineMaterial = new XRENGINEMaterial(this.document.getGraph())
+        readerContext.materials[idx].setExtension(EXTENSION_NAME, xrengineMaterial)
 
-        const eeDef = def.extensions[EXTENSION_NAME] as EEMaterialDef
+        const eeDef = def.extensions[EXTENSION_NAME] as XRENGINEMaterialDef
 
         if (eeDef.uuid) {
-          eeMaterial.uuid = eeDef.uuid
+          xrengineMaterial.uuid = eeDef.uuid
         }
         if (eeDef.name) {
-          eeMaterial.name = eeDef.name
+          xrengineMaterial.name = eeDef.name
         }
         if (eeDef.prototype) {
-          eeMaterial.prototype = eeDef.prototype
+          xrengineMaterial.prototype = eeDef.prototype
         }
         if (eeDef.args) {
-          //eeMaterial.args = eeDef.args
-          const processedArgs = new EEMaterialArgs(this.document.getGraph())
+          //xrengineMaterial.args = eeDef.args
+          const processedArgs = new XRENGINEMaterialArgs(this.document.getGraph())
           const materialArgsInfo = Object.keys(eeDef.args)
           const materialUuid = materialUuidIndex.toString()
           materialUuidIndex++
           this.materialInfoMap.set(materialUuid, materialArgsInfo)
           processedArgs.setExtras({ uuid: materialUuid })
           Object.entries(eeDef.args).map(([field, argDef]) => {
-            const nuArgDef = new EEArgEntry(this.document.getGraph())
+            const nuArgDef = new XRENGINEArgEntry(this.document.getGraph())
             nuArgDef.type = argDef.type!
             if (argDef.type === 'texture') {
               const value = argDef.contents
@@ -259,10 +234,10 @@ export class EEMaterialExtension extends Extension {
               processedArgs.setProp(field, nuArgDef)
             }
           })
-          eeMaterial.args = processedArgs
+          xrengineMaterial.args = processedArgs
         }
         if (eeDef.plugins) {
-          eeMaterial.plugins = eeDef.plugins
+          xrengineMaterial.plugins = eeDef.plugins
         }
       }
     })
@@ -275,29 +250,29 @@ export class EEMaterialExtension extends Extension {
       .getRoot()
       .listMaterials()
       .map((material) => {
-        const eeMaterial = material.getExtension<EEMaterial>(EXTENSION_NAME)
-        if (eeMaterial) {
+        const xrengineMaterial = material.getExtension<XRENGINEMaterial>(EXTENSION_NAME)
+        if (xrengineMaterial) {
           const matIdx = writerContext.materialIndexMap.get(material)!
           const matDef = json.json.materials![matIdx]
-          const extensionDef: EEMaterialDef = {
-            uuid: eeMaterial.uuid,
-            name: eeMaterial.name,
-            prototype: eeMaterial.prototype,
-            plugins: eeMaterial.plugins
+          const extensionDef: XRENGINEMaterialDef = {
+            uuid: xrengineMaterial.uuid,
+            name: xrengineMaterial.name,
+            prototype: xrengineMaterial.prototype,
+            plugins: xrengineMaterial.plugins
           }
-          const matArgs = eeMaterial.args
+          const matArgs = xrengineMaterial.args
           if (matArgs) {
             extensionDef.args = {}
             const materialArgsInfo = this.materialInfoMap.get(matArgs.getExtras().uuid as string)!
             materialArgsInfo.map((field) => {
-              let value: EEArgEntry
+              let value: XRENGINEArgEntry
               try {
-                value = matArgs.getPropRef(field) as EEArgEntry
+                value = matArgs.getPropRef(field) as XRENGINEArgEntry
               } catch (e) {
-                value = matArgs.getProp(field) as EEArgEntry
+                value = matArgs.getProp(field) as XRENGINEArgEntry
               }
               if (value.type === 'texture') {
-                const argEntry = new EEArgEntry(this.document.getGraph())
+                const argEntry = new XRENGINEArgEntry(this.document.getGraph())
                 argEntry.type = 'texture'
                 const texture = value.contents as Texture
                 if (texture) {

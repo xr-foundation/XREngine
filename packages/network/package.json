@@ -1,21 +1,21 @@
 {
-  "name": "@ir-engine/network",
+  "name": "@xrengine/network",
   "version": "1.6.0",
   "main": "index.ts",
   "publishConfig": {
     "access": "public"
   },
-  "description": "Networking abstractions and APIs for the Infinite Reality Engine",
+  "description": "Networking abstractions and APIs for the XREngine",
   "scripts": {
     "check-errors": "tsc --noemit",
     "test": "mocha --jobs 1"
   },
-  "repository": "http://github.com/ir-engine/ir-engine",
-  "author": "Infinite Reality Engine",
+  "repository": "http://github.com/xr-foundation/xrengine",
+  "author": "XREngine",
   "license": "CPAL",
   "dependencies": {
-    "@ir-engine/ecs": "^1.6.0",
-    "@ir-engine/hyperflux": "^1.6.0"
+    "@xrengine/ecs": "^1.6.0",
+    "@xrengine/hyperflux": "^1.6.0"
   },
   "devDependencies": {
     "@types/mocha": "10.0.1",

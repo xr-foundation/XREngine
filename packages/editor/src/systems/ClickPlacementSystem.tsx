@@ -1,29 +1,6 @@
-/*
-CPAL-1.0 License
 
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
 import { Ray } from '@dimforge/rapier3d-compat'
-import { NotificationService } from '@ir-engine/client-core/src/common/services/NotificationService'
+import { NotificationService } from '@xrengine/client-core/src/common/services/NotificationService'
 import {
   Engine,
   Entity,
@@ -36,18 +13,18 @@ import {
   removeComponent,
   setComponent,
   useOptionalComponent
-} from '@ir-engine/ecs'
-import { AssetExt, FileToAssetExt } from '@ir-engine/engine/src/assets/constants/AssetType'
-import { GLTFComponent } from '@ir-engine/engine/src/gltf/GLTFComponent'
-import { GLTFDocumentState, GLTFSnapshotAction } from '@ir-engine/engine/src/gltf/GLTFDocumentState'
-import { GLTFSnapshotState } from '@ir-engine/engine/src/gltf/GLTFState'
-import { useEntityErrors } from '@ir-engine/engine/src/scene/components/ErrorComponent'
-import { ModelComponent } from '@ir-engine/engine/src/scene/components/ModelComponent'
-import { SourceComponent } from '@ir-engine/engine/src/scene/components/SourceComponent'
-import { entityJSONToGLTFNode } from '@ir-engine/engine/src/scene/functions/GLTFConversion'
-import { createSceneEntity } from '@ir-engine/engine/src/scene/functions/createSceneEntity'
-import { getModelSceneID } from '@ir-engine/engine/src/scene/functions/loaders/ModelFunctions'
-import { toEntityJson } from '@ir-engine/engine/src/scene/functions/serializeWorld'
+} from '@xrengine/ecs'
+import { AssetExt, FileToAssetExt } from '@xrengine/engine/src/assets/constants/AssetType'
+import { GLTFComponent } from '@xrengine/engine/src/gltf/GLTFComponent'
+import { GLTFDocumentState, GLTFSnapshotAction } from '@xrengine/engine/src/gltf/GLTFDocumentState'
+import { GLTFSnapshotState } from '@xrengine/engine/src/gltf/GLTFState'
+import { useEntityErrors } from '@xrengine/engine/src/scene/components/ErrorComponent'
+import { ModelComponent } from '@xrengine/engine/src/scene/components/ModelComponent'
+import { SourceComponent } from '@xrengine/engine/src/scene/components/SourceComponent'
+import { entityJSONToGLTFNode } from '@xrengine/engine/src/scene/functions/GLTFConversion'
+import { createSceneEntity } from '@xrengine/engine/src/scene/functions/createSceneEntity'
+import { getModelSceneID } from '@xrengine/engine/src/scene/functions/loaders/ModelFunctions'
+import { toEntityJson } from '@xrengine/engine/src/scene/functions/serializeWorld'
 import {
   NO_PROXY,
   defineState,
@@ -56,20 +33,20 @@ import {
   getState,
   useHookstate,
   useState
-} from '@ir-engine/hyperflux'
-import { TransformComponent } from '@ir-engine/spatial'
-import { CameraComponent } from '@ir-engine/spatial/src/camera/components/CameraComponent'
-import { InputComponent } from '@ir-engine/spatial/src/input/components/InputComponent'
-import { InputPointerComponent } from '@ir-engine/spatial/src/input/components/InputPointerComponent'
-import { MouseScroll } from '@ir-engine/spatial/src/input/state/ButtonState'
-import { Physics } from '@ir-engine/spatial/src/physics/classes/Physics'
-import { GroupComponent } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { MeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { ObjectLayerComponents } from '@ir-engine/spatial/src/renderer/components/ObjectLayerComponent'
-import { ObjectLayers } from '@ir-engine/spatial/src/renderer/constants/ObjectLayers'
-import { HolographicMaterial } from '@ir-engine/spatial/src/renderer/materials/prototypes/HolographicMaterial.mat'
-import { EntityTreeComponent, iterateEntityNode } from '@ir-engine/spatial/src/transform/components/EntityTree'
-import { TransformDirtyCleanupSystem } from '@ir-engine/spatial/src/transform/systems/TransformSystem'
+} from '@xrengine/hyperflux'
+import { TransformComponent } from '@xrengine/spatial'
+import { CameraComponent } from '@xrengine/spatial/src/camera/components/CameraComponent'
+import { InputComponent } from '@xrengine/spatial/src/input/components/InputComponent'
+import { InputPointerComponent } from '@xrengine/spatial/src/input/components/InputPointerComponent'
+import { MouseScroll } from '@xrengine/spatial/src/input/state/ButtonState'
+import { Physics } from '@xrengine/spatial/src/physics/classes/Physics'
+import { GroupComponent } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { MeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { ObjectLayerComponents } from '@xrengine/spatial/src/renderer/components/ObjectLayerComponent'
+import { ObjectLayers } from '@xrengine/spatial/src/renderer/constants/ObjectLayers'
+import { HolographicMaterial } from '@xrengine/spatial/src/renderer/materials/prototypes/HolographicMaterial.mat'
+import { EntityTreeComponent, iterateEntityNode } from '@xrengine/spatial/src/transform/components/EntityTree'
+import { TransformDirtyCleanupSystem } from '@xrengine/spatial/src/transform/systems/TransformSystem'
 import React, { useEffect } from 'react'
 import { Euler, Material, Mesh, Quaternion, Raycaster, Vector3 } from 'three'
 import { EditorControlFunctions } from '../functions/EditorControlFunctions'
@@ -258,7 +235,7 @@ const clickListener = () => {
 }
 
 export const ClickPlacementSystem = defineSystem({
-  uuid: 'ee.studio.ClickPlacementSystem',
+  uuid: 'xrengine.studio.ClickPlacementSystem',
   insert: { after: TransformDirtyCleanupSystem },
   reactor: () => {
     const parentEntity = useHookstate(getMutableState(EditorState)).rootEntity

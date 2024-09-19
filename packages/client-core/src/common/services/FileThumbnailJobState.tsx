@@ -1,34 +1,9 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
-import { API } from '@ir-engine/common'
+import { API } from '@xrengine/common'
 import {
   FileBrowserContentType,
   fileBrowserUploadPath,
   staticResourcePath
-} from '@ir-engine/common/src/schema.type.module'
+} from '@xrengine/common/src/schema.type.module'
 import {
   EntityUUID,
   UUIDComponent,
@@ -38,40 +13,40 @@ import {
   removeEntity,
   setComponent,
   useOptionalComponent
-} from '@ir-engine/ecs'
-import { useTexture } from '@ir-engine/engine/src/assets/functions/resourceLoaderHooks'
-import { GLTFDocumentState } from '@ir-engine/engine/src/gltf/GLTFDocumentState'
-import { ModelComponent } from '@ir-engine/engine/src/scene/components/ModelComponent'
-import { getModelSceneID } from '@ir-engine/engine/src/scene/functions/loaders/ModelFunctions'
-import { NO_PROXY, defineState, getMutableState, useHookstate } from '@ir-engine/hyperflux'
-import { DirectionalLightComponent, TransformComponent } from '@ir-engine/spatial'
-import { CameraComponent } from '@ir-engine/spatial/src/camera/components/CameraComponent'
-import { NameComponent } from '@ir-engine/spatial/src/common/NameComponent'
+} from '@xrengine/ecs'
+import { useTexture } from '@xrengine/engine/src/assets/functions/resourceLoaderHooks'
+import { GLTFDocumentState } from '@xrengine/engine/src/gltf/GLTFDocumentState'
+import { ModelComponent } from '@xrengine/engine/src/scene/components/ModelComponent'
+import { getModelSceneID } from '@xrengine/engine/src/scene/functions/loaders/ModelFunctions'
+import { NO_PROXY, defineState, getMutableState, useHookstate } from '@xrengine/hyperflux'
+import { DirectionalLightComponent, TransformComponent } from '@xrengine/spatial'
+import { CameraComponent } from '@xrengine/spatial/src/camera/components/CameraComponent'
+import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'
 import {
   RendererComponent,
   getNestedVisibleChildren,
   getSceneParameters,
   initializeEngineRenderer,
   render
-} from '@ir-engine/spatial/src/renderer/WebGLRendererSystem'
-import { ObjectLayerMaskComponent } from '@ir-engine/spatial/src/renderer/components/ObjectLayerComponent'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import createReadableTexture from '@ir-engine/spatial/src/renderer/functions/createReadableTexture'
+} from '@xrengine/spatial/src/renderer/WebGLRendererSystem'
+import { ObjectLayerMaskComponent } from '@xrengine/spatial/src/renderer/components/ObjectLayerComponent'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import createReadableTexture from '@xrengine/spatial/src/renderer/functions/createReadableTexture'
 import {
   BoundingBoxComponent,
   updateBoundingBox
-} from '@ir-engine/spatial/src/transform/components/BoundingBoxComponents'
-import { computeTransformMatrix } from '@ir-engine/spatial/src/transform/systems/TransformSystem'
+} from '@xrengine/spatial/src/transform/components/BoundingBoxComponents'
+import { computeTransformMatrix } from '@xrengine/spatial/src/transform/systems/TransformSystem'
 import React, { useEffect } from 'react'
 import { Color, Euler, Material, MathUtils, Matrix4, Mesh, Quaternion, Sphere, SphereGeometry, Vector3 } from 'three'
 
-import { useFind } from '@ir-engine/common'
-import config from '@ir-engine/common/src/config'
-import { ErrorComponent } from '@ir-engine/engine/src/scene/components/ErrorComponent'
-import { ShadowComponent } from '@ir-engine/engine/src/scene/components/ShadowComponent'
-import { addObjectToGroup } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { MeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { loadMaterialGLTF } from '@ir-engine/spatial/src/renderer/materials/materialFunctions'
+import { useFind } from '@xrengine/common'
+import config from '@xrengine/common/src/config'
+import { ErrorComponent } from '@xrengine/engine/src/scene/components/ErrorComponent'
+import { ShadowComponent } from '@xrengine/engine/src/scene/components/ShadowComponent'
+import { addObjectToGroup } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { MeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { loadMaterialGLTF } from '@xrengine/spatial/src/renderer/materials/materialFunctions'
 import { uploadToFeathersService } from '../../util/upload'
 import { getCanvasBlob } from '../utils'
 

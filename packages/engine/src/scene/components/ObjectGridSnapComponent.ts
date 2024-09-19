@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import {
   defineComponent,
   getComponent,
@@ -31,24 +6,24 @@ import {
   setComponent,
   useComponent,
   useOptionalComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { Entity, UndefinedEntity } from '@ir-engine/ecs/src/Entity'
-import { useEntityContext } from '@ir-engine/ecs/src/EntityFunctions'
-import { S } from '@ir-engine/ecs/src/schemas/JSONSchemas'
-import { getMutableState, useDidMount, useState } from '@ir-engine/hyperflux'
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
-import { Vector3_Zero } from '@ir-engine/spatial/src/common/constants/MathConstants'
-import { useHelperEntity } from '@ir-engine/spatial/src/common/debug/DebugComponentUtils'
-import { LineSegmentComponent } from '@ir-engine/spatial/src/renderer/components/LineSegmentComponent'
-import { MeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { ObjectLayerMasks } from '@ir-engine/spatial/src/renderer/constants/ObjectLayers'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { Entity, UndefinedEntity } from '@xrengine/ecs/src/Entity'
+import { useEntityContext } from '@xrengine/ecs/src/EntityFunctions'
+import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
+import { getMutableState, useDidMount, useState } from '@xrengine/hyperflux'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
+import { Vector3_Zero } from '@xrengine/spatial/src/common/constants/MathConstants'
+import { useHelperEntity } from '@xrengine/spatial/src/common/debug/DebugComponentUtils'
+import { LineSegmentComponent } from '@xrengine/spatial/src/renderer/components/LineSegmentComponent'
+import { MeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { ObjectLayerMasks } from '@xrengine/spatial/src/renderer/constants/ObjectLayers'
 import {
   EntityTreeComponent,
   iterateEntityNode,
   useChildrenWithComponents
-} from '@ir-engine/spatial/src/transform/components/EntityTree'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
-import { computeTransformMatrix } from '@ir-engine/spatial/src/transform/systems/TransformSystem'
+} from '@xrengine/spatial/src/transform/components/EntityTree'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
+import { computeTransformMatrix } from '@xrengine/spatial/src/transform/systems/TransformSystem'
 import { useEffect } from 'react'
 import { Box3, BufferGeometry, LineBasicMaterial, Matrix4, Mesh, Quaternion, Vector3 } from 'three'
 import { ModelComponent } from './ModelComponent'

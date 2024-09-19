@@ -18,14 +18,14 @@ jobs:
     if: ${{ needs.secrets-gate.outputs.ok == 'enabled' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Infinite Reality Engine
+      - name: Checkout XREngine
         uses: actions/checkout@v3
         with:
-          repository: ir-engine/ir-engine
+          repository: xrengine/xrengine
       - name: Checkout Project
         uses: actions/checkout@v3
         with:
-          path: './packages/projects/projects/ir-engine/${{ github.event.repository.name }}'
+          path: './packages/projects/projects/xrengine/${{ github.event.repository.name }}'
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -44,5 +44,5 @@ jobs:
       - run: npm run check-errors
       - run: npm run dev-docker
       - run: npm run dev-reinit
-      - run: npx lerna run --ignore '@ir-engine/*' test
+      - run: npx lerna run --ignore '@xrengine/*' test
       - run: npm run build-client

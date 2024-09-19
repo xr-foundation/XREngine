@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { MathUtils, Vector2, Vector3 } from 'three'
 
 import {
@@ -36,38 +11,38 @@ import {
   UndefinedEntity,
   useEntityContext,
   UUIDComponent
-} from '@ir-engine/ecs'
+} from '@xrengine/ecs'
 import {
   defineComponent,
   getOptionalComponent,
   hasComponent,
   useComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { getState, isClient, useImmediateEffect, useMutableState } from '@ir-engine/hyperflux'
-import { TransformComponent } from '@ir-engine/spatial'
-import { CallbackComponent } from '@ir-engine/spatial/src/common/CallbackComponent'
-import { createTransitionState } from '@ir-engine/spatial/src/common/functions/createTransitionState'
-import { InputComponent, InputExecutionOrder } from '@ir-engine/spatial/src/input/components/InputComponent'
-import { RigidBodyComponent } from '@ir-engine/spatial/src/physics/components/RigidBodyComponent'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { getState, isClient, useImmediateEffect, useMutableState } from '@xrengine/hyperflux'
+import { TransformComponent } from '@xrengine/spatial'
+import { CallbackComponent } from '@xrengine/spatial/src/common/CallbackComponent'
+import { createTransitionState } from '@xrengine/spatial/src/common/functions/createTransitionState'
+import { InputComponent, InputExecutionOrder } from '@xrengine/spatial/src/input/components/InputComponent'
+import { RigidBodyComponent } from '@xrengine/spatial/src/physics/components/RigidBodyComponent'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
 import {
   BoundingBoxComponent,
   updateBoundingBox
-} from '@ir-engine/spatial/src/transform/components/BoundingBoxComponents'
-import { ComputedTransformComponent } from '@ir-engine/spatial/src/transform/components/ComputedTransformComponent'
-import { EntityTreeComponent } from '@ir-engine/spatial/src/transform/components/EntityTree'
-import { XRUIComponent } from '@ir-engine/spatial/src/xrui/components/XRUIComponent'
-import { WebLayer3D } from '@ir-engine/xrui'
+} from '@xrengine/spatial/src/transform/components/BoundingBoxComponents'
+import { ComputedTransformComponent } from '@xrengine/spatial/src/transform/components/ComputedTransformComponent'
+import { EntityTreeComponent } from '@xrengine/spatial/src/transform/components/EntityTree'
+import { XRUIComponent } from '@xrengine/spatial/src/xrui/components/XRUIComponent'
+import { WebLayer3D } from '@xrengine/xrui'
 
-import { S } from '@ir-engine/ecs/src/schemas/JSONSchemas'
-import { smootheLerpAlpha } from '@ir-engine/spatial/src/common/functions/MathLerpFunctions'
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
-import { InputState } from '@ir-engine/spatial/src/input/state/InputState'
+import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
+import { smootheLerpAlpha } from '@xrengine/spatial/src/common/functions/MathLerpFunctions'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
+import { InputState } from '@xrengine/spatial/src/input/state/InputState'
 import {
   DistanceFromCameraComponent,
   DistanceFromLocalClientComponent
-} from '@ir-engine/spatial/src/transform/components/DistanceComponents'
-import { useXRUIState } from '@ir-engine/spatial/src/xrui/functions/useXRUIState'
+} from '@xrengine/spatial/src/transform/components/DistanceComponents'
+import { useXRUIState } from '@xrengine/spatial/src/xrui/functions/useXRUIState'
 import { useEffect } from 'react'
 import { AvatarComponent } from '../../avatar/components/AvatarComponent'
 import { createUI } from '../functions/createUI'
@@ -233,7 +208,7 @@ const removeInteractableUI = (entity: Entity) => {
 
 export const InteractableComponent = defineComponent({
   name: 'InteractableComponent',
-  jsonID: 'EE_interactable',
+  jsonID: 'XRENGINE_interactable',
 
   schema: S.Object({
     //TODO reimpliment the frustum culling for interactables

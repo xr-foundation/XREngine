@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { Quaternion, Vector3 } from 'three'
 
 import {
@@ -33,25 +8,25 @@ import {
   hasComponent,
   removeComponent,
   setComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { ECSState } from '@ir-engine/ecs/src/ECSState'
-import { Engine } from '@ir-engine/ecs/src/Engine'
-import { defineQuery } from '@ir-engine/ecs/src/QueryFunctions'
-import { defineSystem } from '@ir-engine/ecs/src/SystemFunctions'
-import { getState } from '@ir-engine/hyperflux'
-import { Vector3_Up, Vector3_Zero } from '@ir-engine/spatial/src/common/constants/MathConstants'
-import { InputComponent } from '@ir-engine/spatial/src/input/components/InputComponent'
-import { InputPointerComponent } from '@ir-engine/spatial/src/input/components/InputPointerComponent'
-import { InputSourceComponent } from '@ir-engine/spatial/src/input/components/InputSourceComponent'
-import { StandardGamepadButton } from '@ir-engine/spatial/src/input/state/ButtonState'
-import { InputState } from '@ir-engine/spatial/src/input/state/InputState'
-import { ClientInputSystem } from '@ir-engine/spatial/src/input/systems/ClientInputSystem'
-import { RaycastArgs } from '@ir-engine/spatial/src/physics/classes/Physics'
-import { RigidBodyFixedTagComponent } from '@ir-engine/spatial/src/physics/components/RigidBodyComponent'
-import { CollisionGroups } from '@ir-engine/spatial/src/physics/enums/CollisionGroups'
-import { getInteractionGroups } from '@ir-engine/spatial/src/physics/functions/getInteractionGroups'
-import { SceneQueryType } from '@ir-engine/spatial/src/physics/types/PhysicsTypes'
-import { XRState } from '@ir-engine/spatial/src/xr/XRState'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { ECSState } from '@xrengine/ecs/src/ECSState'
+import { Engine } from '@xrengine/ecs/src/Engine'
+import { defineQuery } from '@xrengine/ecs/src/QueryFunctions'
+import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
+import { getState } from '@xrengine/hyperflux'
+import { Vector3_Up, Vector3_Zero } from '@xrengine/spatial/src/common/constants/MathConstants'
+import { InputComponent } from '@xrengine/spatial/src/input/components/InputComponent'
+import { InputPointerComponent } from '@xrengine/spatial/src/input/components/InputPointerComponent'
+import { InputSourceComponent } from '@xrengine/spatial/src/input/components/InputSourceComponent'
+import { StandardGamepadButton } from '@xrengine/spatial/src/input/state/ButtonState'
+import { InputState } from '@xrengine/spatial/src/input/state/InputState'
+import { ClientInputSystem } from '@xrengine/spatial/src/input/systems/ClientInputSystem'
+import { RaycastArgs } from '@xrengine/spatial/src/physics/classes/Physics'
+import { RigidBodyFixedTagComponent } from '@xrengine/spatial/src/physics/components/RigidBodyComponent'
+import { CollisionGroups } from '@xrengine/spatial/src/physics/enums/CollisionGroups'
+import { getInteractionGroups } from '@xrengine/spatial/src/physics/functions/getInteractionGroups'
+import { SceneQueryType } from '@xrengine/spatial/src/physics/types/PhysicsTypes'
+import { XRState } from '@xrengine/spatial/src/xr/XRState'
 
 import { AvatarControllerComponent } from '.././components/AvatarControllerComponent'
 import { AvatarTeleportComponent } from '.././components/AvatarTeleportComponent'
@@ -62,10 +37,10 @@ import { AvatarComponent } from '../components/AvatarComponent'
 import { applyInputSourcePoseToIKTargets } from '../functions/applyInputSourcePoseToIKTargets'
 import { setIkFootTarget } from '../functions/avatarFootHeuristics'
 
-import { FollowCameraComponent } from '@ir-engine/spatial/src/camera/components/FollowCameraComponent'
-import { FollowCameraMode } from '@ir-engine/spatial/src/camera/types/FollowCameraMode'
-import { isMobile } from '@ir-engine/spatial/src/common/functions/isMobile'
-import { getThumbstickOrThumbpadAxes } from '@ir-engine/spatial/src/input/functions/getThumbstickOrThumbpadAxes'
+import { FollowCameraComponent } from '@xrengine/spatial/src/camera/components/FollowCameraComponent'
+import { FollowCameraMode } from '@xrengine/spatial/src/camera/types/FollowCameraMode'
+import { isMobile } from '@xrengine/spatial/src/common/functions/isMobile'
+import { getThumbstickOrThumbpadAxes } from '@xrengine/spatial/src/input/functions/getThumbstickOrThumbpadAxes'
 
 const _quat = new Quaternion()
 
@@ -296,7 +271,7 @@ const execute = () => {
 }
 
 export const AvatarInputSystem = defineSystem({
-  uuid: 'ee.engine.AvatarInputSystem',
+  uuid: 'xrengine.engine.AvatarInputSystem',
   insert: { after: ClientInputSystem },
   execute
 })

@@ -1,64 +1,39 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 // import * as polyfill from 'credential-handler-polyfill'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
 
-import Avatar from '@ir-engine/client-core/src/common/components/Avatar'
-import ConfirmDialog from '@ir-engine/client-core/src/common/components/ConfirmDialog'
-import { AppleIcon } from '@ir-engine/client-core/src/common/components/Icons/AppleIcon'
-import { DiscordIcon } from '@ir-engine/client-core/src/common/components/Icons/DiscordIcon'
-import { GoogleIcon } from '@ir-engine/client-core/src/common/components/Icons/GoogleIcon'
-import { LinkedInIcon } from '@ir-engine/client-core/src/common/components/Icons/LinkedInIcon'
-import { MetaIcon } from '@ir-engine/client-core/src/common/components/Icons/MetaIcon'
-import { XIcon } from '@ir-engine/client-core/src/common/components/Icons/XIcon'
-import InputText from '@ir-engine/client-core/src/common/components/InputText'
-import Menu from '@ir-engine/client-core/src/common/components/Menu'
-import Text from '@ir-engine/client-core/src/common/components/Text'
-import commonStyles from '@ir-engine/client-core/src/common/components/common.module.scss'
-import { useFind } from '@ir-engine/common'
-import config, { validateEmail, validatePhoneNumber } from '@ir-engine/common/src/config'
-import multiLogger from '@ir-engine/common/src/logger'
+import Avatar from '@xrengine/client-core/src/common/components/Avatar'
+import ConfirmDialog from '@xrengine/client-core/src/common/components/ConfirmDialog'
+import { AppleIcon } from '@xrengine/client-core/src/common/components/Icons/AppleIcon'
+import { DiscordIcon } from '@xrengine/client-core/src/common/components/Icons/DiscordIcon'
+import { GoogleIcon } from '@xrengine/client-core/src/common/components/Icons/GoogleIcon'
+import { LinkedInIcon } from '@xrengine/client-core/src/common/components/Icons/LinkedInIcon'
+import { MetaIcon } from '@xrengine/client-core/src/common/components/Icons/MetaIcon'
+import { XIcon } from '@xrengine/client-core/src/common/components/Icons/XIcon'
+import InputText from '@xrengine/client-core/src/common/components/InputText'
+import Menu from '@xrengine/client-core/src/common/components/Menu'
+import Text from '@xrengine/client-core/src/common/components/Text'
+import commonStyles from '@xrengine/client-core/src/common/components/common.module.scss'
+import { useFind } from '@xrengine/common'
+import config, { validateEmail, validatePhoneNumber } from '@xrengine/common/src/config'
+import multiLogger from '@xrengine/common/src/logger'
 import {
   UserName,
   authenticationSettingPath,
   clientSettingPath,
   userPath
-} from '@ir-engine/common/src/schema.type.module'
-import { getMutableState, useHookstate } from '@ir-engine/hyperflux'
-import Box from '@ir-engine/ui/src/primitives/mui/Box'
-import Checkbox from '@ir-engine/ui/src/primitives/mui/Checkbox'
-import CircularProgress from '@ir-engine/ui/src/primitives/mui/CircularProgress'
-import FormControlLabel from '@ir-engine/ui/src/primitives/mui/FormControlLabel'
-import Icon from '@ir-engine/ui/src/primitives/mui/Icon'
-import IconButton from '@ir-engine/ui/src/primitives/mui/IconButton'
+} from '@xrengine/common/src/schema.type.module'
+import { getMutableState, useHookstate } from '@xrengine/hyperflux'
+import Box from '@xrengine/ui/src/primitives/mui/Box'
+import Checkbox from '@xrengine/ui/src/primitives/mui/Checkbox'
+import CircularProgress from '@xrengine/ui/src/primitives/mui/CircularProgress'
+import FormControlLabel from '@xrengine/ui/src/primitives/mui/FormControlLabel'
+import Icon from '@xrengine/ui/src/primitives/mui/Icon'
+import IconButton from '@xrengine/ui/src/primitives/mui/IconButton'
 
-import { API } from '@ir-engine/common'
-import Grid from '@ir-engine/ui/src/primitives/mui/Grid'
+import { API } from '@xrengine/common'
+import Grid from '@xrengine/ui/src/primitives/mui/Grid'
 import { initialAuthState, initialOAuthConnectedState } from '../../../../common/initialAuthState'
 import { NotificationService } from '../../../../common/services/NotificationService'
 import { useZendesk } from '../../../../hooks/useZendesk'
@@ -347,7 +322,7 @@ const ProfileMenu = ({ hideLogin, onClose, isPopover }: Props): JSX.Element => {
   //               {
   //                 example: {
   //                   '@context': ['https://www.w3.org/2018/credentials/v1', 'https://w3id.org/xr/v1'],
-  //                   // various Infinite Reality Engine user preferences
+  //                   // various XREngine user preferences
   //                   type: 'UserPreferencesCredential'
   //                 }
   //               }

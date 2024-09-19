@@ -1,32 +1,7 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { Bone, InstancedMesh, Mesh, Object3D, Scene, SkinnedMesh } from 'three'
 import { v4 as uuidv4 } from 'uuid'
 
-import { EntityUUID, UUIDComponent } from '@ir-engine/ecs'
+import { EntityUUID, UUIDComponent } from '@xrengine/ecs'
 import {
   ComponentJSONIDMap,
   ComponentMap,
@@ -34,22 +9,22 @@ import {
   getOptionalComponent,
   hasComponent,
   setComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { Entity, UndefinedEntity } from '@ir-engine/ecs/src/Entity'
-import { TransformComponent } from '@ir-engine/spatial'
-import iterateObject3D from '@ir-engine/spatial/src/common/functions/iterateObject3D'
-import { NameComponent } from '@ir-engine/spatial/src/common/NameComponent'
-import { addObjectToGroup, GroupComponent } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { MeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { Object3DComponent } from '@ir-engine/spatial/src/renderer/components/Object3DComponent'
-import { ObjectLayerMaskComponent } from '@ir-engine/spatial/src/renderer/components/ObjectLayerComponent'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { RendererComponent } from '@ir-engine/spatial/src/renderer/WebGLRendererSystem'
-import { FrustumCullCameraComponent } from '@ir-engine/spatial/src/transform/components/DistanceComponents'
-import { EntityTreeComponent } from '@ir-engine/spatial/src/transform/components/EntityTree'
-import { computeTransformMatrix } from '@ir-engine/spatial/src/transform/systems/TransformSystem'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { Entity, UndefinedEntity } from '@xrengine/ecs/src/Entity'
+import { TransformComponent } from '@xrengine/spatial'
+import iterateObject3D from '@xrengine/spatial/src/common/functions/iterateObject3D'
+import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'
+import { addObjectToGroup, GroupComponent } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { MeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { Object3DComponent } from '@xrengine/spatial/src/renderer/components/Object3DComponent'
+import { ObjectLayerMaskComponent } from '@xrengine/spatial/src/renderer/components/ObjectLayerComponent'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { RendererComponent } from '@xrengine/spatial/src/renderer/WebGLRendererSystem'
+import { FrustumCullCameraComponent } from '@xrengine/spatial/src/transform/components/DistanceComponents'
+import { EntityTreeComponent } from '@xrengine/spatial/src/transform/components/EntityTree'
+import { computeTransformMatrix } from '@xrengine/spatial/src/transform/systems/TransformSystem'
 
-import { ColliderComponent } from '@ir-engine/spatial/src/physics/components/ColliderComponent'
+import { ColliderComponent } from '@xrengine/spatial/src/physics/components/ColliderComponent'
 import { BoneComponent } from '../../avatar/components/BoneComponent'
 import { SkinnedMeshComponent } from '../../avatar/components/SkinnedMeshComponent'
 import { GLTFLoadedComponent } from '../components/GLTFLoadedComponent'
@@ -162,7 +137,7 @@ export const parseGLTFModel = (entity: Entity, scene: Scene) => {
     child.parent = model.scene
     iterateObject3D(child, (obj: Object3D) => {
       const uuid =
-        (obj.userData?.gltfExtensions?.EE_uuid as EntityUUID) || (obj.uuid as EntityUUID) || (uuidv4() as EntityUUID)
+        (obj.userData?.gltfExtensions?.XRENGINE_uuid as EntityUUID) || (obj.uuid as EntityUUID) || (uuidv4() as EntityUUID)
       obj.uuid = uuid
       const eJson = generateEntityJsonFromObject(entity, obj, entityJson[uuid])
       entityJson[uuid] = eJson
@@ -294,7 +269,7 @@ export const generateEntityJsonFromObject = (rootEntity: Entity, obj: Object3D, 
     if (
       hasComponent(obj.entity, ColliderComponent) ||
       Object.keys(obj.userData).find(
-        (key) => key.startsWith('xrengine.collider') || key.startsWith('xrengine.EE_collider')
+        (key) => key.startsWith('xrengine.collider') || key.startsWith('xrengine.XRENGINE_collider')
       )
     ) {
       return true
@@ -303,7 +278,7 @@ export const generateEntityJsonFromObject = (rootEntity: Entity, obj: Object3D, 
     //   return (
     //     hasComponent(obj.parent.entity, ColliderComponent) ||
     //     Object.keys(obj.parent.userData).some(
-    //       (key) => key.startsWith('xrengine.collider') || key.startsWith('xrengine.EE_collider')
+    //       (key) => key.startsWith('xrengine.collider') || key.startsWith('xrengine.XRENGINE_collider')
     //     )
     //   )
     // }

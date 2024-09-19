@@ -1,47 +1,22 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { GLTF } from '@gltf-transform/core'
 import assert from 'assert'
 import { Cache, Color, MathUtils } from 'three'
 
-import { UserID } from '@ir-engine/common/src/schema.type.module'
-import { createEntity, getComponent, setComponent, UUIDComponent } from '@ir-engine/ecs'
-import { createEngine, destroyEngine, Engine } from '@ir-engine/ecs/src/Engine'
-import { Entity, EntityUUID } from '@ir-engine/ecs/src/Entity'
-import { GLTFSnapshotState, GLTFSourceState } from '@ir-engine/engine/src/gltf/GLTFState'
-import { SourceComponent } from '@ir-engine/engine/src/scene/components/SourceComponent'
-import { SplineComponent } from '@ir-engine/engine/src/scene/components/SplineComponent'
-import { applyIncomingActions, getMutableState, getState } from '@ir-engine/hyperflux'
-import { HemisphereLightComponent, TransformComponent } from '@ir-engine/spatial'
-import { EngineState } from '@ir-engine/spatial/src/EngineState'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
+import { UserID } from '@xrengine/common/src/schema.type.module'
+import { createEntity, getComponent, setComponent, UUIDComponent } from '@xrengine/ecs'
+import { createEngine, destroyEngine, Engine } from '@xrengine/ecs/src/Engine'
+import { Entity, EntityUUID } from '@xrengine/ecs/src/Entity'
+import { GLTFSnapshotState, GLTFSourceState } from '@xrengine/engine/src/gltf/GLTFState'
+import { SourceComponent } from '@xrengine/engine/src/scene/components/SourceComponent'
+import { SplineComponent } from '@xrengine/engine/src/scene/components/SplineComponent'
+import { applyIncomingActions, getMutableState, getState } from '@xrengine/hyperflux'
+import { HemisphereLightComponent, TransformComponent } from '@xrengine/spatial'
+import { EngineState } from '@xrengine/spatial/src/EngineState'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
 
-import { Physics } from '@ir-engine/spatial/src/physics/classes/Physics'
-import { SceneComponent } from '@ir-engine/spatial/src/renderer/components/SceneComponents'
-import { EntityTreeComponent } from '@ir-engine/spatial/src/transform/components/EntityTree'
+import { Physics } from '@xrengine/spatial/src/physics/classes/Physics'
+import { SceneComponent } from '@xrengine/spatial/src/renderer/components/SceneComponents'
+import { EntityTreeComponent } from '@xrengine/spatial/src/transform/components/EntityTree'
 import { EditorState } from '../services/EditorServices'
 import { EditorControlFunctions } from './EditorControlFunctions'
 

@@ -9,12 +9,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for using Infinite Reality Engine! Let's figure out the problem.
+        Thanks for using XREngine! Let's figure out the problem.
   - type: input
     id: version
     attributes:
       label: Version
-      description: What version or commit of EE are you running?
+      description: What version or commit of XREngine are you running?
       value: 08c3b70(1.6.0)
     validations:
       required: true

@@ -1,44 +1,19 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { Paginated } from '@feathersjs/feathers'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { locationPath, LocationType } from '@ir-engine/common/src/schema.type.module'
-import Button from '@ir-engine/ui/src/primitives/mui/Button'
-import Icon from '@ir-engine/ui/src/primitives/mui/Icon'
-import InputAdornment from '@ir-engine/ui/src/primitives/mui/InputAdornment'
-import Table from '@ir-engine/ui/src/primitives/mui/Table'
-import TableBody from '@ir-engine/ui/src/primitives/mui/TableBody'
-import TableCell from '@ir-engine/ui/src/primitives/mui/TableCell'
-import TableHead from '@ir-engine/ui/src/primitives/mui/TableHead'
-import TablePagination from '@ir-engine/ui/src/primitives/mui/TablePagination'
-import TableRow from '@ir-engine/ui/src/primitives/mui/TableRow'
-import TextField from '@ir-engine/ui/src/primitives/mui/TextField'
-import Typography from '@ir-engine/ui/src/primitives/mui/Typography'
+import { locationPath, LocationType } from '@xrengine/common/src/schema.type.module'
+import Button from '@xrengine/ui/src/primitives/mui/Button'
+import Icon from '@xrengine/ui/src/primitives/mui/Icon'
+import InputAdornment from '@xrengine/ui/src/primitives/mui/InputAdornment'
+import Table from '@xrengine/ui/src/primitives/mui/Table'
+import TableBody from '@xrengine/ui/src/primitives/mui/TableBody'
+import TableCell from '@xrengine/ui/src/primitives/mui/TableCell'
+import TableHead from '@xrengine/ui/src/primitives/mui/TableHead'
+import TablePagination from '@xrengine/ui/src/primitives/mui/TablePagination'
+import TableRow from '@xrengine/ui/src/primitives/mui/TableRow'
+import TextField from '@xrengine/ui/src/primitives/mui/TextField'
+import Typography from '@xrengine/ui/src/primitives/mui/Typography'
 
 import { API } from '../../../../API'
 import { LocationSeed } from '../../../../social/services/LocationService'

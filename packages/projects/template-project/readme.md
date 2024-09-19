@@ -1,3 +1,3 @@
-### Ethereal Engine Project
+### XREngine Project
 
-This is an Ethereal Engine project.
+This is an XREngine project.

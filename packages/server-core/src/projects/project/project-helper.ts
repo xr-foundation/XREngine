@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import {
   DescribeImagesCommand as DescribePrivateImagesCommand,
   ECRClient,
@@ -43,36 +18,36 @@ import path from 'path'
 import semver from 'semver'
 import { promisify } from 'util'
 
-import { INSTALLATION_SIGNED_REGEX, PUBLIC_SIGNED_REGEX } from '@ir-engine/common/src/regex'
-import { AssetType, FileToAssetType } from '@ir-engine/engine/src/assets/constants/AssetType'
+import { INSTALLATION_SIGNED_REGEX, PUBLIC_SIGNED_REGEX } from '@xrengine/common/src/regex'
+import { AssetType, FileToAssetType } from '@xrengine/engine/src/assets/constants/AssetType'
 
-import { ManifestJson } from '@ir-engine/common/src/interfaces/ManifestJson'
-import { ProjectPackageJsonType } from '@ir-engine/common/src/interfaces/ProjectPackageJsonType'
-import { ResourcesJson, ResourceType } from '@ir-engine/common/src/interfaces/ResourcesJson'
-import { apiJobPath } from '@ir-engine/common/src/schemas/cluster/api-job.schema'
-import { invalidationPath } from '@ir-engine/common/src/schemas/media/invalidation.schema'
-import { staticResourcePath, StaticResourceType } from '@ir-engine/common/src/schemas/media/static-resource.schema'
-import { ProjectBuilderTagsType } from '@ir-engine/common/src/schemas/projects/project-builder-tags.schema'
-import { ProjectCheckSourceDestinationMatchType } from '@ir-engine/common/src/schemas/projects/project-check-source-destination-match.schema'
-import { ProjectCheckUnfetchedCommitType } from '@ir-engine/common/src/schemas/projects/project-check-unfetched-commit.schema'
-import { ProjectCommitType } from '@ir-engine/common/src/schemas/projects/project-commits.schema'
-import { ProjectDestinationCheckType } from '@ir-engine/common/src/schemas/projects/project-destination-check.schema'
-import { projectPath, ProjectType } from '@ir-engine/common/src/schemas/projects/project.schema'
-import { helmSettingPath } from '@ir-engine/common/src/schemas/setting/helm-setting.schema'
-import { identityProviderPath, IdentityProviderType } from '@ir-engine/common/src/schemas/user/identity-provider.schema'
-import { userPath, UserType } from '@ir-engine/common/src/schemas/user/user.schema'
-import { getDateTimeSql, toDateTimeSql } from '@ir-engine/common/src/utils/datetime-sql'
+import { ManifestJson } from '@xrengine/common/src/interfaces/ManifestJson'
+import { ProjectPackageJsonType } from '@xrengine/common/src/interfaces/ProjectPackageJsonType'
+import { ResourcesJson, ResourceType } from '@xrengine/common/src/interfaces/ResourcesJson'
+import { apiJobPath } from '@xrengine/common/src/schemas/cluster/api-job.schema'
+import { invalidationPath } from '@xrengine/common/src/schemas/media/invalidation.schema'
+import { staticResourcePath, StaticResourceType } from '@xrengine/common/src/schemas/media/static-resource.schema'
+import { ProjectBuilderTagsType } from '@xrengine/common/src/schemas/projects/project-builder-tags.schema'
+import { ProjectCheckSourceDestinationMatchType } from '@xrengine/common/src/schemas/projects/project-check-source-destination-match.schema'
+import { ProjectCheckUnfetchedCommitType } from '@xrengine/common/src/schemas/projects/project-check-unfetched-commit.schema'
+import { ProjectCommitType } from '@xrengine/common/src/schemas/projects/project-commits.schema'
+import { ProjectDestinationCheckType } from '@xrengine/common/src/schemas/projects/project-destination-check.schema'
+import { projectPath, ProjectType } from '@xrengine/common/src/schemas/projects/project.schema'
+import { helmSettingPath } from '@xrengine/common/src/schemas/setting/helm-setting.schema'
+import { identityProviderPath, IdentityProviderType } from '@xrengine/common/src/schemas/user/identity-provider.schema'
+import { userPath, UserType } from '@xrengine/common/src/schemas/user/user.schema'
+import { getDateTimeSql, toDateTimeSql } from '@xrengine/common/src/utils/datetime-sql'
 import {
   copyFolderRecursiveSync,
   deleteFolderRecursive,
   getFilesRecursive
-} from '@ir-engine/common/src/utils/fsHelperFunctions'
-import { processFileName } from '@ir-engine/common/src/utils/processFileName'
-import { AssetLoader } from '@ir-engine/engine/src/assets/classes/AssetLoader'
-import { getState } from '@ir-engine/hyperflux'
-import { ProjectConfigInterface, ProjectEventHooks } from '@ir-engine/projects/ProjectConfigInterface'
+} from '@xrengine/common/src/utils/fsHelperFunctions'
+import { processFileName } from '@xrengine/common/src/utils/processFileName'
+import { AssetLoader } from '@xrengine/engine/src/assets/classes/AssetLoader'
+import { getState } from '@xrengine/hyperflux'
+import { ProjectConfigInterface, ProjectEventHooks } from '@xrengine/projects/ProjectConfigInterface'
 
-import { BUILDER_CHART_REGEX } from '@ir-engine/common/src/regex'
+import { BUILDER_CHART_REGEX } from '@xrengine/common/src/regex'
 import { Application } from '../../../declarations'
 import config from '../../appconfig'
 import { getPodsData } from '../../cluster/pods/pods-helper'
@@ -188,7 +163,7 @@ export const updateBuilder = async (
 
       if (helmSettings && helmSettings.builder && helmSettings.builder.length > 0)
         await execAsync(
-          `helm repo update && helm upgrade --reuse-values --version ${helmSettings.builder} --set builder.image.tag=${tag} ${builderDeploymentName} ir-engine/ir-engine-builder`
+          `helm repo update && helm upgrade --reuse-values --version ${helmSettings.builder} --set builder.image.tag=${tag} ${builderDeploymentName} xrengine/xrengine-builder`
         )
       else {
         const { stdout } = await execAsync(`helm history ${builderDeploymentName} | grep deployed`)
@@ -199,7 +174,7 @@ export const updateBuilder = async (
           const builderChartVersion = match[1]
           if (builderChartVersion)
             await execAsync(
-              `helm repo update && helm upgrade --reuse-values --version ${builderChartVersion} --set builder.image.tag=${tag} ${builderDeploymentName} ir-engine/ir-engine-builder`
+              `helm repo update && helm upgrade --reuse-values --version ${builderChartVersion} --set builder.image.tag=${tag} ${builderDeploymentName} xrengine/xrengine-builder`
             )
         }
       }
@@ -245,7 +220,7 @@ export const checkBuilderService = async (
         jobStatus.failed = failed.length > 0
         jobStatus.running = running.length > 0
       } else {
-        const containerName = 'ir-engine-builder'
+        const containerName = 'xrengine-builder'
 
         const builderPods = await k8DefaultClient.listNamespacedPod(
           'default',
@@ -1009,10 +984,10 @@ export async function getProjectUpdateJobBody(
   const projectJobName = cleanProjectName(data.name)
 
   const labels = {
-    'ir-engine/projectUpdater': 'true',
-    'ir-engine/autoUpdate': 'false',
-    'ir-engine/projectField': projectJobName,
-    'ir-engine/release': process.env.RELEASE_NAME!
+    'xrengine/projectUpdater': 'true',
+    'xrengine/autoUpdate': 'false',
+    'xrengine/projectField': projectJobName,
+    'xrengine/release': process.env.RELEASE_NAME!
   }
 
   const name = `${process.env.RELEASE_NAME}-${projectJobName}-update`
@@ -1057,9 +1032,9 @@ export async function getProjectPushJobBody(
   const projectJobName = cleanProjectName(project.name)
 
   const labels = {
-    'ir-engine/projectPusher': 'true',
-    'ir-engine/projectField': projectJobName,
-    'ir-engine/release': process.env.RELEASE_NAME!
+    'xrengine/projectPusher': 'true',
+    'xrengine/projectField': projectJobName,
+    'xrengine/release': process.env.RELEASE_NAME!
   }
 
   const name = `${process.env.RELEASE_NAME}-${projectJobName}-gh-push`
@@ -1073,11 +1048,11 @@ export const getCronJobBody = (project: ProjectType, image: string): object => {
     metadata: {
       name: `${process.env.RELEASE_NAME}-${projectJobName}-auto-update`,
       labels: {
-        'ir-engine/projectUpdater': 'true',
-        'ir-engine/autoUpdate': 'true',
-        'ir-engine/projectField': projectJobName,
-        'ir-engine/projectId': project.id,
-        'ir-engine/release': process.env.RELEASE_NAME
+        'xrengine/projectUpdater': 'true',
+        'xrengine/autoUpdate': 'true',
+        'xrengine/projectField': projectJobName,
+        'xrengine/projectId': project.id,
+        'xrengine/release': process.env.RELEASE_NAME
       }
     },
     spec: {
@@ -1090,15 +1065,15 @@ export const getCronJobBody = (project: ProjectType, image: string): object => {
           template: {
             metadata: {
               labels: {
-                'ir-engine/projectUpdater': 'true',
-                'ir-engine/autoUpdate': 'true',
-                'ir-engine/projectField': projectJobName,
-                'ir-engine/projectId': project.id,
-                'ir-engine/release': process.env.RELEASE_NAME
+                'xrengine/projectUpdater': 'true',
+                'xrengine/autoUpdate': 'true',
+                'xrengine/projectField': projectJobName,
+                'xrengine/projectId': project.id,
+                'xrengine/release': process.env.RELEASE_NAME
               }
             },
             spec: {
-              serviceAccountName: `${process.env.RELEASE_NAME}-ir-engine-api`,
+              serviceAccountName: `${process.env.RELEASE_NAME}-xrengine-api`,
               containers: [
                 {
                   name: `${process.env.RELEASE_NAME}-${project.name.toLowerCase()}-auto-update`,
@@ -1147,9 +1122,9 @@ export async function getDirectoryArchiveJobBody(
   const projectJobName = cleanProjectName(projectName)
 
   const labels = {
-    'ir-engine/directoryArchiver': 'true',
-    'ir-engine/projectField': projectJobName,
-    'ir-engine/release': process.env.RELEASE_NAME || ''
+    'xrengine/directoryArchiver': 'true',
+    'xrengine/projectField': projectJobName,
+    'xrengine/release': process.env.RELEASE_NAME || ''
   }
 
   const name = `${process.env.RELEASE_NAME}-${projectJobName}-archive`
@@ -1175,7 +1150,7 @@ export const createOrUpdateProjectUpdateJob = async (app: Application, projectNa
     app
   )
 
-  const image = apiPods.pods[0].containers.find((container) => container.name === 'ir-engine')!.image
+  const image = apiPods.pods[0].containers.find((container) => container.name === 'xrengine')!.image
 
   const k8BatchClient = getState(ServerState).k8BatchClient
 
@@ -1264,7 +1239,7 @@ export const copyDefaultProject = () => {
   deleteFolderRecursive(path.join(projectsRootFolder, `default-project`))
   copyFolderRecursiveSync(
     path.join(appRootPath.path, 'packages/projects/default-project'),
-    path.join(projectsRootFolder, 'ir-engine')
+    path.join(projectsRootFolder, 'xrengine')
   )
 }
 
@@ -1314,9 +1289,9 @@ export const updateProject = async (
   },
   params?: ProjectParams
 ) => {
-  if (data.sourceURL === 'ir-engine/default-project') {
+  if (data.sourceURL === 'xrengine/default-project') {
     copyDefaultProject()
-    await uploadLocalProjectToProvider(app, 'ir-engine/default-project')
+    await uploadLocalProjectToProvider(app, 'xrengine/default-project')
     if (params?.jobId) {
       const date = await getDateTimeSql()
       await app.service(apiJobPath).patch(params.jobId as string, {
@@ -1328,7 +1303,7 @@ export const updateProject = async (
       (await app.service(projectPath).find({
         query: {
           action: 'admin',
-          name: 'ir-engine/default-project',
+          name: 'xrengine/default-project',
           $limit: 1
         }
       })) as Paginated<ProjectType>

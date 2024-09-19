@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 /**
  * This is a modified version of figbird. https://humaans.github.io/figbird/
  * It now runs on hookstate instead of redux, and has been modified to work with
@@ -39,7 +14,7 @@ import { Params, Query } from '@feathersjs/feathers'
 import React, { useCallback, useEffect, useLayoutEffect, useMemo } from 'react'
 import { ServiceTypes } from '../../declarations'
 
-import { defineState, getState, NO_PROXY, OpaqueType, State, useHookstate, useMutableState } from '@ir-engine/hyperflux'
+import { defineState, getState, NO_PROXY, OpaqueType, State, useHookstate, useMutableState } from '@xrengine/hyperflux'
 import { API } from '../API'
 
 export type Methods = 'find' | 'get' | 'create' | 'update' | 'patch' | 'remove'
@@ -67,7 +42,7 @@ type ArrayOrPaginated<T> = T[] | Paginated<T>
 type ArrayOrPaginatedType<T> = T extends ArrayOrPaginated<infer R> ? R[] : never
 
 export const FeathersState = defineState({
-  name: 'ee.engine.FeathersState',
+  name: 'xrengine.engine.FeathersState',
   initial: () =>
     ({}) as Record<
       keyof ServiceTypes,

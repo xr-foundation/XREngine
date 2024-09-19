@@ -131,7 +131,7 @@
       },
       "parameters": {
         "system": {
-          "value": "ee.engine.VisualScriptSystem"
+          "value": "xrengine.engine.VisualScriptSystem"
         }
       },
       "flows": {

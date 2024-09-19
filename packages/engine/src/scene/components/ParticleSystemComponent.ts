@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { useEffect } from 'react'
 import {
   AdditiveBlending,
@@ -51,15 +26,15 @@ import {
 } from 'three.quarks'
 import matches from 'ts-matches'
 
-import { Entity, UUIDComponent } from '@ir-engine/ecs'
+import { Entity, UUIDComponent } from '@xrengine/ecs'
 import {
   defineComponent,
   getComponent,
   setComponent,
   useComponent,
   useOptionalComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { createEntity, generateEntityUUID, removeEntity, useEntityContext } from '@ir-engine/ecs/src/EntityFunctions'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { createEntity, generateEntityUUID, removeEntity, useEntityContext } from '@xrengine/ecs/src/EntityFunctions'
 import {
   NO_PROXY,
   defineState,
@@ -68,16 +43,16 @@ import {
   getState,
   none,
   useHookstate
-} from '@ir-engine/hyperflux'
-import { NameComponent } from '@ir-engine/spatial/src/common/NameComponent'
-import { addObjectToGroup, removeObjectFromGroup } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { VisibleComponent } from '@ir-engine/spatial/src/renderer/components/VisibleComponent'
-import { useDisposable } from '@ir-engine/spatial/src/resources/resourceHooks'
-import { EntityTreeComponent } from '@ir-engine/spatial/src/transform/components/EntityTree'
-import { TransformComponent } from '@ir-engine/spatial/src/transform/components/TransformComponent'
+} from '@xrengine/hyperflux'
+import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'
+import { addObjectToGroup, removeObjectFromGroup } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
+import { useDisposable } from '@xrengine/spatial/src/resources/resourceHooks'
+import { EntityTreeComponent } from '@xrengine/spatial/src/transform/components/EntityTree'
+import { TransformComponent } from '@xrengine/spatial/src/transform/components/TransformComponent'
 
-import { S } from '@ir-engine/ecs/src/schemas/JSONSchemas'
-import { AssetType } from '@ir-engine/engine/src/assets/constants/AssetType'
+import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
+import { AssetType } from '@xrengine/engine/src/assets/constants/AssetType'
 import { AssetLoader } from '../../assets/classes/AssetLoader'
 import { useGLTF, useTexture } from '../../assets/functions/resourceLoaderHooks'
 import { GLTFComponent } from '../../gltf/GLTFComponent'
@@ -848,7 +823,7 @@ export const DEFAULT_PARTICLE_SYSTEM_PARAMETERS = S.Object({
 
 export const ParticleSystemComponent = defineComponent({
   name: 'ParticleSystemComponent',
-  jsonID: 'EE_particle_system',
+  jsonID: 'XRENGINE_particle_system',
 
   schema: S.Object({
     systemParameters: DEFAULT_PARTICLE_SYSTEM_PARAMETERS,

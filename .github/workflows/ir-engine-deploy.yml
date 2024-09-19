@@ -1,4 +1,4 @@
-name: Deploy IR Engine
+name: Deploy XREngine
 
 on:
   push:
@@ -24,9 +24,9 @@ jobs:
   remote-dispatch-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Remote Dispatch to Deploy IR-Engine
+      - name: Send Remote Dispatch to Deploy XREngine
         run: |
-          curl -H "Authorization: token ${{ secrets.IR_ORG_ACCESS_TOKEN }}" \
+          curl -H "Authorization: token ${{ secrets.XRENGINE_ACCESS_TOKEN }}" \
             -H 'Accept: application/vnd.github.everest-preview+json' \
-            ${{ secrets.IR_ENGINE_OPS_API_URL }} \
-            -d '{"event_type": "deploy-ir-engine", "client_payload": {"environment": "${{ env.TARGET_BRANCH_NAME }}"}}'
+            ${{ secrets.XRENGINE_OPS_API_URL }} \
+            -d '{"event_type": "deploy-xrengine", "client_payload": {"environment": "${{ env.TARGET_BRANCH_NAME }}"}}'

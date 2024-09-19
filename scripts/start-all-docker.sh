@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker start ir-engine_db
-docker start ir-engine_redis
-docker start ir-engine_minikube_db
-docker start ir-engine_test_db
+docker start xrengine_db
+docker start xrengine_redis
+docker start xrengine_minikube_db
+docker start xrengine_test_db

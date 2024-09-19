@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import React, { useLayoutEffect } from 'react'
 
 import {
@@ -39,25 +14,25 @@ import {
   useHookstate,
   useMutableState,
   Validator
-} from '@ir-engine/hyperflux'
-import { Network, NetworkActions, NetworkState } from '@ir-engine/network'
+} from '@xrengine/hyperflux'
+import { Network, NetworkActions, NetworkState } from '@xrengine/network'
 
 export class MediasoupTransportActions {
   static requestTransport = defineAction({
-    type: 'ee.engine.network.mediasoup.TRANSPORT_REQUEST_CREATE',
+    type: 'xrengine.engine.network.mediasoup.TRANSPORT_REQUEST_CREATE',
     peerID: matchesPeerID,
     direction: matches.literals('send', 'recv'),
     sctpCapabilities: matches.object
   })
 
   static requestTransportError = defineAction({
-    type: 'ee.engine.network.mediasoup.TRANSPORT_REQUEST_ERROR_CREATE',
+    type: 'xrengine.engine.network.mediasoup.TRANSPORT_REQUEST_ERROR_CREATE',
     error: matches.string,
     direction: matches.literals('send', 'recv')
   })
 
   static transportCreated = defineAction({
-    type: 'ee.engine.network.mediasoup.TRANSPORT_CREATED',
+    type: 'xrengine.engine.network.mediasoup.TRANSPORT_CREATED',
     peerID: matchesPeerID,
     transportID: matches.string,
     direction: matches.literals('send', 'recv'),
@@ -75,32 +50,32 @@ export class MediasoupTransportActions {
   })
 
   static requestTransportConnect = defineAction({
-    type: 'ee.engine.network.mediasoup.TRANSPORT_REQUEST_CONNECT',
+    type: 'xrengine.engine.network.mediasoup.TRANSPORT_REQUEST_CONNECT',
     requestID: matches.string,
     transportID: matches.string,
     dtlsParameters: matches.object
   })
 
   static requestTransportConnectError = defineAction({
-    type: 'ee.engine.network.mediasoup.TRANSPORT_REQUEST_ERROR_CONNECT',
+    type: 'xrengine.engine.network.mediasoup.TRANSPORT_REQUEST_ERROR_CONNECT',
     requestID: matches.string,
     error: matches.string
   })
 
   static transportConnected = defineAction({
-    type: 'ee.engine.network.mediasoup.TRANSPORT_CONNECTED',
+    type: 'xrengine.engine.network.mediasoup.TRANSPORT_CONNECTED',
     requestID: matches.string,
     transportID: matches.string
   })
 
   static transportClosed = defineAction({
-    type: 'ee.engine.network.mediasoup.TRANSPORT_CLOSED',
+    type: 'xrengine.engine.network.mediasoup.TRANSPORT_CLOSED',
     transportID: matches.string
   })
 }
 
 export const MediasoupTransportObjectsState = defineState({
-  name: 'ee.engine.network.mediasoup.MediasoupTransportObjectsState',
+  name: 'xrengine.engine.network.mediasoup.MediasoupTransportObjectsState',
   initial: {} as Record<string, any>
 })
 
@@ -117,7 +92,7 @@ export type TransportType = {
 }
 
 export const MediasoupTransportState = defineState({
-  name: 'ee.engine.network.mediasoup.MediasoupTransportState',
+  name: 'xrengine.engine.network.mediasoup.MediasoupTransportState',
 
   initial: {} as Record<
     NetworkID,

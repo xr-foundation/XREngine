@@ -1,6 +1,6 @@
 {
-  "name": "@ir-engine/server",
-  "description": "API Server for Infinite Reality Engine",
+  "name": "@xrengine/server",
+  "description": "API Server for XREngine",
   "version": "1.6.0",
   "private": true,
   "homepage": "",
@@ -17,8 +17,8 @@
     "vr"
   ],
   "author": {
-    "name": "Infinite Reality Engine Collective",
-    "email": "hello@ir-engine.org"
+    "name": "XREngine Collective",
+    "email": "hello@xrfoundation.org"
   },
   "contributors": [],
   "bugs": {},
@@ -42,7 +42,7 @@
   },
   "types": "lib/",
   "dependencies": {
-    "@ir-engine/server-core": "^1.6.0",
+    "@xrengine/server-core": "^1.6.0",
     "@feathersjs/koa": "5.0.5",
     "@feathersjs/transport-commons": "5.0.5",
     "@swc/core": "1.3.41",

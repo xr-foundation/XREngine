@@ -1,6 +1,6 @@
 {
-  "appId": "org.ir-engine.client",
-  "appName": "@ir-engine/client",
+  "appId": "org.xrengine.client",
+  "appName": "@xrengine/client",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

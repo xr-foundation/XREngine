@@ -15,9 +15,9 @@
     {
       "name": "Point Light",
       "extensions": {
-        "EE_uuid": "45a35b2e-0e35-46e4-993a-bcf6831c4fb1",
-        "EE_visible": true,
-        "EE_point_light": {
+        "XRENGINE_uuid": "45a35b2e-0e35-46e4-993a-bcf6831c4fb1",
+        "XRENGINE_visible": true,
+        "XRENGINE_point_light": {
           "color": 16777215,
           "intensity": 1,
           "range": 0,
@@ -30,9 +30,9 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_point_light",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_point_light",
+    "XRENGINE_ecs"
   ]
 }

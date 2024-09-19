@@ -1,59 +1,34 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { DrawingUtils } from '@mediapipe/tasks-vision'
 import classNames from 'classnames'
 import hark from 'hark'
 import { t } from 'i18next'
 import React, { RefObject, useEffect, useRef } from 'react'
 
-import Text from '@ir-engine/client-core/src/common/components/Text'
-import { AuthState } from '@ir-engine/client-core/src/user/services/AuthService'
-import { useGet } from '@ir-engine/common'
-import { UserName, userPath } from '@ir-engine/common/src/schema.type.module'
-import { useExecute } from '@ir-engine/ecs'
-import { Engine } from '@ir-engine/ecs/src/Engine'
-import { AudioState } from '@ir-engine/engine/src/audio/AudioState'
-import { MediaSettingsState } from '@ir-engine/engine/src/audio/MediaSettingsState'
-import { MotionCaptureSystem, timeSeriesMocapData } from '@ir-engine/engine/src/mocap/MotionCaptureSystem'
-import { applyScreenshareToTexture } from '@ir-engine/engine/src/scene/functions/applyScreenshareToTexture'
-import { NO_PROXY, PeerID, State, getMutableState, getState, useHookstate, useMutableState } from '@ir-engine/hyperflux'
+import Text from '@xrengine/client-core/src/common/components/Text'
+import { AuthState } from '@xrengine/client-core/src/user/services/AuthService'
+import { useGet } from '@xrengine/common'
+import { UserName, userPath } from '@xrengine/common/src/schema.type.module'
+import { useExecute } from '@xrengine/ecs'
+import { Engine } from '@xrengine/ecs/src/Engine'
+import { AudioState } from '@xrengine/engine/src/audio/AudioState'
+import { MediaSettingsState } from '@xrengine/engine/src/audio/MediaSettingsState'
+import { MotionCaptureSystem, timeSeriesMocapData } from '@xrengine/engine/src/mocap/MotionCaptureSystem'
+import { applyScreenshareToTexture } from '@xrengine/engine/src/scene/functions/applyScreenshareToTexture'
+import { NO_PROXY, PeerID, State, getMutableState, getState, useHookstate, useMutableState } from '@xrengine/hyperflux'
 import {
   NetworkState,
   screenshareAudioDataChannelType,
   screenshareVideoDataChannelType,
   webcamAudioDataChannelType,
   webcamVideoDataChannelType
-} from '@ir-engine/network'
-import { isMobile } from '@ir-engine/spatial/src/common/functions/isMobile'
-import { drawPoseToCanvas } from '@ir-engine/ui/src/pages/Capture'
-import Icon from '@ir-engine/ui/src/primitives/mui/Icon'
-import IconButton from '@ir-engine/ui/src/primitives/mui/IconButton'
-import Slider from '@ir-engine/ui/src/primitives/mui/Slider'
-import Tooltip from '@ir-engine/ui/src/primitives/mui/Tooltip'
-import Canvas from '@ir-engine/ui/src/primitives/tailwind/Canvas'
+} from '@xrengine/network'
+import { isMobile } from '@xrengine/spatial/src/common/functions/isMobile'
+import { drawPoseToCanvas } from '@xrengine/ui/src/pages/Capture'
+import Icon from '@xrengine/ui/src/primitives/mui/Icon'
+import IconButton from '@xrengine/ui/src/primitives/mui/IconButton'
+import Slider from '@xrengine/ui/src/primitives/mui/Slider'
+import Tooltip from '@xrengine/ui/src/primitives/mui/Tooltip'
+import Canvas from '@xrengine/ui/src/primitives/tailwind/Canvas'
 
 import { useTranslation } from 'react-i18next'
 import { useZendesk } from '../../hooks/useZendesk'

@@ -16,9 +16,9 @@
     {
       "name": "Primitive Geometry",
       "extensions": {
-        "EE_uuid": "852336f7-89fd-48db-a2fa-98443914e4ca",
-        "EE_visible": true,
-        "EE_primitive_geometry": {
+        "XRENGINE_uuid": "852336f7-89fd-48db-a2fa-98443914e4ca",
+        "XRENGINE_visible": true,
+        "XRENGINE_primitive_geometry": {
           "geometryType": 0,
           "geometryParams": {
             "width": 1,
@@ -33,9 +33,9 @@
     }
   ],
   "extensionsUsed": [
-    "EE_uuid",
-    "EE_visible",
-    "EE_primitive_geometry",
-    "EE_ecs"
+    "XRENGINE_uuid",
+    "XRENGINE_visible",
+    "XRENGINE_primitive_geometry",
+    "XRENGINE_ecs"
   ]
 }

@@ -1,47 +1,22 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { useLayoutEffect } from 'react'
 import { ColorRepresentation, Mesh, MeshLambertMaterial, PlaneGeometry, ShadowMaterial } from 'three'
 
-import { defineComponent, removeComponent, setComponent, useComponent } from '@ir-engine/ecs/src/ComponentFunctions'
-import { useEntityContext } from '@ir-engine/ecs/src/EntityFunctions'
-import { S } from '@ir-engine/ecs/src/schemas/JSONSchemas'
-import { matches } from '@ir-engine/hyperflux'
-import { matchesColor } from '@ir-engine/spatial/src/common/functions/MatchesUtils'
-import { ColliderComponent } from '@ir-engine/spatial/src/physics/components/ColliderComponent'
-import { RigidBodyComponent } from '@ir-engine/spatial/src/physics/components/RigidBodyComponent'
-import { CollisionGroups } from '@ir-engine/spatial/src/physics/enums/CollisionGroups'
-import { BodyTypes, Shapes } from '@ir-engine/spatial/src/physics/types/PhysicsTypes'
-import { useMeshComponent } from '@ir-engine/spatial/src/renderer/components/MeshComponent'
-import { ObjectLayerMaskComponent } from '@ir-engine/spatial/src/renderer/components/ObjectLayerComponent'
-import { ObjectLayerMasks } from '@ir-engine/spatial/src/renderer/constants/ObjectLayers'
+import { defineComponent, removeComponent, setComponent, useComponent } from '@xrengine/ecs/src/ComponentFunctions'
+import { useEntityContext } from '@xrengine/ecs/src/EntityFunctions'
+import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
+import { matches } from '@xrengine/hyperflux'
+import { matchesColor } from '@xrengine/spatial/src/common/functions/MatchesUtils'
+import { ColliderComponent } from '@xrengine/spatial/src/physics/components/ColliderComponent'
+import { RigidBodyComponent } from '@xrengine/spatial/src/physics/components/RigidBodyComponent'
+import { CollisionGroups } from '@xrengine/spatial/src/physics/enums/CollisionGroups'
+import { BodyTypes, Shapes } from '@xrengine/spatial/src/physics/types/PhysicsTypes'
+import { useMeshComponent } from '@xrengine/spatial/src/renderer/components/MeshComponent'
+import { ObjectLayerMaskComponent } from '@xrengine/spatial/src/renderer/components/ObjectLayerComponent'
+import { ObjectLayerMasks } from '@xrengine/spatial/src/renderer/constants/ObjectLayers'
 
 export const GroundPlaneComponent = defineComponent({
   name: 'GroundPlaneComponent',
-  jsonID: 'EE_ground_plane',
+  jsonID: 'XRENGINE_ground_plane',
 
   schema: S.Object({
     color: S.Color(0xffffff),

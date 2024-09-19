@@ -1,23 +1,23 @@
 {
-  "name": "@ir-engine/engine",
+  "name": "@xrengine/engine",
   "author": {
-    "name": "Infinite Reality Engine Collective",
-    "email": "hello@ir-engine.org",
-    "url": "http://github.com/ir-engine"
+    "name": "XREngine Collective",
+    "email": "hello@xrfoundation.org",
+    "url": "http://github.com/xr-foundation"
   },
   "bugs": {
-    "url": "https://github.com/ir-engine/ir-engine/issues"
+    "url": "https://github.com/xr-foundation/xrengine/issues"
   },
   "publishConfig": {
     "access": "public"
   },
   "description": "A declarative way to build 3D/VR/AR/XR apps that scale. Built with tooling web developers will love, using conventions that game developers and creative coders will find straightforward familiar.",
-  "homepage": "https://github.com/ir-engine/ir-engine#readme",
+  "homepage": "https://github.com/xr-foundation/xrengine#readme",
   "license": "CPAL",
   "main": "index.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ir-engine/ir-engine.git"
+    "url": "git+https://github.com/xr-foundation/xrengine.git"
   },
   "scripts": {
     "check-errors": "tsc --noemit",
@@ -28,11 +28,11 @@
   "version": "1.6.0",
   "dependencies": {
     "@dimforge/rapier3d-compat": "0.11.2",
-    "@ir-engine/ecs": "^1.6.0",
-    "@ir-engine/hyperflux": "^1.6.0",
-    "@ir-engine/network": "^1.6.0",
-    "@ir-engine/spatial": "^1.6.0",
-    "@ir-engine/xrui": "^1.6.0",
+    "@xrengine/ecs": "^1.6.0",
+    "@xrengine/hyperflux": "^1.6.0",
+    "@xrengine/network": "^1.6.0",
+    "@xrengine/spatial": "^1.6.0",
+    "@xrengine/xrui": "^1.6.0",
     "@gltf-transform/core": "3.4.2",
     "@gltf-transform/extensions": "3.4.2",
     "@gltf-transform/functions": "3.4.2",

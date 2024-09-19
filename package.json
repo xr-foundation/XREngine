@@ -1,11 +1,11 @@
 {
-  "name": "ir-engine",
-  "description": "Engine, Server & Devops powering Infinite Reality Engine. Please support at https://opencollective.com/etherealengine",
+  "name": "xrengine",
+  "description": "Engine, Server & Devops powering XREngine.",
   "version": "0.0.0",
-  "homepage": "ir-engine.org",
+  "homepage": "xrfoundation.org",
   "private": true,
   "bin": {
-    "ir-engine": "npx/cli.js"
+    "xrengine": "npx/cli.js"
   },
   "workspaces": [
     "packages/*",
@@ -24,8 +24,8 @@
     "vr"
   ],
   "author": {
-    "name": "Infinite Reality Engine",
-    "email": "info@ir-engine.org"
+    "name": "XREngine",
+    "email": "info@xrfoundation.org"
   },
   "entrypoint": {},
   "contributors": [],
@@ -41,7 +41,7 @@
   "scripts": {
     "build-client": "cd packages/client && npm run build",
     "check": "npm run lint && npm run check-errors && npm run check-eslint && npm run test && npm run build-client",
-    "check-errors": "lerna run --scope '@ir-engine/*' check-errors && lerna run --ignore '@ir-engine/*' check-errors",
+    "check-errors": "lerna run --scope '@xrengine/*' check-errors && lerna run --ignore '@xrengine/*' check-errors",
     "check-eslint": "eslint --quiet .",
     "checkout-dev": "lerna exec 'git checkout dev' --parallel --no-bail",
     "clean-node-modules": "npx rimraf node_modules && npx rimraf package-lock.json && npx lerna exec npx rimraf node_modules && npx lerna exec npx rimraf package-lock.json",
@@ -80,7 +80,7 @@
     "publish": "lerna publish from-package --yes --registry https://registry.npmjs.org",
     "publish-npm": "lerna publish from-package --yes --no-verify-access --ignore-scripts --registry https://registry.npmjs.org",
     "publish-github": "lerna publish from-package --yes --no-verify-access --ignore-scripts --registry https://npm.pkg.github.com",
-    "test": "cross-env TEST=true lerna run --scope '@ir-engine/*' --ignore '@ir-engine/server-core' test && lerna run --scope '@ir-engine/server-core' test && lerna run --ignore '@ir-engine/*' test",
+    "test": "cross-env TEST=true lerna run --scope '@xrengine/*' --ignore '@xrengine/server-core' test && lerna run --scope '@xrengine/server-core' test && lerna run --ignore '@xrengine/*' test",
     "test-e2e": "ts-node --swc scripts/run_e2e_tests.ts",
     "test:ci": "cpy --no-overwrite --rename=.env.local '.env.local.default' . && cross-env CI=true npm run test",
     "test-coverage": "npm run test-coverage-generate ; npm run test-coverage-launch",

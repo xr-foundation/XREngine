@@ -1,28 +1,3 @@
-/*
-CPAL-1.0 License
-
-The contents of this file are subject to the Common Public Attribution License
-Version 1.0. (the "License"); you may not use this file except in compliance
-with the License. You may obtain a copy of the License at
-https://github.com/ir-engine/ir-engine/blob/dev/LICENSE.
-The License is based on the Mozilla Public License Version 1.1, but Sections 14
-and 15 have been added to cover use of software over a computer network and 
-provide for limited attribution for the Original Developer. In addition, 
-Exhibit A has been modified to be consistent with Exhibit B.
-
-Software distributed under the License is distributed on an "AS IS" basis,
-WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
-specific language governing rights and limitations under the License.
-
-The Original Code is Infinite Reality Engine.
-
-The Original Developer is the Initial Developer. The Initial Developer of the
-Original Code is the Infinite Reality Engine team.
-
-All portions of the code written by the Infinite Reality Engine team are Copyright © 2021-2023 
-Infinite Reality Engine. All Rights Reserved.
-*/
-
 import { Tween } from '@tweenjs/tween.js'
 import {
   AdditiveAnimationBlendMode,
@@ -45,24 +20,24 @@ import {
   hasComponent,
   removeComponent,
   setComponent
-} from '@ir-engine/ecs/src/ComponentFunctions'
-import { Engine } from '@ir-engine/ecs/src/Engine'
-import { Entity } from '@ir-engine/ecs/src/Entity'
-import { PositionalAudioComponent } from '@ir-engine/engine/src/audio/components/PositionalAudioComponent'
-import { AnimationState } from '@ir-engine/engine/src/avatar/AnimationManager'
-import { LoopAnimationComponent } from '@ir-engine/engine/src/avatar/components/LoopAnimationComponent'
-import { MediaComponent } from '@ir-engine/engine/src/scene/components/MediaComponent'
-import { VideoComponent } from '@ir-engine/engine/src/scene/components/VideoComponent'
-import { PlayMode } from '@ir-engine/engine/src/scene/constants/PlayMode'
-import { dispatchAction, getState } from '@ir-engine/hyperflux'
-import { CameraActions } from '@ir-engine/spatial/src/camera/CameraState'
-import { FollowCameraComponent } from '@ir-engine/spatial/src/camera/components/FollowCameraComponent'
-import iterateObject3D from '@ir-engine/spatial/src/common/functions/iterateObject3D'
-import { GroupComponent } from '@ir-engine/spatial/src/renderer/components/GroupComponent'
-import { TweenComponent } from '@ir-engine/spatial/src/transform/components/TweenComponent'
-import { endXRSession, requestXRSession } from '@ir-engine/spatial/src/xr/XRSessionFunctions'
-import { ContentFitType } from '@ir-engine/spatial/src/xrui/functions/ObjectFitFunctions'
-import { NodeCategory, makeFlowNodeDefinition, makeFunctionNodeDefinition } from '@ir-engine/visual-script'
+} from '@xrengine/ecs/src/ComponentFunctions'
+import { Engine } from '@xrengine/ecs/src/Engine'
+import { Entity } from '@xrengine/ecs/src/Entity'
+import { PositionalAudioComponent } from '@xrengine/engine/src/audio/components/PositionalAudioComponent'
+import { AnimationState } from '@xrengine/engine/src/avatar/AnimationManager'
+import { LoopAnimationComponent } from '@xrengine/engine/src/avatar/components/LoopAnimationComponent'
+import { MediaComponent } from '@xrengine/engine/src/scene/components/MediaComponent'
+import { VideoComponent } from '@xrengine/engine/src/scene/components/VideoComponent'
+import { PlayMode } from '@xrengine/engine/src/scene/constants/PlayMode'
+import { dispatchAction, getState } from '@xrengine/hyperflux'
+import { CameraActions } from '@xrengine/spatial/src/camera/CameraState'
+import { FollowCameraComponent } from '@xrengine/spatial/src/camera/components/FollowCameraComponent'
+import iterateObject3D from '@xrengine/spatial/src/common/functions/iterateObject3D'
+import { GroupComponent } from '@xrengine/spatial/src/renderer/components/GroupComponent'
+import { TweenComponent } from '@xrengine/spatial/src/transform/components/TweenComponent'
+import { endXRSession, requestXRSession } from '@xrengine/spatial/src/xr/XRSessionFunctions'
+import { ContentFitType } from '@xrengine/spatial/src/xrui/functions/ObjectFitFunctions'
+import { NodeCategory, makeFlowNodeDefinition, makeFunctionNodeDefinition } from '@xrengine/visual-script'
 
 export const playVideo = makeFlowNodeDefinition({
   typeName: 'engine/media/playVideo',
