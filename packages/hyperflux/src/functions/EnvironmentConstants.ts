@@ -1,3 +1,4 @@
+
 const isBrowser = typeof window !== 'undefined' && typeof window.document !== 'undefined'
 
 /* eslint-disable no-restricted-globals */

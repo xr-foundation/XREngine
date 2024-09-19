@@ -1,3 +1,4 @@
+
 import { getComponent, hasComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { ECSState } from '@xrengine/ecs/src/ECSState'
 import { Entity } from '@xrengine/ecs/src/Entity'

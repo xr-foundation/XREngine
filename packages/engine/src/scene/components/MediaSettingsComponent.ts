@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react'
 
 import { defineComponent, useComponent } from '@xrengine/ecs/src/ComponentFunctions'

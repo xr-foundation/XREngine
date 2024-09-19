@@ -1,3 +1,4 @@
+
 import { engineSettingPath, EngineSettingType } from '@xrengine/common/src/schemas/setting/engine-setting.schema'
 import { userPath, UserType } from '@xrengine/common/src/schemas/user/user.schema'
 import { destroyEngine } from '@xrengine/ecs/src/Engine'

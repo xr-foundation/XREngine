@@ -1,3 +1,4 @@
+
 import { ServiceInterface } from '@feathersjs/feathers'
 import appRootPath from 'app-root-path'
 import fs from 'fs'

@@ -1,3 +1,4 @@
+
 import { ComponentJSONIDMap } from '@xrengine/ecs'
 
 import { SceneJsonType } from '../types/SceneTypes'

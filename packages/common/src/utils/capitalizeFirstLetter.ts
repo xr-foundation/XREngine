@@ -1,3 +1,4 @@
+
 /**
  * Capitalizes first letter of a string.
  * Replacement for `_.upperFirst()`

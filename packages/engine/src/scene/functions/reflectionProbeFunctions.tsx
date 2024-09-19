@@ -1,3 +1,4 @@
+
 import { Entity, getComponent } from '@xrengine/ecs'
 import { TransformComponent } from '@xrengine/spatial'
 import { createDisposable } from '@xrengine/spatial/src/resources/resourceHooks'

@@ -1,3 +1,4 @@
+
 import { Entity, UndefinedEntity, getComponent, useOptionalComponent, useQuery } from '@xrengine/ecs'
 import { startReactor, useHookstate, useImmediateEffect } from '@xrengine/hyperflux'
 import React, { useLayoutEffect } from 'react'

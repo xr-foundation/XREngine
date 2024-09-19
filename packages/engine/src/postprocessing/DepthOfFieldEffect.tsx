@@ -1,3 +1,4 @@
+
 import { Entity, useComponent } from '@xrengine/ecs'
 import { getMutableState, getState, none } from '@xrengine/hyperflux'
 import { CameraComponent } from '@xrengine/spatial/src/camera/components/CameraComponent'

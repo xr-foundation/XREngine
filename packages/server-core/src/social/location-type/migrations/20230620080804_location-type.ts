@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { locationTypePath } from '@xrengine/common/src/schemas/social/location-type.schema'

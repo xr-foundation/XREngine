@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 
 import { fileBrowserPath } from '@xrengine/common/src/schemas/media/file-browser.schema'

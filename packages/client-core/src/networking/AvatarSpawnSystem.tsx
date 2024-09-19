@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react'
 
 import { getSearchParamFromURL } from '@xrengine/common/src/utils/getSearchParamFromURL'

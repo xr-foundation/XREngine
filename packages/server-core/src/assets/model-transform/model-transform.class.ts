@@ -1,3 +1,4 @@
+
 import { BadRequest } from '@feathersjs/errors/lib'
 import { ServiceInterface } from '@feathersjs/feathers/lib'
 import { KnexAdapterParams } from '@feathersjs/knex/lib'

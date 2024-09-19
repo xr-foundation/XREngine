@@ -1,3 +1,4 @@
+
 import { Object3D } from 'three'
 
 export default async function asyncTraverse(object: Object3D, callback: (node: Object3D) => void) {

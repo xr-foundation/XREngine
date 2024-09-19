@@ -1,3 +1,4 @@
+
 import { defineComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'
 

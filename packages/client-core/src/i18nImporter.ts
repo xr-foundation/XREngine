@@ -1,3 +1,4 @@
+
 export const getI18nConfigs = (modules: { [module: string]: any }) => {
   if (!Object.keys(modules).length) return {}
   const resources = Object.entries(modules).reduce((obj, [key, translation]) => {

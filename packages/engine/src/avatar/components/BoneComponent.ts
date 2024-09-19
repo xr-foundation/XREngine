@@ -1,3 +1,4 @@
+
 import { Bone } from 'three'
 
 import { defineComponent } from '@xrengine/ecs/src/ComponentFunctions'

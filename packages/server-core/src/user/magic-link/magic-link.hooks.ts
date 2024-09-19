@@ -1,3 +1,4 @@
+
 import { disallow } from 'feathers-hooks-common'
 
 export default {

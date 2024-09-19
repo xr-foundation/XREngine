@@ -1,3 +1,4 @@
+
 export default function isInputSelected() {
   const el = document.activeElement as any
   const nodeName = el.nodeName

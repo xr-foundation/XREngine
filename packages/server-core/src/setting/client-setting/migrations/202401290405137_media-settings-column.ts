@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { defaultMediaSettings } from '@xrengine/common/src/constants/DefaultMediaSettings'

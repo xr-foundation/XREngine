@@ -1,3 +1,4 @@
+
 import { Paginated, Params } from '@feathersjs/feathers'
 import { AvatarType, avatarPath } from '@xrengine/common/src/schemas/user/avatar.schema'
 import { UserApiKeyType, userApiKeyPath } from '@xrengine/common/src/schemas/user/user-api-key.schema'

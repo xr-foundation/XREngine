@@ -1,3 +1,4 @@
+
 import { ShaderChunk } from 'three'
 
 const lightParsBeginInitial = ShaderChunk.lights_pars_begin

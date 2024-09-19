@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react'
 
 import { getComponent, removeComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'

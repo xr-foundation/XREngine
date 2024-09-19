@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { botCommandPath } from '@xrengine/common/src/schemas/bot/bot-command.schema'

@@ -1,3 +1,4 @@
+
 import { createWorkerFromCrossOriginURL } from '@xrengine/spatial/src/common/functions/createWorkerFromCrossOriginURL'
 
 import { WorkerPool } from '../WorkerPool'

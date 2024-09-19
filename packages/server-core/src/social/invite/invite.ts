@@ -1,3 +1,4 @@
+
 import { Paginated } from '@feathersjs/feathers'
 
 import { inviteMethods, invitePath, InviteType } from '@xrengine/common/src/schemas/social/invite.schema'

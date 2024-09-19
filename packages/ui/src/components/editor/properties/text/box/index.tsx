@@ -1,3 +1,4 @@
+
 import { useComponent } from '@xrengine/ecs'
 import { EditorComponentType, commitProperty, updateProperty } from '@xrengine/editor/src/components/properties/Util'
 import { TextComponent } from '@xrengine/engine/src/scene/components/TextComponent'

@@ -1,3 +1,4 @@
+
 import { GLTFParser } from '../GLTFParser'
 
 export class RemoveMaterialsExtension {

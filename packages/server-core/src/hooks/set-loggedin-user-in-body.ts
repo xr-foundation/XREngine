@@ -1,3 +1,4 @@
+
 import { HookContext } from '@feathersjs/feathers'
 
 import { UserType } from '@xrengine/common/src/schemas/user/user.schema'

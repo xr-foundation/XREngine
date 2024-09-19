@@ -1,3 +1,4 @@
+
 import { RepeatWrapping, VideoTexture } from 'three'
 
 import { isClient } from '@xrengine/hyperflux'

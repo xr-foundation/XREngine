@@ -1,3 +1,4 @@
+
 import { BlendFunction, Effect } from 'postprocessing'
 
 import fragmentShader from './glsl/linear-to-srgb/shader.frag'

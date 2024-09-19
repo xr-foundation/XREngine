@@ -1,3 +1,4 @@
+
 import { AvatarID } from '@xrengine/common/src/schema.type.module'
 
 export const AVATAR_CHARACTERS = '123456789abcdef'

@@ -1,3 +1,4 @@
+
 const wristJoints = ['wrist']
 const thumbJoints = ['thumb-metacarpal', 'thumb-phalanx-proximal', 'thumb-phalanx-distal', 'thumb-tip']
 const indexFingerJoints = [

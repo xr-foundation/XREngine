@@ -1,3 +1,4 @@
+
 import { defineComponent, useComponent, useEntityContext } from '@xrengine/ecs'
 import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
 import { useEffect } from 'react'

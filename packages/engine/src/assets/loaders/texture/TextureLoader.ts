@@ -1,3 +1,4 @@
+
 import { isClient } from '@xrengine/hyperflux'
 import { iOS } from '@xrengine/spatial/src/common/functions/isMobile'
 import { ImageLoader, LoadingManager, Texture } from 'three'

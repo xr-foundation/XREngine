@@ -1,3 +1,4 @@
+
 import { CustomEvent } from '../Events/CustomEvent'
 import { Metadata } from '../Metadata'
 import { NodeConfiguration } from '../Nodes/Node'

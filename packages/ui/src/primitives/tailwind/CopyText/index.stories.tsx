@@ -1,4 +1,5 @@
 
+
 import CopyText from './index'
 
 export default {

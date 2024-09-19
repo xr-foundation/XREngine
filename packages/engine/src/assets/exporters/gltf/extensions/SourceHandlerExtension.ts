@@ -1,3 +1,4 @@
+
 import { Object3D } from 'three'
 
 import { getComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'

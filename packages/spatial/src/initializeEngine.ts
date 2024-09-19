@@ -1,3 +1,4 @@
+
 import { BoxGeometry, Group, Mesh, MeshNormalMaterial } from 'three'
 
 import { createEntity, getComponent, removeEntity, setComponent, UUIDComponent } from '@xrengine/ecs'

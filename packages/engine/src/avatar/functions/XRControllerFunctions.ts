@@ -1,3 +1,4 @@
+
 import { AnimationMixer, Group, LoopOnce } from 'three'
 
 import { setComponent } from '@xrengine/ecs/src/ComponentFunctions'

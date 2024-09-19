@@ -1,3 +1,4 @@
+
 import { BadRequest } from '@feathersjs/errors'
 import { disallow } from 'feathers-hooks-common'
 import { HookContext } from '../../../declarations'

@@ -1,5 +1,6 @@
+
 import CloseIcon from '@mui/icons-material/Close'
-import { IconButtonProps, default as MUIIconButton } from '@mui/material/IconButton'
+import { IconButton as MUIIconButton, IconButtonProps } from '@mui/material'
 import React from 'react'
 
 import { handleSoundEffect } from '@xrengine/client-core/src/common/utils'

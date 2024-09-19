@@ -1,3 +1,4 @@
+
 import { WidgetAppServiceReceptorSystem } from '@xrengine/spatial/src/xrui/WidgetAppService'
 
 import { AvatarSpawnSystem } from '../networking/AvatarSpawnSystem'

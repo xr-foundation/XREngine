@@ -1,3 +1,4 @@
+
 import config from '@xrengine/common/src/config'
 import { useGLTF } from '@xrengine/engine/src/assets/functions/resourceLoaderHooks'
 import { defineState, getMutableState, useHookstate } from '@xrengine/hyperflux'

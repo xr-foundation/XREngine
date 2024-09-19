@@ -1,3 +1,4 @@
+
 export type DeepReadonly<T> = T extends (infer R)[]
   ? DeepReadonlyArray<R>
   : // eslint-disable-next-line @typescript-eslint/ban-types

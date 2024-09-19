@@ -1,3 +1,4 @@
+
 // Based on https://github.com/cburgmer/xmlserializer
 
 import { getEmbeddedDataURL } from './serialization/getEmbeddedDataURL'

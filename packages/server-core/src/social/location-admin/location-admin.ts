@@ -1,3 +1,4 @@
+
 import { locationAdminMethods, locationAdminPath } from '@xrengine/common/src/schemas/social/location-admin.schema'
 
 // Initializes the `location-admin` service on path `/location-admin`

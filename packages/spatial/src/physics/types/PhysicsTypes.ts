@@ -1,3 +1,4 @@
+
 import RAPIER, { ActiveCollisionTypes, RigidBodyType, ShapeType, Vector } from '@dimforge/rapier3d-compat'
 import { BoxGeometry, CapsuleGeometry, CylinderGeometry, SphereGeometry, Vector3 } from 'three'
 

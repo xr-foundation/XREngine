@@ -1,3 +1,4 @@
+
 import { defineState, syncStateWithLocalStorage } from '@xrengine/hyperflux'
 
 export const AvatarAxesControlScheme = {

@@ -1,3 +1,4 @@
+
 import { builderInfoMethods, builderInfoPath } from '@xrengine/common/src/schemas/projects/builder-info.schema'
 
 import { Application } from '../../../declarations'

@@ -1,3 +1,4 @@
+
 /** Adapted from https://github.com/trusktr/geometry-interfaces */
 
 // This matrix is represented internally in row-major format so that it is easy

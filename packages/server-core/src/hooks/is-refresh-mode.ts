@@ -1,3 +1,4 @@
+
 import appConfig from '@xrengine/server-core/src/appconfig'
 
 import { HookContext } from '../../declarations'

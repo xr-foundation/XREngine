@@ -1,3 +1,4 @@
+
 /* eslint-disable @typescript-eslint/no-this-alias */
 // Modified version taken from underscore.js
 // Returns a function, that, when invoked, will only be triggered at most once

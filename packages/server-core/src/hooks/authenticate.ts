@@ -1,3 +1,4 @@
+
 import * as authentication from '@feathersjs/authentication'
 import { NotAuthenticated } from '@feathersjs/errors'
 import { HookContext, NextFunction, Paginated } from '@feathersjs/feathers'

@@ -1,3 +1,4 @@
+
 import { defineQuery, defineSystem, getComponent } from '@xrengine/ecs'
 import { getState, useMutableState } from '@xrengine/hyperflux'
 import { useEffect } from 'react'

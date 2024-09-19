@@ -1,3 +1,4 @@
+
 /**
  * adapted from https://github.com/soldair/node-gitconfiglocal
  */

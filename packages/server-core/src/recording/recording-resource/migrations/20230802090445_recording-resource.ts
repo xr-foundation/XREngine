@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { recordingResourcePath } from '@xrengine/common/src/schemas/recording/recording-resource.schema'

@@ -1,3 +1,4 @@
+
 /** Camera Modes. */
 export enum FollowCameraMode {
   FirstPerson = 'FirstPerson',

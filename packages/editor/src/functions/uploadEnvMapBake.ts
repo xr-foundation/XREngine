@@ -1,3 +1,4 @@
+
 import { Scene, Vector3 } from 'three'
 
 import { getComponent, hasComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'

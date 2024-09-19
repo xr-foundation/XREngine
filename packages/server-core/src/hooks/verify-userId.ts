@@ -1,3 +1,4 @@
+
 import { NotAuthenticated } from '@feathersjs/errors'
 import { HookContext } from '@feathersjs/feathers'
 

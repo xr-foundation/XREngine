@@ -1,3 +1,4 @@
+
 import { t } from 'i18next'
 import React, { Suspense } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'

@@ -1,3 +1,4 @@
+
 import { EasingFunctions, EasingModes, makeFunctionNodeDefinition, NodeCategory } from '../../../VisualScriptModule'
 
 export const Easing = makeFunctionNodeDefinition({

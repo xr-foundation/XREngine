@@ -1,3 +1,4 @@
+
 import { useQuery, UUIDComponent } from '@xrengine/ecs'
 import { getComponent, useComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import {

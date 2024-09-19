@@ -1,3 +1,4 @@
+
 /**
  * This class provides methods to manage events dispatches.
  */

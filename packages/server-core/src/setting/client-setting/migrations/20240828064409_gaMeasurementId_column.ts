@@ -1,3 +1,4 @@
+
 import { clientSettingPath } from '@xrengine/common/src/schemas/setting/client-setting.schema'
 import type { Knex } from 'knex'
 

@@ -1,3 +1,4 @@
+
 import { getComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Engine } from '@xrengine/ecs/src/Engine'
 import { getState } from '@xrengine/hyperflux'

@@ -1,3 +1,4 @@
+
 import { Bounds, getBounds, getViewportBounds } from '@xrengine/xrui'
 
 export const calculateAndApplyYOffset = (element: HTMLElement | null, additionalOffset = 0) => {

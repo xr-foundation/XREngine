@@ -1,3 +1,4 @@
+
 import { metabaseSettingPath } from '@xrengine/common/src/schemas/integrations/metabase/metabase-setting.schema'
 import type { Knex } from 'knex'
 

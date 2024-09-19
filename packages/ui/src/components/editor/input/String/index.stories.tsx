@@ -1,3 +1,4 @@
+
 import StringInput from './index'
 const argTypes = {}
 

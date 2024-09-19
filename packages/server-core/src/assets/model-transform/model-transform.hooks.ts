@@ -1,3 +1,4 @@
+
 import verifyScope from '../../hooks/verify-scope'
 
 export default {

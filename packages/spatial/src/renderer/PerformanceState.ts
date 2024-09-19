@@ -1,3 +1,4 @@
+
 import { GetGPUTier, getGPUTier } from 'detect-gpu'
 import { debounce } from 'lodash'
 import { SMAAPreset } from 'postprocessing'

@@ -1,3 +1,4 @@
+
 export function getOS() {
   const platform = process.platform
 

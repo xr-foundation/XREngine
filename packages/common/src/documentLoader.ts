@@ -1,3 +1,4 @@
+
 // If this gets re-implemented, need to add the @digitalCredentials packages back to package.json dependencies
 // import { CachedResolver } from '@digitalcredentials/did-io'
 // import * as didKey from '@digitalcredentials/did-method-key'

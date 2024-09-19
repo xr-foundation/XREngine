@@ -1,3 +1,4 @@
+
 export const initialAuthState = {
   jwt: true,
   apple: false,

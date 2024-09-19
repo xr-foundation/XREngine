@@ -1,3 +1,4 @@
+
 import { Engine, getOptionalComponent } from '@xrengine/ecs'
 import { ECSState } from '@xrengine/ecs/src/ECSState'
 import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'

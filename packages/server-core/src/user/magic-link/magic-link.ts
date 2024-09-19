@@ -1,3 +1,4 @@
+
 import { magicLinkMethods, magicLinkPath } from '@xrengine/common/src/schemas/user/magic-link.schema'
 
 import { Application } from '../../../declarations'

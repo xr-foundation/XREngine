@@ -1,3 +1,4 @@
+
 import { removeComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { dispatchAction } from '@xrengine/hyperflux'
 import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'

@@ -1,3 +1,4 @@
+
 import { useTranslation } from 'react-i18next'
 
 import { Component, useComponent } from '@xrengine/ecs/src/ComponentFunctions'

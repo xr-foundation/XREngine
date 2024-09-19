@@ -1,3 +1,4 @@
+
 import { userKickMethods, userKickPath } from '@xrengine/common/src/schemas/user/user-kick.schema'
 
 import { Application } from '../../../declarations'

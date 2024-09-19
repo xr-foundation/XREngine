@@ -1,3 +1,4 @@
+
 import { camelCaseToSpacedString } from '@xrengine/common/src/utils/camelCaseToSpacedString'
 import { useComponent } from '@xrengine/ecs'
 import { EditorComponentType, commitProperty } from '@xrengine/editor/src/components/properties/Util'

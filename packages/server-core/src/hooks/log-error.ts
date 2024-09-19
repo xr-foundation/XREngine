@@ -1,3 +1,4 @@
+
 import { NextFunction } from '@feathersjs/feathers'
 
 import multiLogger from '@xrengine/common/src/logger'

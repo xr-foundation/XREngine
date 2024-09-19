@@ -1,3 +1,4 @@
+
 import { getAllComponents, serializeComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'
 import { ComponentJsonType } from '@xrengine/engine/src/scene/types/SceneTypes'

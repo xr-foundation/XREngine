@@ -1,3 +1,4 @@
+
 import { makeFlowNodeDefinition, NodeCategory } from '../../../VisualScriptModule'
 
 export const MultiGate = makeFlowNodeDefinition({

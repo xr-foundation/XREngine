@@ -1,3 +1,4 @@
+
 import { botCommandMethods, botCommandPath } from '@xrengine/common/src/schemas/bot/bot-command.schema'
 
 import { Application } from '../../../declarations'

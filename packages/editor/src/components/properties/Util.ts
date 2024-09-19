@@ -1,3 +1,4 @@
+
 import { UUIDComponent } from '@xrengine/ecs'
 import { Component, SerializedComponentType, updateComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'

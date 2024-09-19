@@ -1,3 +1,4 @@
+
 import { defineComponent } from '@xrengine/ecs/src/ComponentFunctions'
 
 export const ScreenshareTargetComponent = defineComponent({

@@ -1,3 +1,4 @@
+
 import { EntityUUID, UUIDComponent, useQuery } from '@xrengine/ecs'
 import { ComponentType, getComponent, useComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { EditorComponentType, commitProperty, updateProperty } from '@xrengine/editor/src/components/properties/Util'

@@ -1,3 +1,4 @@
+
 import { Group, Object3D, SkinnedMesh } from 'three'
 
 import { Entity } from '@xrengine/ecs/src/Entity'

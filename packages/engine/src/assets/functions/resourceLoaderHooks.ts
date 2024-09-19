@@ -1,3 +1,4 @@
+
 import { GLTF } from '@gltf-transform/core'
 import { useEffect } from 'react'
 import { Texture } from 'three'

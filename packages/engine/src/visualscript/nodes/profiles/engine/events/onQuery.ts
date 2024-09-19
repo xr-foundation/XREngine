@@ -1,3 +1,4 @@
+
 import { Component, ComponentMap } from '@xrengine/ecs/src/ComponentFunctions'
 import { Query, defineQuery, removeQuery } from '@xrengine/ecs/src/QueryFunctions'
 import { SystemDefinitions, SystemUUID, defineSystem, destroySystem } from '@xrengine/ecs/src/SystemFunctions'

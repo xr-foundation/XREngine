@@ -1,3 +1,4 @@
+
 import { Paginated } from '@feathersjs/feathers'
 
 import { avatarMethods, avatarPath, AvatarType } from '@xrengine/common/src/schemas/user/avatar.schema'

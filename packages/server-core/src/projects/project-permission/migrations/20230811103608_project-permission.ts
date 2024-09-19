@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { projectPermissionPath } from '@xrengine/common/src/schemas/projects/project-permission.schema'

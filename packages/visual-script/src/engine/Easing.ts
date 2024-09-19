@@ -1,3 +1,4 @@
+
 export type Easing = (t: number) => number
 
 export const EasingFunctions: { [name: string]: Easing } = {

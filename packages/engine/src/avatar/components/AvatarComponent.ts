@@ -1,3 +1,4 @@
+
 import { Engine, EntityUUID, UUIDComponent } from '@xrengine/ecs'
 import { defineComponent, getComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { defineQuery } from '@xrengine/ecs/src/QueryFunctions'

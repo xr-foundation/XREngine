@@ -1,3 +1,4 @@
+
 import { PopoverState } from '@xrengine/client-core/src/common/services/PopoverState'
 import { staticResourcePath } from '@xrengine/common/src/schema.type.module'
 import { NO_PROXY, getMutableState, useHookstate, useMutableState } from '@xrengine/hyperflux'

@@ -1,3 +1,4 @@
+
 import { userSettingMethods, userSettingPath } from '@xrengine/common/src/schemas/user/user-setting.schema'
 
 import { Application } from '../../../declarations'

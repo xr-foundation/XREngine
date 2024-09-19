@@ -1,3 +1,4 @@
+
 import { Id, Paginated, ServiceInterface } from '@feathersjs/feathers'
 import { KnexAdapterParams } from '@feathersjs/knex'
 

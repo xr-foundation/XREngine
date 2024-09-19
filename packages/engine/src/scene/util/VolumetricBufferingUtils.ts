@@ -1,3 +1,4 @@
+
 import { State } from '@xrengine/hyperflux'
 import { isMobile } from '@xrengine/spatial/src/common/functions/isMobile'
 import { isMobileXRHeadset } from '@xrengine/spatial/src/xr/XRState'

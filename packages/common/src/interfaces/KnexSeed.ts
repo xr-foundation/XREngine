@@ -1,3 +1,4 @@
+
 import { Knex } from 'knex'
 
 export interface KnexSeed {

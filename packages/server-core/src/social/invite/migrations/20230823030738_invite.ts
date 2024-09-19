@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { invitePath } from '@xrengine/common/src/schemas/social/invite.schema'

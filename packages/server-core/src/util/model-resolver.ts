@@ -1,3 +1,4 @@
+
 const resolveObject = (obj: any): any => {
   if (obj?.dataValues) {
     return { ...obj.dataValues }

@@ -1,3 +1,4 @@
+
 import { CanvasTexture, Texture } from 'three'
 
 import { isClient } from '@xrengine/hyperflux'

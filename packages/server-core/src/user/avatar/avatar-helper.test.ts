@@ -1,3 +1,4 @@
+
 import { destroyEngine } from '@xrengine/ecs/src/Engine'
 
 import { Application } from '../../../declarations'

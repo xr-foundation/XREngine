@@ -1,3 +1,4 @@
+
 import { locationTypeMethods, locationTypePath } from '@xrengine/common/src/schemas/social/location-type.schema'
 
 import { Application } from '../../../declarations'

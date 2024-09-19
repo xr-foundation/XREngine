@@ -1,3 +1,4 @@
+
 /**
  * fetchContentType is used to get the header content type of response using url.
  *

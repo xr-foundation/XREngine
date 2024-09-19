@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { authenticationSettingPath } from '@xrengine/common/src/schemas/setting/authentication-setting.schema'

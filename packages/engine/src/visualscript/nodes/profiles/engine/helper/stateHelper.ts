@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react'
 
 import { Engine } from '@xrengine/ecs/src/Engine'

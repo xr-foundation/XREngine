@@ -1,3 +1,4 @@
+
 import { NotImplemented } from '@feathersjs/errors'
 import { hooks as schemaHooks } from '@feathersjs/schema'
 import { metabaseSettingPath } from '@xrengine/common/src/schemas/integrations/metabase/metabase-setting.schema'

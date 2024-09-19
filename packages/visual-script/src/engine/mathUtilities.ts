@@ -1,3 +1,4 @@
+
 export const EPSILON = 0.000001 // chosen from gl-matrix
 
 export function equalsTolerance(a: number, b: number, tolerance: number = EPSILON): boolean {

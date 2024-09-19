@@ -1,3 +1,4 @@
+
 import { scopeTypePath } from '@xrengine/common/src/schemas/scope/scope-type.schema'
 import { scopePath, ScopeType } from '@xrengine/common/src/schemas/scope/scope.schema'
 import { UserID } from '@xrengine/common/src/schemas/user/user.schema'

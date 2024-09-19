@@ -1,3 +1,4 @@
+
 import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
 
 import { XRSystem } from './XRSystem'

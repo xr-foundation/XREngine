@@ -1,3 +1,4 @@
+
 import { Color, CubeTexture, FogBase, Texture } from 'three'
 
 import { defineComponent } from '@xrengine/ecs'

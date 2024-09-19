@@ -1,3 +1,4 @@
+
 import { getComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { defineQuery } from '@xrengine/ecs/src/QueryFunctions'
 import { UserID } from '@xrengine/hyperflux'

@@ -1,3 +1,4 @@
+
 // as long as this continues to be triggered within the duration period, it will not fire.
 // based lousy on https://www.npmjs.com/package/debounce
 

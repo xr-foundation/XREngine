@@ -1,3 +1,4 @@
+
 import { DefaultLogger, ManualLifecycleEventEmitter, registerCoreProfile } from '../profiles/ProfilesModule'
 import { registerSceneProfile } from '../profiles/scene/SceneProfileModule'
 import { registerStructProfile } from '../profiles/struct/StructProfileModule'

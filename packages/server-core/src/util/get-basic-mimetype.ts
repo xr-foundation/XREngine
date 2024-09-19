@@ -1,3 +1,4 @@
+
 // TODO: Can we format this to be non-nested and not on one line?
 export default (mimeType: string): string =>
   mimeType.includes('application/dash+xml')

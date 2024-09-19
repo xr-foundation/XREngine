@@ -1,3 +1,4 @@
+
 import { IGraph, makeGraphApi } from '../Graphs/Graph'
 import { NodeConfiguration } from './Node'
 import { IFunctionNodeDefinition, IHasTriggered, SocketNames, SocketsDefinition } from './NodeDefinitions'

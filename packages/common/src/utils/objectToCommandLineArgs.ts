@@ -1,3 +1,4 @@
+
 function castValue(value, type) {
   switch (type.toLowerCase()) {
     case 'number':

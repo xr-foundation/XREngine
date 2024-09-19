@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { locationAuthorizedUserPath } from '@xrengine/common/src/schemas/social/location-authorized-user.schema'

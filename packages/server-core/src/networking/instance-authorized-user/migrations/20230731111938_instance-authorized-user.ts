@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { instanceAuthorizedUserPath } from '@xrengine/common/src/schemas/networking/instance-authorized-user.schema'

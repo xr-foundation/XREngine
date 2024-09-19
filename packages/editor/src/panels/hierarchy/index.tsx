@@ -1,3 +1,4 @@
+
 import { useOptionalComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { EditorState } from '@xrengine/editor/src/services/EditorServices'
 import { GLTFSnapshotState } from '@xrengine/engine/src/gltf/GLTFState'

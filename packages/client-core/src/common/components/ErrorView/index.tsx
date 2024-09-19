@@ -1,4 +1,5 @@
-import { Variant } from '@mui/material/styles/createTypography'
+
+import { Variant } from '@mui/material'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 

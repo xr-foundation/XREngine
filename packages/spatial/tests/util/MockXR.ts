@@ -1,3 +1,4 @@
+
 import { MockEventListener } from './MockEventListener'
 
 export class MockXRInputSource {

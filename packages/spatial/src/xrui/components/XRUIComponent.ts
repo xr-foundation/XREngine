@@ -1,3 +1,4 @@
+
 import { useEntityContext } from '@xrengine/ecs'
 import { defineComponent, useComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'

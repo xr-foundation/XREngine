@@ -1,3 +1,4 @@
+
 import { ValueTypeMap } from '../ValueTypeMap'
 
 const valueTypeNameRegex = /^\w+$/

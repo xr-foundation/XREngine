@@ -1,3 +1,4 @@
+
 /**
  * On 'xr-standard' mapping, get thumbstick input [2,3], fallback to thumbpad input [0,1]
  * On 'standard' mapping, get thumbstick input [0,1]

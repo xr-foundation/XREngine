@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 
 import { destroyEngine } from '@xrengine/ecs/src/Engine'

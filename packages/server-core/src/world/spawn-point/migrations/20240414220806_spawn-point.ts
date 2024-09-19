@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { spawnPointPath } from '@xrengine/common/src/schema.type.module'

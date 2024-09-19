@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { staticResourcePath } from '@xrengine/common/src/schemas/media/static-resource.schema'

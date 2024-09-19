@@ -1,3 +1,4 @@
+
 import { Forbidden } from '@feathersjs/errors'
 import { ProjectType, UserType, projectPath, projectPermissionPath } from '@xrengine/common/src/schema.type.module'
 import { Application, HookContext } from '../../declarations'

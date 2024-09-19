@@ -1,3 +1,4 @@
+
 const camelCaseProps = ['itemProp']
 const uniqueIdentifiersI = ['property', 'name', 'itemprop']
 

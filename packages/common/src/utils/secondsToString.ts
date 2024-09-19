@@ -1,3 +1,4 @@
+
 const padTime = (t: number): string => (t < 10 ? `0${t}` : `${t}`)
 
 const secondsToString = (seconds: number): string => {

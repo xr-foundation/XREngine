@@ -1,3 +1,4 @@
+
 import { UUIDComponent } from '@xrengine/ecs'
 import { getComponent, getOptionalComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'

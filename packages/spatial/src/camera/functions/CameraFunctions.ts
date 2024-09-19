@@ -1,3 +1,4 @@
+
 import { ComponentType, getOptionalComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'
 

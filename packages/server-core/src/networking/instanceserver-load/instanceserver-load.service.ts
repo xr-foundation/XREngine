@@ -1,3 +1,4 @@
+
 import { LocationID } from '@xrengine/common/src/schemas/social/location.schema'
 
 import { Application } from '../../../declarations'

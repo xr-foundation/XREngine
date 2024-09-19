@@ -1,3 +1,4 @@
+
 export default function eventToMessage(event) {
   if (!event) return ''
   if (event.message) return event.message

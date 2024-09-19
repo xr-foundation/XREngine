@@ -1,3 +1,4 @@
+
 import { hooks as schemaHooks } from '@feathersjs/schema'
 
 import { inviteCodeLookupQueryValidator } from '@xrengine/common/src/schemas/social/invite-code-lookup.schema'

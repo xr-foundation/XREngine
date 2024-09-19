@@ -1,3 +1,4 @@
+
 import { API } from '@xrengine/common'
 
 async function waitForClientAuthenticated(): Promise<void> {

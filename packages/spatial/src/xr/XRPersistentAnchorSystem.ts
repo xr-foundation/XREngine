@@ -1,3 +1,4 @@
+
 import { Quaternion, Vector3 } from 'three'
 
 import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'

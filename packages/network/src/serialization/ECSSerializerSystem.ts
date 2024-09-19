@@ -1,3 +1,4 @@
+
 import { Entity, EntityUUID, getComponent, UUIDComponent } from '@xrengine/ecs'
 import {
   checkBitflag,

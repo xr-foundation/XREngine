@@ -1,3 +1,4 @@
+
 const { defineProperties } = Object
 
 export const ProxyWithECS = <T>(store: Record<string | keyof T, any>, obj: T, ...keys: (keyof T)[]) => {

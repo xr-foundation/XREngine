@@ -1,3 +1,4 @@
+
 import { useLayoutEffect } from 'react'
 
 import { defineComponent, hasComponent, setComponent, useComponent } from '@xrengine/ecs/src/ComponentFunctions'

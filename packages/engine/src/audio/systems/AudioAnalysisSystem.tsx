@@ -1,3 +1,4 @@
+
 import { defineQuery, defineSystem, getComponent, PresentationSystemGroup, setComponent } from '@xrengine/ecs'
 
 import { AudioAnalysisComponent } from '../../scene/components/AudioAnalysisComponent'

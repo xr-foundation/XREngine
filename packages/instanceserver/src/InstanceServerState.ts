@@ -1,3 +1,4 @@
+
 import { InstanceType } from '@xrengine/common/src/schema.type.module'
 import { defineState } from '@xrengine/hyperflux'
 

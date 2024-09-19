@@ -1,3 +1,4 @@
+
 import { clientSettingMethods, clientSettingPath } from '@xrengine/common/src/schemas/setting/client-setting.schema'
 
 import { Application } from '../../../declarations'

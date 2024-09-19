@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react'
 
 import { LocationService } from '@xrengine/client-core/src/social/services/LocationService'

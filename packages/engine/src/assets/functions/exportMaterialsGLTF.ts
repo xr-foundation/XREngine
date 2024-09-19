@@ -1,3 +1,4 @@
+
 import { BufferGeometry, Material, Mesh, Scene } from 'three'
 
 import { Entity, getComponent } from '@xrengine/ecs'

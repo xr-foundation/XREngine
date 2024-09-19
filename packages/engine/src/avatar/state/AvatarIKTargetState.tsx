@@ -1,3 +1,4 @@
+
 import React, { useLayoutEffect } from 'react'
 
 import { EntityUUID, UUIDComponent } from '@xrengine/ecs'

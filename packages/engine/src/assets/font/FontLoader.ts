@@ -1,3 +1,4 @@
+
 import { LoadingManager, ShapePath } from 'three'
 
 import { FileLoader } from '../loaders/base/FileLoader'

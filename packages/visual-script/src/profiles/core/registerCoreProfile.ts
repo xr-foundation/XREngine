@@ -1,3 +1,4 @@
+
 /* eslint-disable max-len */
 
 import { getNodeDescriptions, IRegistry, memo, NodeDefinition, ValueTypeMap } from '../../VisualScriptModule'

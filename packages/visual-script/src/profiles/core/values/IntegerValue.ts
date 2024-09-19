@@ -1,3 +1,4 @@
+
 import { ValueType } from '../../../VisualScriptModule'
 
 export const IntegerValue: ValueType = {

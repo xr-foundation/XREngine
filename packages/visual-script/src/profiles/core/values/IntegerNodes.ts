@@ -1,3 +1,4 @@
+
 // Unreal Engine Integer Blueprints API: https://docs.unrealengine.com/4.27/en-US/BlueprintAPI/Math/Integer/
 
 import { makeInNOutFunctionDesc } from '../../../VisualScriptModule'

@@ -1,3 +1,4 @@
+
 import { Params, ServiceInterface } from '@feathersjs/feathers'
 import { Application } from '../../../declarations'
 import appconfig from '../../appconfig'

@@ -1,3 +1,4 @@
+
 import assert, { strictEqual } from 'assert'
 
 import { ECSState } from '@xrengine/ecs/src/ECSState'

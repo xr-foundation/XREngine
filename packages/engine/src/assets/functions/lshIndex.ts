@@ -1,3 +1,4 @@
+
 export type BinaryHash = string
 
 export class LSHIndex {

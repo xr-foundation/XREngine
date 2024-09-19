@@ -1,3 +1,4 @@
+
 import { LoaderUtils, Texture } from 'three'
 
 import { AssetLoader, getLoader } from '../../../classes/AssetLoader'

@@ -1,3 +1,4 @@
+
 import { projectSettingPath } from '@xrengine/common/src/schemas/setting/project-setting.schema'
 import type { Knex } from 'knex'
 

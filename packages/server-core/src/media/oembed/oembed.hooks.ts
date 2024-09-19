@@ -1,3 +1,4 @@
+
 import { disallow } from 'feathers-hooks-common'
 
 import logRequest from '@xrengine/server-core/src/hooks/log-request'

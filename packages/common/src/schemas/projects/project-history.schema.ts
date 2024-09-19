@@ -1,3 +1,4 @@
+
 // For more information about this file see https://dove.feathersjs.com/guides/cli/service.schemas.html
 import { Static, StringEnum, Type, getValidator, querySyntax } from '@feathersjs/typebox'
 import { UserID } from '@xrengine/common/src/schemas/user/user.schema'

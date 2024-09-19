@@ -1,3 +1,4 @@
+
 import { defineQuery, defineSystem, Engine } from '@xrengine/ecs'
 import { defineComponent, getComponent, hasComponent } from '@xrengine/ecs/src/ComponentFunctions'
 

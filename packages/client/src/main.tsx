@@ -1,3 +1,4 @@
+
 import { t } from 'i18next'
 import React, { lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'

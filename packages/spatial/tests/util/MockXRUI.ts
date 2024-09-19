@@ -1,5 +1,6 @@
 
 
+
 import { Entity, setComponent } from '@xrengine/ecs'
 import { Bounds, Edges, WebContainer3D, WebLayerManager } from '@xrengine/xrui'
 import { XRUIComponent } from '../../src/xrui/components/XRUIComponent'

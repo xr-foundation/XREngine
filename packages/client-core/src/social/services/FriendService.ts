@@ -1,3 +1,4 @@
+
 import { Paginated } from '@feathersjs/feathers'
 import i18n from 'i18next'
 import { useEffect } from 'react'

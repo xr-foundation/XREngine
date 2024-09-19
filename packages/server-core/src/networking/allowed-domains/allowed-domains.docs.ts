@@ -1,3 +1,4 @@
+
 import { allowedDomainsSchema } from '@xrengine/common/src/schemas/networking/allowed-domains.schema'
 import { createSwaggerServiceOptions } from 'feathers-swagger'
 

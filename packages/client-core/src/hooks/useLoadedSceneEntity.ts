@@ -1,3 +1,4 @@
+
 import { useGet } from '@xrengine/common'
 import { staticResourcePath } from '@xrengine/common/src/schema.type.module'
 import { GLTFAssetState } from '@xrengine/engine/src/gltf/GLTFState'

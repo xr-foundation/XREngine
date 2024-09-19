@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 import { AvatarComponent } from '@xrengine/engine/src/avatar/components/AvatarComponent'

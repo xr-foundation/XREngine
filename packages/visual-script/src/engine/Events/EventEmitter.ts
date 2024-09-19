@@ -1,3 +1,4 @@
+
 export class EventEmitter<T> {
   private readonly listeners: ((t: T) => void)[] = []
 

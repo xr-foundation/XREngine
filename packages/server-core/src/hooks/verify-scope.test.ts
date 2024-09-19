@@ -1,3 +1,4 @@
+
 import { Forbidden } from '@feathersjs/errors'
 import { HookContext, Paginated } from '@feathersjs/feathers/lib'
 import assert from 'assert'

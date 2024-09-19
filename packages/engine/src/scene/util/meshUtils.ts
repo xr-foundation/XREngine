@@ -1,3 +1,4 @@
+
 import { Mesh, Object3D } from 'three'
 
 import iterateObject3D from '@xrengine/spatial/src/common/functions/iterateObject3D'

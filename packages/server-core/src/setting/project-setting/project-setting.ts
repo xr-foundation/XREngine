@@ -1,3 +1,4 @@
+
 import { projectSettingMethods, projectSettingPath } from '@xrengine/common/src/schemas/setting/project-setting.schema'
 import { Application } from '@xrengine/server-core/declarations'
 import { ProjectSettingService } from './project-setting.class'

@@ -1,3 +1,4 @@
+
 import { TypedArray } from 'bitecs'
 
 import { Entity } from '@xrengine/ecs/src/Entity'

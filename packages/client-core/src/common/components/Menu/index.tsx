@@ -1,4 +1,5 @@
-import { Breakpoint, SxProps, Theme } from '@mui/material/styles'
+
+import { Breakpoint, SxProps, Theme } from '@mui/material'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 

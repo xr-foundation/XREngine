@@ -1,3 +1,4 @@
+
 /**
  * Web5 (Verifiable Credentials, Decentralized Identifiers, Decentralized Web Nodes, etc) related interfaces.
  */

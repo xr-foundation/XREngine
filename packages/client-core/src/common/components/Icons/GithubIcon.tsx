@@ -1,4 +1,5 @@
-import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon'
+
+import { SvgIcon, SvgIconProps } from '@mui/material'
 import React from 'react'
 
 export const GithubIcon = (props: SvgIconProps) => {

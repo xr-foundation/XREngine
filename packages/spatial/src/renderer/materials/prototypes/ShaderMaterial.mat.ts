@@ -1,3 +1,4 @@
+
 import { Color, ShaderMaterial as Shader } from 'three'
 
 import { ColorArg, ObjectArg, ShaderArg } from '../constants/DefaultArgs'

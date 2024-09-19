@@ -1,3 +1,4 @@
+
 import { identityProviderPath } from '@xrengine/common/src/schemas/user/identity-provider.schema'
 import { userLoginPath } from '@xrengine/common/src/schemas/user/user-login.schema'
 import type { Knex } from 'knex'

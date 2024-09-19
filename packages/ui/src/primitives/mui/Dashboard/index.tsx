@@ -1,4 +1,5 @@
-import { useTheme } from '@mui/material/styles'
+
+import { useTheme } from '@mui/material'
 import React from 'react'
 
 import { PopupMenuInline } from '@xrengine/client-core/src/user/components/UserMenu/PopupMenuInline'

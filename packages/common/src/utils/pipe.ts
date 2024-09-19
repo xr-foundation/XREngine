@@ -1,3 +1,4 @@
+
 export const pipe =
   (...fns) =>
   (input) => {

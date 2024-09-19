@@ -1,3 +1,4 @@
+
 import { Extension, ReaderContext, WriterContext } from '@gltf-transform/core'
 
 const EXTENSION_NAME = 'VRM'

@@ -1,4 +1,5 @@
 
+
 import { isApple } from '@xrengine/common/src/utils/getDeviceStats'
 
 export function getStepSize(event, smallStep, mediumStep, largeStep) {

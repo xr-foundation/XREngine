@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 import { AssetExt, AssetType, FileToAssetExt, FileToAssetType } from './AssetType'
 

@@ -1,3 +1,4 @@
+
 import { SkinnedMesh } from 'three'
 
 import { defineComponent } from '@xrengine/ecs/src/ComponentFunctions'

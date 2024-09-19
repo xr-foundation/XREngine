@@ -1,3 +1,4 @@
+
 /**
  * @fileoverview
  * Defines the {@link NodeEditor} UI for managing {@link TextComponent}s in the Studio.

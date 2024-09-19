@@ -1,3 +1,4 @@
+
 import AvatarImage from './index'
 
 export default {

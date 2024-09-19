@@ -1,3 +1,4 @@
+
 export function insertionSort<T>(list: T[], comparator: (a: T, b: T) => number): T[] {
   IndexIterator: for (let i = 1; i < list.length; i++) {
     const valueToSort = list[i]

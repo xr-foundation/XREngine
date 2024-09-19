@@ -1,3 +1,4 @@
+
 import { getOptionalComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'
 import { NameComponent } from '@xrengine/spatial/src/common/NameComponent'

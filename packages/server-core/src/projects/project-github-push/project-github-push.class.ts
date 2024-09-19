@@ -1,3 +1,4 @@
+
 import { NullableId, ServiceInterface } from '@feathersjs/feathers'
 import { KnexAdapterParams } from '@feathersjs/knex'
 

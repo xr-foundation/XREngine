@@ -1,3 +1,4 @@
+
 import { AxesHelper } from 'three'
 
 import { defineComponent, useComponent, useEntityContext } from '@xrengine/ecs'

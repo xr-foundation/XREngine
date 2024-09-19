@@ -1,3 +1,4 @@
+
 import { NodeSpecJSON } from '@xrengine/visual-script'
 
 export type color = 'red' | 'green' | 'lime' | 'purple' | 'blue' | 'gray' | 'white' | 'orange' | 'cyan' | 'indigo'

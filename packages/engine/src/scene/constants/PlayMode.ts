@@ -1,3 +1,4 @@
+
 export enum PlayMode {
   /**
    * Play a single track once, then stop playing

@@ -1,3 +1,4 @@
+
 /**
  * Wraps a worker in a blob URL to allow it to be referenced from a separate domain (such as an edge cache)
  * Injects process.env so it can be used in the worker context

@@ -1,3 +1,4 @@
+
 /**
  * An isomorphic logger with a built-in transport, meant to make
  * error aggregation easier on the client side.

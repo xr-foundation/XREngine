@@ -1,3 +1,4 @@
+
 export enum SkyTypeEnum {
   'color',
   'cubemap',

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useLayoutEffect } from 'react'
 
 import { InstanceID } from '@xrengine/common/src/schema.type.module'

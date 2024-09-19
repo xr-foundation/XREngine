@@ -1,3 +1,4 @@
+
 import { Paginated, Params } from '@feathersjs/feathers'
 
 import { LocationID, locationPath, LocationType } from '@xrengine/common/src/schemas/social/location.schema'

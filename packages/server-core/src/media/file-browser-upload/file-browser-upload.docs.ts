@@ -1,3 +1,4 @@
+
 import { createSwaggerServiceOptions } from 'feathers-swagger'
 
 export default createSwaggerServiceOptions({

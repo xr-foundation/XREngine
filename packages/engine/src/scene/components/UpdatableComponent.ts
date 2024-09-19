@@ -1,3 +1,4 @@
+
 import { defineComponent } from '@xrengine/ecs/src/ComponentFunctions'
 
 /** @deprecated - use a system instead */

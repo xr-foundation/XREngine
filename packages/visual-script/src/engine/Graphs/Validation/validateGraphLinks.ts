@@ -1,3 +1,4 @@
+
 import { GraphNodes } from '../Graph'
 
 export function validateGraphLinks(nodes: GraphNodes): string[] {

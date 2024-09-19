@@ -1,3 +1,4 @@
+
 import { Entity, hasComponent, useComponent } from '@xrengine/ecs'
 import { EditorComponentType, commitProperty, updateProperty } from '@xrengine/editor/src/components/properties/Util'
 import { EditorControlFunctions } from '@xrengine/editor/src/functions/EditorControlFunctions'

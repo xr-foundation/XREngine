@@ -1,3 +1,4 @@
+
 const navigator = globalThis?.navigator
 
 let mobileOrTablet = false

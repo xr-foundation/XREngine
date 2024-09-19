@@ -1,3 +1,4 @@
+
 import { getComponent, getOptionalComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'
 import { GroupComponent } from '@xrengine/spatial/src/renderer/components/GroupComponent'

@@ -1,3 +1,4 @@
+
 import { ResizeObserver as Polyfill } from '@juggle/resize-observer'
 
 import { isClient } from '@xrengine/hyperflux'

@@ -1,3 +1,4 @@
+
 export class Assert {
   static mustEqual(value: number, mustEqualThisValue: number, msg = '') {
     if (value !== mustEqualThisValue) {

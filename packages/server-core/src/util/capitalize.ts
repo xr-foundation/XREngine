@@ -1,3 +1,4 @@
+
 export function capitalize(words): string {
   const wordArray = words.split(' ')
 

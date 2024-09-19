@@ -1,3 +1,4 @@
+
 export function getObjectComponents(object) {
   return (
     object.userData.gltfExtensions &&

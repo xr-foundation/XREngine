@@ -1,3 +1,4 @@
+
 import { HookContext } from '@feathersjs/feathers'
 
 import { scopePath, ScopeTypeInterface } from '@xrengine/common/src/schemas/scope/scope.schema'

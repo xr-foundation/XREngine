@@ -1,3 +1,4 @@
+
 import { hooks as schemaHooks } from '@feathersjs/schema'
 import setLoggedInUserInData from '@xrengine/server-core/src/hooks/set-loggedin-user-in-body'
 import { iff, iffElse, isProvider } from 'feathers-hooks-common'

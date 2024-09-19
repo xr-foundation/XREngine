@@ -1,3 +1,4 @@
+
 import packagejson from '../../package.json'
 
 const engineVersion = packagejson.version

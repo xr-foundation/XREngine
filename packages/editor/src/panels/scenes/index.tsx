@@ -1,3 +1,4 @@
+
 import { PopoverState } from '@xrengine/client-core/src/common/services/PopoverState'
 import { useFind, useRealtime } from '@xrengine/common'
 import { StaticResourceType, fileBrowserPath, staticResourcePath } from '@xrengine/common/src/schema.type.module'

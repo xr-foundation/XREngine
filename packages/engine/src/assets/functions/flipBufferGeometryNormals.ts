@@ -1,3 +1,4 @@
+
 //from https://stackoverflow.com/questions/16824650/three-js-how-to-flip-normals-after-negative-scale/54496265#54496265
 
 export function flipBufferGeometryNormals(geometry) {

@@ -1,3 +1,4 @@
+
 import { NullableId, Paginated, ServiceInterface } from '@feathersjs/feathers/lib/declarations'
 import { KnexAdapterParams } from '@feathersjs/knex'
 import appRootPath from 'app-root-path'

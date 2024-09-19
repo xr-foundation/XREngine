@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { scopeTypePath } from '@xrengine/common/src/schemas/scope/scope-type.schema'

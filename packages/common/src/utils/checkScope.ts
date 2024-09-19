@@ -1,3 +1,4 @@
+
 import { API } from '../API'
 import { scopePath, ScopeTypeInterface, UserType } from '../schema.type.module'
 

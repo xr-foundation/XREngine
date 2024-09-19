@@ -1,3 +1,4 @@
+
 export type MockEventListenerFunc = (this: any, ev?: any) => any
 export class MockEventListener {
   listeners: Record<string, MockEventListenerFunc[]> = {}

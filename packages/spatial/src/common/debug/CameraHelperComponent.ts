@@ -1,3 +1,4 @@
+
 import { Camera, CameraHelper } from 'three'
 
 import { defineComponent, useComponent, useEntityContext } from '@xrengine/ecs'

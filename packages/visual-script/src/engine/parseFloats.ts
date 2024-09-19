@@ -1,3 +1,4 @@
+
 const cSeparator = /[^\d+.-]+/
 
 export function parseSafeFloat(text: string, fallback = 0): number {

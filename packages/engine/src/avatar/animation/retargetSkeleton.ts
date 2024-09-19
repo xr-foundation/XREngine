@@ -1,3 +1,4 @@
+
 import { Bone, Matrix4, Object3D, Quaternion, Skeleton, SkinnedMesh, Vector3 } from 'three'
 
 function getBoneBindMatrix(skeleton: Skeleton, index: number, matrix: Matrix4) {

@@ -1,3 +1,4 @@
+
 import { Params } from '@feathersjs/feathers'
 import { KnexAdapterOptions, KnexAdapterParams, KnexService } from '@feathersjs/knex'
 import appRootPath from 'app-root-path'

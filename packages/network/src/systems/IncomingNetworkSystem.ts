@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react'
 
 import { ECSState } from '@xrengine/ecs/src/ECSState'

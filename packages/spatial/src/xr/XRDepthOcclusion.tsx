@@ -1,3 +1,4 @@
+
 /**
  * Adapted from https://github.com/tentone/webxr-occlusion-lighting/tree/main/src/material
  */

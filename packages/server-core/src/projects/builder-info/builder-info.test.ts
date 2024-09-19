@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 
 import { builderInfoPath } from '@xrengine/common/src/schemas/projects/builder-info.schema'

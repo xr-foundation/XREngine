@@ -1,3 +1,4 @@
+
 import { iff, isProvider } from 'feathers-hooks-common'
 import { SYNC } from 'feathers-sync'
 

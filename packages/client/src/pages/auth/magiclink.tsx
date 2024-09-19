@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 import AuthMagicLink from '@xrengine/client-core/src/user/components/MagicLink/AuthMagicLink'

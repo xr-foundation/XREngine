@@ -1,3 +1,4 @@
+
 import { Engine, Entity, UUIDComponent, defineQuery, defineSystem, getComponent } from '@xrengine/ecs'
 import { Matrix4, Quaternion, Vector3 } from 'three'
 import { LookAtComponent } from '../components/LookAtComponent'

@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { locationBanPath } from '@xrengine/common/src/schemas/social/location-ban.schema'

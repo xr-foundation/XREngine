@@ -1,3 +1,4 @@
+
 import { GLTF as GLTFDocument } from '@gltf-transform/core'
 import {
   AnimationClip,

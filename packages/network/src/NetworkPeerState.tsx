@@ -1,3 +1,4 @@
+
 import { NetworkID, PeerID, defineState, getMutableState, getState, none, useMutableState } from '@xrengine/hyperflux'
 import React, { useEffect } from 'react'
 import { NetworkActions, NetworkPeer, NetworkState } from './NetworkState'

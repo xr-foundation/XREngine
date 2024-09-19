@@ -1,3 +1,4 @@
+
 import { EntityUUID } from '@xrengine/ecs'
 
 export type ComponentJsonType = {

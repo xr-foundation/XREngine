@@ -1,3 +1,4 @@
+
 import { createSwaggerServiceOptions } from 'feathers-swagger'
 
 import { emailDataSchema } from '@xrengine/common/src/schemas/user/email.schema'

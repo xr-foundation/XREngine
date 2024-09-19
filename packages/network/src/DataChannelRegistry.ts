@@ -1,3 +1,4 @@
+
 import { defineState, getMutableState, getState, none, OpaqueType, PeerID } from '@xrengine/hyperflux'
 
 import { Network } from './Network'

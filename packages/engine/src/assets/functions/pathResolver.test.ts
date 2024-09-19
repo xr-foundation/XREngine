@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 import { STATIC_ASSET_REGEX } from './pathResolver'
 

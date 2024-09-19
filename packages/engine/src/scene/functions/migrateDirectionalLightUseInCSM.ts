@@ -1,3 +1,4 @@
+
 import { EntityUUID, SerializedComponentType } from '@xrengine/ecs'
 import { DirectionalLightComponent } from '@xrengine/spatial'
 

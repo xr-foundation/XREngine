@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { analyticsPath } from '@xrengine/common/src/schemas/analytics/analytics.schema'

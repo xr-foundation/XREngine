@@ -1,3 +1,4 @@
+
 import { ClientSettingDatabaseType, clientSettingPath } from '../../common/src/schemas/setting/client-setting.schema'
 
 import knex from 'knex'

@@ -1,3 +1,4 @@
+
 export type RedirectConfig = {
   domain?: string
   path?: string

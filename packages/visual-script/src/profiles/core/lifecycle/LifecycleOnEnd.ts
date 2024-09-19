@@ -1,3 +1,4 @@
+
 import { Assert, makeEventNodeDefinition, NodeCategory } from '../../../VisualScriptModule'
 import { ILifecycleEventEmitter } from '../abstractions/ILifecycleEventEmitter'
 

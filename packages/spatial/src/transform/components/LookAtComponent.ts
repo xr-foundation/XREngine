@@ -1,3 +1,4 @@
+
 import { defineComponent } from '@xrengine/ecs'
 import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'
 export const LookAtComponent = defineComponent({

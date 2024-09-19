@@ -1,3 +1,4 @@
+
 const originalFetch = (global as any).fetch
 
 export const mockFetch = (urls: { [url: string]: { contentType: string; response: Buffer } }) => {

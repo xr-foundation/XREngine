@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { emailSettingPath } from '@xrengine/common/src/schemas/setting/email-setting.schema'

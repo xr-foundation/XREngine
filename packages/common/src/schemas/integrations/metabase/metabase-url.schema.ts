@@ -1,3 +1,4 @@
+
 // For more information about this file see https://dove.feathersjs.com/guides/cli/service.schemas.html
 import type { Static } from '@feathersjs/typebox'
 import { Type, getValidator } from '@feathersjs/typebox'

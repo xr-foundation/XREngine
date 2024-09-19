@@ -1,3 +1,4 @@
+
 import { ValueType } from '../../../VisualScriptModule'
 import { Vec4, vec4Equals, Vec4JSON, vec4Mix, vec4Parse } from './internal/Vec4'
 

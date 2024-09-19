@@ -1,3 +1,4 @@
+
 export default `
 uniform sampler2D envMap;
 uniform samplerCube skybox;

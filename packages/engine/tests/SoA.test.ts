@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 
 import { getComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'

@@ -1,5 +1,6 @@
 
 
+
 var DracoEncoderModule = function(DracoEncoderModule) {
   DracoEncoderModule = DracoEncoderModule || {};
 

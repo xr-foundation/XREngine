@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { userKickPath } from '@xrengine/common/src/schemas/user/user-kick.schema'

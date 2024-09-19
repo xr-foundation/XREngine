@@ -1,3 +1,4 @@
+
 import { AuthState } from '@xrengine/client-core/src/user/services/AuthService'
 import { spawnLocalAvatarInWorld } from '@xrengine/common/src/world/receiveJoinWorld'
 import { UUIDComponent } from '@xrengine/ecs'

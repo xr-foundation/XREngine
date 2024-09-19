@@ -1,3 +1,4 @@
+
 export const defaultThemeSettings = {
   light: {
     textColor: '#585858',

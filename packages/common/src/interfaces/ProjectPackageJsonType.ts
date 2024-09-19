@@ -1,3 +1,4 @@
+
 import { IPackageJson } from 'package-json-type'
 
 export const DefaultUpdateSchedule = '0 * * * *'

@@ -1,3 +1,4 @@
+
 import { matches, OpaqueType, Validator } from '@xrengine/hyperflux'
 
 export type Entity = OpaqueType<'entity'> & number

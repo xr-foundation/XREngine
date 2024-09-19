@@ -1,3 +1,4 @@
+
 import { ECSState, defineQuery, useEntityContext } from '@xrengine/ecs'
 import {
   defineComponent,

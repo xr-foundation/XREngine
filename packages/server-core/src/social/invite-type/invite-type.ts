@@ -1,3 +1,4 @@
+
 import { inviteTypeMethods, inviteTypePath } from '@xrengine/common/src/schemas/social/invite-type.schema'
 
 import { Application } from '../../../declarations'

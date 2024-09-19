@@ -1,3 +1,4 @@
+
 import { generateTokenMethods, generateTokenPath } from '@xrengine/common/src/schemas/user/generate-token.schema'
 
 import { Application } from '../../../declarations'

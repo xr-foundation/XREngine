@@ -1,3 +1,4 @@
+
 import { Socket } from '../Sockets/Socket'
 
 export const readInputFromSockets = <T>(inputs: Socket[], inputName: string, nodeTypeName: string) => {

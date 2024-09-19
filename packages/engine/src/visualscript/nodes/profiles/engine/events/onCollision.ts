@@ -1,3 +1,4 @@
+
 import { getComponent, removeComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'
 import { defineQuery, Query, removeQuery } from '@xrengine/ecs/src/QueryFunctions'

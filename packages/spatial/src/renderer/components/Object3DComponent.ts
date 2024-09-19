@@ -1,3 +1,4 @@
+
 import { Object3D } from 'three'
 
 import { defineComponent, useComponent, useEntityContext, useOptionalComponent } from '@xrengine/ecs'

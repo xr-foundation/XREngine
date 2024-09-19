@@ -1,3 +1,4 @@
+
 export const validatePath = (url: string) => {
   const xhr = new XMLHttpRequest()
   xhr.open('HEAD', url, false)

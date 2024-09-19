@@ -1,4 +1,5 @@
-import Box from '@mui/material/Box'
+
+import { Box } from '@mui/material'
 import React from 'react'
 
 import MetaTags from '@xrengine/client-core/src/common/components/MetaTags'

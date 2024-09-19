@@ -1,3 +1,4 @@
+
 import { Object3D } from 'three'
 
 import { Entity } from '@xrengine/ecs/src/Entity'

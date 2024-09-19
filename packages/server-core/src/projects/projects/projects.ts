@@ -1,3 +1,4 @@
+
 import { projectsMethods, projectsPath } from '@xrengine/common/src/schemas/projects/projects.schema'
 
 import { Application } from '../../../declarations'

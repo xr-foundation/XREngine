@@ -1,3 +1,4 @@
+
 import { RenderInfoSystem } from '@xrengine/spatial/src/renderer/RenderInfoSystem'
 // import { EditorInstanceNetworkingSystem } from './components/realtime/EditorInstanceNetworkingSystem'
 import { ClickPlacementSystem } from './systems/ClickPlacementSystem'

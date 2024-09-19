@@ -1,3 +1,4 @@
+
 import { ImmutableArray } from '@hookstate/core'
 import { FileThumbnailJobState } from '@xrengine/client-core/src/common/services/FileThumbnailJobState'
 import { NotificationService } from '@xrengine/client-core/src/common/services/NotificationService'

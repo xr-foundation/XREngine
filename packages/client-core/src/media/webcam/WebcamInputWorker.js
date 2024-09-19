@@ -1,5 +1,6 @@
 
 
+
 import './faceEnvWorkerPatch.js' // polyfill for face-api in webworker - MUST BE FIRST
 import * as Comlink from 'comlink'
 /** @todo reassess if we want to use this face-api package */

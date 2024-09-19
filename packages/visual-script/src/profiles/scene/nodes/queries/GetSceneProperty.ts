@@ -1,3 +1,4 @@
+
 import { makeFunctionNodeDefinition, NodeCategory } from '../../../../VisualScriptModule'
 import { IScene } from '../../abstractions/IScene'
 

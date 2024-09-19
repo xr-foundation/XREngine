@@ -1,3 +1,4 @@
+
 export const VIDEO_CONSTRAINTS = {
   nhd: { width: { ideal: 640 }, height: { ideal: 360 } },
   fwvga: { width: { ideal: 854 }, height: { ideal: 480 } },

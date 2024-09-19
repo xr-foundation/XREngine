@@ -1,3 +1,4 @@
+
 import { Hook, HookContext } from '@feathersjs/feathers'
 
 import { matchUserPath } from '@xrengine/common/src/schemas/matchmaking/match-user.schema'

@@ -1,3 +1,4 @@
+
 import type { AuthenticationClient } from '@feathersjs/authentication-client'
 import authentication from '@feathersjs/authentication-client'
 import feathers from '@feathersjs/client'

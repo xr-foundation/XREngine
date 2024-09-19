@@ -1,3 +1,4 @@
+
 import { getValidator, querySyntax, Static, Type } from '@feathersjs/typebox'
 
 import { TypedString } from '../../types/TypeboxUtils'

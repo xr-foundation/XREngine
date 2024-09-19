@@ -1,3 +1,4 @@
+
 import { identityProviderPath, IdentityProviderType } from '@xrengine/common/src/schema.type.module'
 
 import { UserID } from '../schemas/user/user.schema'

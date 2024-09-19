@@ -1,3 +1,4 @@
+
 import { defineQuery } from '@xrengine/ecs'
 import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
 import { NetworkObjectAuthorityTag } from '@xrengine/network'

@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 
 import { createEntity, destroyEngine } from '@xrengine/ecs'

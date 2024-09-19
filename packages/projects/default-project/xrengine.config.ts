@@ -1,3 +1,4 @@
+
 import type { ProjectConfigInterface } from '@xrengine/projects/ProjectConfigInterface'
 
 const config: ProjectConfigInterface = {

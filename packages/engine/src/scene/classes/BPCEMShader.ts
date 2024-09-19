@@ -1,3 +1,4 @@
+
 //Shader injection for parallax corrected cubemaps
 export const worldposReplace = `
 			#define BOX_PROJECTED_ENV_MAP

@@ -1,3 +1,4 @@
+
 import { VitePWA } from 'vite-plugin-pwa'
 
 import manifest from './manifest.default.json'

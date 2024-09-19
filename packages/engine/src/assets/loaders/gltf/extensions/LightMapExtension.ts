@@ -1,3 +1,4 @@
+
 // https://github.com/mozilla/hubs/blob/27eb7f3d9eba3b938f1ca47ed5b161547b6fb3f2/src/components/gltf-model-plus.js
 import { Mesh, MeshBasicMaterial, MeshStandardMaterial, RepeatWrapping, Texture } from 'three'
 

@@ -1,3 +1,4 @@
+
 import { API } from '@xrengine/common'
 import { staticResourcePath } from '@xrengine/common/src/schema.type.module'
 import { EntityUUID, UUIDComponent } from '@xrengine/ecs'

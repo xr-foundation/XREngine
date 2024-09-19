@@ -1,3 +1,4 @@
+
 import { ECSState, Timer, setComponent } from '@xrengine/ecs'
 import { getMutableState, getState } from '@xrengine/hyperflux'
 import { EngineState } from '../../src/EngineState'

@@ -1,3 +1,4 @@
+
 import { TypedArray } from 'bitecs'
 
 import { getComponent, hasComponent } from '@xrengine/ecs/src/ComponentFunctions'

@@ -1,3 +1,4 @@
+
 import crypto from 'crypto'
 
 import { InviteCode, userPath } from '@xrengine/common/src/schemas/user/user.schema'

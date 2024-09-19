@@ -1,3 +1,4 @@
+
 import { modelTransformMethods, modelTransformPath } from '@xrengine/common/src/schemas/assets/model-transform.schema'
 
 import { Application } from '../../../declarations'

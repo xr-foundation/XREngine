@@ -1,3 +1,4 @@
+
 import { EMAIL_REGEX } from './regex'
 import type { MediaSettingsType } from './schema.type.module'
 

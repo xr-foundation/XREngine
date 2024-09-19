@@ -1,3 +1,4 @@
+
 import { Forbidden } from '@feathersjs/errors'
 import { HookContext } from '@feathersjs/feathers'
 import { hooks as schemaHooks } from '@feathersjs/schema'

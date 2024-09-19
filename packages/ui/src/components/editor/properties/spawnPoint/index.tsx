@@ -1,3 +1,4 @@
+
 import { useComponent } from '@xrengine/ecs'
 import { EditorComponentType } from '@xrengine/editor/src/components/properties/Util'
 import { SpawnPointComponent } from '@xrengine/engine/src/scene/components/SpawnPointComponent'

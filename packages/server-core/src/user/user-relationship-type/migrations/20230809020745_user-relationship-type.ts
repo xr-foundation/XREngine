@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { userRelationshipTypePath } from '@xrengine/common/src/schemas/user/user-relationship-type.schema'

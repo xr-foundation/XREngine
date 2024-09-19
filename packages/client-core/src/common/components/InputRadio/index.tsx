@@ -1,4 +1,5 @@
-import { SxProps, Theme } from '@mui/material/styles'
+
+import { SxProps, Theme } from '@mui/material'
 import React from 'react'
 
 import { InputMenuItem } from '@xrengine/client-core/src/common/components/InputSelect'

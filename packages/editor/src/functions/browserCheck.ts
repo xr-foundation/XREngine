@@ -1,3 +1,4 @@
+
 export const isSupportedBrowser = () => {
   const userAgent = window.navigator.userAgent
   const isGoogleChrome = /Chrome/.test(userAgent) && !/Chromium|Edg|OPR|Brave|CriOS/.test(userAgent)

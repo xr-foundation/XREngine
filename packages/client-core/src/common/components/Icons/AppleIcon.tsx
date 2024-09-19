@@ -1,6 +1,7 @@
+
 import React from 'react'
 
-import { SvgIconProps } from '@mui/material/SvgIcon'
+import { SvgIcon, SvgIconProps } from '@mui/material'
 
 export const AppleIcon = (props: SvgIconProps) => {
   return (

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -13,7 +14,7 @@ import './LocationModule'
 
 import multiLogger from '@xrengine/common/src/logger'
 import LoadingView from '@xrengine/ui/src/primitives/tailwind/LoadingView'
-import { StyledEngineProvider } from '@mui/material/styles'
+import { StyledEngineProvider } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { NotificationService } from '../common/services/NotificationService'
 import { useLoadEngineWithScene, useNetwork } from '../components/World/EngineHooks'

@@ -1,3 +1,4 @@
+
 import assert, { strictEqual } from 'assert'
 
 import { EntityUUID, getComponent, UUIDComponent } from '@xrengine/ecs'

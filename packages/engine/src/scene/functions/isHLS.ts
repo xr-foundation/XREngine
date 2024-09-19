@@ -1,3 +1,4 @@
+
 const HLS_MIMETYPES = ['application/x-mpegurl', 'application/vnd.apple.mpegurl']
 
 export default function isHLS(src: string, type?: any) {

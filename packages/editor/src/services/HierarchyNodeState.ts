@@ -1,3 +1,4 @@
+
 import { Entity } from '@xrengine/ecs'
 import { defineState, syncStateWithLocalStorage } from '@xrengine/hyperflux'
 

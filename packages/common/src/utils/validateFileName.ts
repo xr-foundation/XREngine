@@ -1,3 +1,4 @@
+
 import { VALID_FILENAME_REGEX, WINDOWS_RESERVED_NAME_REGEX } from '@xrengine/common/src/regex'
 
 export function isValidFileName(fileName: string) {

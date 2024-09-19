@@ -1,3 +1,4 @@
+
 import Component, { BooleanInputProp } from './index'
 
 const argTypes: BooleanInputProp = { value: false, onChange: () => {} }

@@ -1,3 +1,4 @@
+
 import { hooks as schemaHooks } from '@feathersjs/schema'
 import { iff, isProvider } from 'feathers-hooks-common'
 import { SYNC } from 'feathers-sync'

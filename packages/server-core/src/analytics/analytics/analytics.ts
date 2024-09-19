@@ -1,3 +1,4 @@
+
 import { analyticsMethods, analyticsPath } from '@xrengine/common/src/schemas/analytics/analytics.schema'
 
 import { Application } from '../../../declarations'

@@ -1,3 +1,4 @@
+
 /** glsl, vertex uniforms */
 export const ditheringVertexUniform = `
 #ifndef LAMBERT

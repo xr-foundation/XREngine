@@ -1,3 +1,4 @@
+
 import { scopeMethods, scopePath } from '@xrengine/common/src/schemas/scope/scope.schema'
 
 import { Application } from '../../../declarations'

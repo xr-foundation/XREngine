@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 
 import { inviteCodeLookupPath } from '@xrengine/common/src/schemas/social/invite-code-lookup.schema'

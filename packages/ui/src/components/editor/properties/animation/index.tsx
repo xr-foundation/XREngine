@@ -1,3 +1,4 @@
+
 import { getOptionalComponent, useComponent, useOptionalComponent } from '@xrengine/ecs'
 import {
   EditorComponentType,

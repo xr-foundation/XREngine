@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react'
 
 import { ChatSection } from '@xrengine/ui/src/components/Chat/ChatSection'

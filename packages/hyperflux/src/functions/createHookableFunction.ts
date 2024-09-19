@@ -1,3 +1,4 @@
+
 export interface HookableFunctionContext<F extends (...args) => any> {
   args: Parameters<F>
   result: ReturnType<F>

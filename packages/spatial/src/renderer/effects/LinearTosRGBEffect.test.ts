@@ -1,3 +1,4 @@
+
 import { createEngine, destroyEngine } from '@xrengine/ecs'
 import assert from 'assert'
 import { mockSpatialEngine } from '../../../tests/util/mockSpatialEngine'

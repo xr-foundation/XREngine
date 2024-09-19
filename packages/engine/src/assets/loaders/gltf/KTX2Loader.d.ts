@@ -1,5 +1,6 @@
 
 
+
 import { CompressedTexture } from "three";
 
 export class KTX2Loader extends CompressedTextureLoader {

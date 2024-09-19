@@ -1,3 +1,4 @@
+
 import { GraphJSON } from '@xrengine/visual-script'
 
 export const hasPositionMetaData = (visualScript: GraphJSON): boolean => {

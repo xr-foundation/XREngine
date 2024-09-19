@@ -1,3 +1,4 @@
+
 import { useFind, useGet } from '@xrengine/common'
 import { config } from '@xrengine/common/src/config'
 import { UserID, avatarPath, userAvatarPath } from '@xrengine/common/src/schema.type.module'

@@ -1,3 +1,4 @@
+
 import { Entity } from '@xrengine/ecs/src/Entity'
 import { entityExists } from '@xrengine/ecs/src/EntityFunctions'
 import { Query } from '@xrengine/ecs/src/QueryFunctions'

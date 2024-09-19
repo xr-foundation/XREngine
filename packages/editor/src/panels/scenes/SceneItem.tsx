@@ -1,3 +1,4 @@
+
 import { useHookstate } from '@hookstate/core'
 import { PopoverState } from '@xrengine/client-core/src/common/services/PopoverState'
 import { deleteScene } from '@xrengine/client-core/src/world/SceneAPI'

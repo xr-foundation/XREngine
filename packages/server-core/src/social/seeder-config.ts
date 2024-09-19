@@ -1,3 +1,4 @@
+
 import { KnexSeed } from '@xrengine/common/src/interfaces/KnexSeed'
 
 import * as inviteTypeSeed from './invite-type/invite-type.seed'

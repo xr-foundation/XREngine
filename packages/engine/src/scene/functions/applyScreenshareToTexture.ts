@@ -1,3 +1,4 @@
+
 import { BufferGeometry, DoubleSide, Mesh, MeshStandardMaterial, SRGBColorSpace, Vector4, VideoTexture } from 'three'
 
 import { getComponent } from '@xrengine/ecs/src/ComponentFunctions'

@@ -1,3 +1,4 @@
+
 import React, { PropsWithChildren, Suspense } from 'react'
 
 import { hasComponent } from '@xrengine/ecs/src/ComponentFunctions'

@@ -1,3 +1,4 @@
+
 import { Edge, Node } from 'reactflow'
 
 export interface GraphTemplate {

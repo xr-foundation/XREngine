@@ -1,3 +1,4 @@
+
 import { getComponent, hasComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity, EntityUUID } from '@xrengine/ecs/src/Entity'
 import { entityExists } from '@xrengine/ecs/src/EntityFunctions'

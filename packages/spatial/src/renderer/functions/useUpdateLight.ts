@@ -1,3 +1,4 @@
+
 import { DirectionalLight, SpotLight, Vector3 } from 'three'
 
 import { useExecute } from '@xrengine/ecs/src/SystemFunctions'

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Navigate } from 'react-router-dom'

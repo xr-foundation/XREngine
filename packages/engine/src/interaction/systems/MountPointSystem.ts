@@ -1,3 +1,4 @@
+
 import { Quaternion, Vector3 } from 'three'
 
 import { getComponent, getOptionalComponent, hasComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'

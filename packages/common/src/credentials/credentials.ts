@@ -1,3 +1,4 @@
+
 // import { Ed25519Signature2020 } from '@digitalcredentials/ed25519-signature-2020'
 // import vcjs from '@digitalcredentials/vc'
 // import axios from 'axios'

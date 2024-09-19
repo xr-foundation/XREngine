@@ -1,3 +1,4 @@
+
 import { UUIDComponent } from '@xrengine/ecs'
 import {
   getAllComponents,

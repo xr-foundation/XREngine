@@ -1,3 +1,4 @@
+
 import { removeComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { VisibleComponent } from '@xrengine/spatial/src/renderer/components/VisibleComponent'
 import { createXRUI } from '@xrengine/spatial/src/xrui/functions/createXRUI'

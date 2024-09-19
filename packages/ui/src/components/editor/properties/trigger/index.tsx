@@ -1,3 +1,4 @@
+
 import { UUIDComponent, defineQuery, getComponent, hasComponent, useComponent } from '@xrengine/ecs'
 import {
   EditorComponentType,

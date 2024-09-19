@@ -1,5 +1,6 @@
-import { SxProps, Theme } from '@mui/material/styles'
-import { Variant } from '@mui/material/styles/createTypography'
+
+import { SxProps, Theme } from '@mui/material'
+import { Variant } from '@mui/material'
 import React from 'react'
 
 import Typography from '@xrengine/ui/src/primitives/mui/Typography'

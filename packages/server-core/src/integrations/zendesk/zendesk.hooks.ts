@@ -1,3 +1,4 @@
+
 import { Application, HookContext } from '@feathersjs/feathers/lib/declarations'
 import appConfig from '@xrengine/server-core/src/appconfig'
 import { disallow } from 'feathers-hooks-common'

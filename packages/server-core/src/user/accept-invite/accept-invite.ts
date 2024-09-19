@@ -1,3 +1,4 @@
+
 import { acceptInviteMethods, acceptInvitePath } from '@xrengine/common/src/schemas/user/accept-invite.schema'
 
 import { Application } from '../../../declarations'

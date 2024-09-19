@@ -1,3 +1,4 @@
+
 import { defineState } from '@xrengine/hyperflux'
 
 import { FollowCameraMode } from './types/FollowCameraMode'

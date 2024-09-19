@@ -1,3 +1,4 @@
+
 import type { ProjectConfigInterface } from './ProjectConfigInterface'
 
 const configs = {} as Record<string, ProjectConfigInterface>

@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 
 import { EntityUUID, UUIDComponent, getComponent } from '@xrengine/ecs'

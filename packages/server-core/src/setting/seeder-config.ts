@@ -1,3 +1,4 @@
+
 import { KnexSeed } from '@xrengine/common/src/interfaces/KnexSeed'
 
 import * as authenticationSeed from './authentication-setting/authentication-setting.seed'

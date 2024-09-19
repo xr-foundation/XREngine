@@ -1,3 +1,4 @@
+
 import { defineState, syncStateWithLocalStorage } from '@xrengine/hyperflux'
 import { FileDataType } from '../constants/AssetTypes'
 

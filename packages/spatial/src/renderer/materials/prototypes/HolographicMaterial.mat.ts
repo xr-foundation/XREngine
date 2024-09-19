@@ -1,3 +1,4 @@
+
 import { Color, Material, MeshStandardMaterial, MeshStandardMaterialParameters, Uniform } from 'three'
 
 import { createEntity, setComponent } from '@xrengine/ecs'

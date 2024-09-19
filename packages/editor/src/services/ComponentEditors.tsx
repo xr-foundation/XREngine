@@ -1,3 +1,4 @@
+
 import { VisualScriptComponent } from '@xrengine/engine'
 import { PositionalAudioComponent } from '@xrengine/engine/src/audio/components/PositionalAudioComponent'
 import { LoopAnimationComponent } from '@xrengine/engine/src/avatar/components/LoopAnimationComponent'

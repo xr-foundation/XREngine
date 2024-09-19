@@ -1,3 +1,4 @@
+
 import { FrontSide, Material, Uniform, Vector3 } from 'three'
 
 import { defineComponent, getComponent, getOptionalComponent, useEntityContext } from '@xrengine/ecs'

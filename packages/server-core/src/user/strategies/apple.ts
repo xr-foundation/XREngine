@@ -1,3 +1,4 @@
+
 import { AuthenticationRequest, AuthenticationResult } from '@feathersjs/authentication'
 import { Paginated, Params } from '@feathersjs/feathers'
 import { avatarPath, AvatarType } from '@xrengine/common/src/schemas/user/avatar.schema'

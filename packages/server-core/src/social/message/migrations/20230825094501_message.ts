@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { messagePath } from '@xrengine/common/src/schemas/social/message.schema'

@@ -1,3 +1,4 @@
+
 import { NullableId, ServiceInterface } from '@feathersjs/feathers'
 
 import { isDev } from '@xrengine/common/src/config'

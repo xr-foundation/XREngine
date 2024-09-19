@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react'
 
 import { getComponent, hasComponent, useEntityContext } from '@xrengine/ecs'

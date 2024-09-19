@@ -1,3 +1,4 @@
+
 /**
  * @fileoverview
  * Defines the types and logic required for using and creating Spatial Text {@link Component}s.

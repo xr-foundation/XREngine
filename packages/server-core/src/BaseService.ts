@@ -1,3 +1,4 @@
+
 import { Application, Id, NullableId, PaginationParams, Params, ServiceMethods } from '@feathersjs/feathers'
 
 export class BaseService<Result, Data = Partial<Result>, ServiceParams = Params, PatchData = Partial<Data>>

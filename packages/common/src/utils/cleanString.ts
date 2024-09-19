@@ -1,3 +1,4 @@
+
 /**
  * cleans a string to allow only alphanumeric, period, underscore, and dash
  * @param {string} str

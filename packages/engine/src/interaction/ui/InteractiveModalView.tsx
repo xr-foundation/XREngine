@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 import { createEntity, setComponent } from '@xrengine/ecs'

@@ -1,3 +1,4 @@
+
 import { Material, Mesh } from 'three'
 
 export function forEachMaterial(mesh: Mesh, fn: (material: Material) => void) {

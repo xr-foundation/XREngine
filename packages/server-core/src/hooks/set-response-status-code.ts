@@ -1,3 +1,4 @@
+
 import { HookContext } from '@feathersjs/feathers'
 
 export default (statusCode = 200) => {

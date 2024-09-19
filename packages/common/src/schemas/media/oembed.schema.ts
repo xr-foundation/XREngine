@@ -1,3 +1,4 @@
+
 import { Static, Type } from '@feathersjs/typebox'
 
 // For more information about this file see https://dove.feathersjs.com/guides/cli/service.schemas.html

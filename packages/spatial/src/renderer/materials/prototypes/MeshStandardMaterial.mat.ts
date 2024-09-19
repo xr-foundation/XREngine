@@ -1,3 +1,4 @@
+
 import { MeshStandardMaterial as Standard } from 'three'
 
 import { MaterialPrototypeDefinition } from '@xrengine/spatial/src/renderer/materials/MaterialComponent'

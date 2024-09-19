@@ -1,3 +1,4 @@
+
 import { defineComponent, hasComponent, removeComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'
 import { S } from '@xrengine/ecs/src/schemas/JSONSchemas'

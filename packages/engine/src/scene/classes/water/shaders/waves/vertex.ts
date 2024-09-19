@@ -1,3 +1,4 @@
+
 export default `
 attribute vec3 position;
 attribute vec2 uv;

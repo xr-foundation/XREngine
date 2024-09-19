@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { userAvatarPath } from '@xrengine/common/src/schemas/user/user-avatar.schema'

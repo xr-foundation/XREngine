@@ -1,3 +1,4 @@
+
 import { VRM } from '@pixiv/three-vrm'
 
 import { getComponent, getOptionalMutableComponent } from '@xrengine/ecs/src/ComponentFunctions'

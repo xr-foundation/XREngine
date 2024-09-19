@@ -1,3 +1,4 @@
+
 import type { Params } from '@feathersjs/feathers'
 import { KnexAdapterParams } from '@feathersjs/knex'
 

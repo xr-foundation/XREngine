@@ -1,3 +1,4 @@
+
 import { BadRequest } from '@feathersjs/errors'
 import { Paginated } from '@feathersjs/feathers'
 import { ProjectType, projectPath } from '@xrengine/common/src/schemas/projects/project.schema'

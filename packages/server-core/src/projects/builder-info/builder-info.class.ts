@@ -1,3 +1,4 @@
+
 import { ServiceInterface } from '@feathersjs/feathers'
 
 import { BuilderInfoType } from '@xrengine/common/src/schemas/projects/builder-info.schema'

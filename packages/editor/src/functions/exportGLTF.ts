@@ -1,3 +1,4 @@
+
 import { Entity } from '@xrengine/ecs/src/Entity'
 import exportModelGLTF from '@xrengine/engine/src/assets/functions/exportModelGLTF'
 import { STATIC_ASSET_REGEX } from '@xrengine/engine/src/assets/functions/pathResolver'

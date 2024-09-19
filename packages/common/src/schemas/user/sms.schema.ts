@@ -1,3 +1,4 @@
+
 import type { Static } from '@feathersjs/typebox'
 import { getValidator, Type } from '@feathersjs/typebox'
 

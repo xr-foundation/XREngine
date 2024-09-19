@@ -1,3 +1,4 @@
+
 import { UUIDComponent } from '@xrengine/ecs'
 import { ComponentJSONIDMap, getComponent, hasComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity, UndefinedEntity } from '@xrengine/ecs/src/Entity'

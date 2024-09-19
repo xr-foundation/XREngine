@@ -1,3 +1,4 @@
+
 import { createSwaggerServiceOptions } from 'feathers-swagger'
 
 import { spawnPointSchema } from '@xrengine/common/src/schemas/world/spawn-point.schema'

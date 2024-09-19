@@ -1,3 +1,4 @@
+
 import { createEntity, destroyEngine, getComponent, setComponent } from '@xrengine/ecs'
 import { createEngine } from '@xrengine/ecs/src/Engine'
 import assert from 'assert'

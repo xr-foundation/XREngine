@@ -1,3 +1,4 @@
+
 import { parseSafeFloat, ValueType } from '../../../VisualScriptModule'
 
 export const FloatValue: ValueType = {

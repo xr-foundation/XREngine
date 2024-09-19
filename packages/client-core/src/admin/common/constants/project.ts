@@ -1,3 +1,4 @@
+
 import { t } from 'i18next'
 
 import { ITableHeadCell } from '../Table'

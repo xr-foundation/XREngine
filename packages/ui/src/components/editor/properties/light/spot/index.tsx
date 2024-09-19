@@ -1,3 +1,4 @@
+
 import { SpotLightComponent } from '@xrengine/spatial/src/renderer/components/lights/SpotLightComponent'
 import React from 'react'
 import { useTranslation } from 'react-i18next'

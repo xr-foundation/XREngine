@@ -1,3 +1,4 @@
+
 import { UserType } from '@xrengine/common/src/schemas/user/user.schema'
 
 import { HookContext } from '../../declarations'

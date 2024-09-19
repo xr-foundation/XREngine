@@ -1,3 +1,4 @@
+
 import { ECSState } from '@xrengine/ecs/src/ECSState'
 import { AvatarComponent } from '@xrengine/engine/src/avatar/components/AvatarComponent'
 import { respawnAvatar } from '@xrengine/engine/src/avatar/functions/respawnAvatar'

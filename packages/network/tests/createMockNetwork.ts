@@ -1,3 +1,4 @@
+
 import { getMutableState, NetworkID, PeerID, UserID } from '@xrengine/hyperflux'
 
 import { NetworkPeerFunctions } from '../src/functions/NetworkPeerFunctions'

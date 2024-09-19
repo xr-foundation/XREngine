@@ -1,3 +1,4 @@
+
 import { PerspectiveCamera, Scene, WebGLRenderer } from 'three'
 
 export type XR8Type = {

@@ -1,3 +1,4 @@
+
 import BasisEncoderModuleSRC from './basis_encoder_low_memory/basis_encoder.js.txt'
 // @ts-ignore
 import BasisEncoderWASMBinary from './basis_encoder_low_memory/basis_encoder.wasm'

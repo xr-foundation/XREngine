@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { userPath } from '@xrengine/common/src/schemas/user/user.schema'

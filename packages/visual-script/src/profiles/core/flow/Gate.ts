@@ -1,3 +1,4 @@
+
 // based on Unreal Engine Blueprint Gate node
 
 import { makeFlowNodeDefinition, NodeCategory } from '../../../VisualScriptModule'

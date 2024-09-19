@@ -1,3 +1,4 @@
+
 import React, { useEffect, useLayoutEffect } from 'react'
 
 import { EntityUUID, getOptionalComponent, setComponent, UUIDComponent } from '@xrengine/ecs'

@@ -1,3 +1,4 @@
+
 import AllowedDomains from './allowed-domains/allowed-domains'
 import InstanceAttendance from './instance-attendance/instance-attendance'
 import InstanceAuthorizedUser from './instance-authorized-user/instance-authorized-user'

@@ -1,3 +1,4 @@
+
 import assert from 'assert'
 
 import { projectsPath } from '@xrengine/common/src/schemas/projects/projects.schema'

@@ -1,3 +1,4 @@
+
 import { FileThumbnailJobState } from '@xrengine/client-core/src/common/services/FileThumbnailJobState'
 import { NotificationService } from '@xrengine/client-core/src/common/services/NotificationService'
 import { useUploadingFiles } from '@xrengine/client-core/src/util/upload'

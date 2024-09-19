@@ -1,3 +1,4 @@
+
 import { StaticResourceType, invalidationPath, staticResourcePath } from '@xrengine/common/src/schema.type.module'
 import { AssetLoader } from '@xrengine/engine/src/assets/classes/AssetLoader'
 import { Application } from '../../../declarations'

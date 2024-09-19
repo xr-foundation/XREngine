@@ -1,3 +1,4 @@
+
 import { BadRequest } from '@feathersjs/errors'
 import { Paginated, Params, ServiceInterface } from '@feathersjs/feathers/lib/declarations'
 

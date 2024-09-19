@@ -1,3 +1,4 @@
+
 /**
  * Inserts a string before the first occurrence of the search term
  * @param source

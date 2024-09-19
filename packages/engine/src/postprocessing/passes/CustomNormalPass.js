@@ -1,3 +1,4 @@
+
 import { Color, MeshNormalMaterial, NearestFilter, WebGLRenderTarget } from "three";
 import { Resolution, RenderPass, Pass } from "postprocessing";
 import { ObjectLayers } from "@xrengine/spatial/src/renderer/constants/ObjectLayers";

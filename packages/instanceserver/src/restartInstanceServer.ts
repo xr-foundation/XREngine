@@ -1,3 +1,4 @@
+
 /**
  * When using local dev, to properly test multiple worlds for portals we
  * need to programatically shut down and restart the instanceserver process.

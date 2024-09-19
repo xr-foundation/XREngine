@@ -1,3 +1,4 @@
+
 import { createSwaggerServiceOptions } from 'feathers-swagger'
 
 import { botDataSchema, botPatchSchema, botQuerySchema, botSchema } from '@xrengine/common/src/schemas/bot/bot.schema'

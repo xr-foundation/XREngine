@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { coilSettingPath } from '@xrengine/common/src/schemas/setting/coil-setting.schema'

@@ -1,3 +1,4 @@
+
 import '@feathersjs/transport-commons'
 
 import { identityProviderPath } from '@xrengine/common/src/schemas/user/identity-provider.schema'

@@ -1,3 +1,4 @@
+
 import { CompressedTexture, Material, Mesh, Object3D, Texture } from 'three'
 
 import iterateObject3D from '@xrengine/spatial/src/common/functions/iterateObject3D'

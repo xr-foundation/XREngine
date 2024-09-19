@@ -1,3 +1,4 @@
+
 import { Object3D } from 'three'
 
 import { ResourceManager } from '@xrengine/spatial/src/resources/ResourceState'

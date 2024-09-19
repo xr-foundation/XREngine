@@ -1,3 +1,4 @@
+
 import { Object3D } from 'three'
 
 import { getAllComponents, getComponent, hasComponent, serializeComponent } from '@xrengine/ecs/src/ComponentFunctions'

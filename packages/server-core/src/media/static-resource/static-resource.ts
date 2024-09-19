@@ -1,3 +1,4 @@
+
 import {
   StaticResourceType,
   staticResourceMethods,

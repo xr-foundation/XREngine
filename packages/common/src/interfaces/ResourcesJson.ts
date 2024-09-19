@@ -1,3 +1,4 @@
+
 export type ResourceType = {
   type: string // 'scene' | 'asset' | 'file' | 'thumbnail' | 'avatar' | 'recording'
   tags?: string[]

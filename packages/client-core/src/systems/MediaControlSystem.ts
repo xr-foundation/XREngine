@@ -1,3 +1,4 @@
+
 import { Vector3 } from 'three'
 
 import { isClient } from '@xrengine/common/src/utils/getEnvironment'

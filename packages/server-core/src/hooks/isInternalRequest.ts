@@ -1,3 +1,4 @@
+
 import { HookContext } from '@feathersjs/feathers'
 import { isProvider } from 'feathers-hooks-common'
 

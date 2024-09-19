@@ -1,3 +1,4 @@
+
 import { GLTF } from '@gltf-transform/core'
 import useFeatureFlags from '@xrengine/client-core/src/hooks/useFeatureFlags'
 import { FeatureFlags } from '@xrengine/common/src/constants/FeatureFlags'

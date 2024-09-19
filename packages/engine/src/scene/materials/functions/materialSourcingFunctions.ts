@@ -1,3 +1,4 @@
+
 import { Entity, EntityUUID, getComponent, hasComponent } from '@xrengine/ecs'
 import { MaterialInstanceComponent } from '@xrengine/spatial/src/renderer/materials/MaterialComponent'
 

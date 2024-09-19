@@ -1,3 +1,4 @@
+
 import { updateAppConfig } from '@xrengine/server-core/src/updateAppConfig'
 
 const init = async () => {

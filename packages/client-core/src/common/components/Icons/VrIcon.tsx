@@ -1,4 +1,5 @@
-import SvgIcon from '@mui/material/SvgIcon'
+
+import { SvgIcon } from '@mui/material'
 import React from 'react'
 
 export const VrIcon = (props) => {

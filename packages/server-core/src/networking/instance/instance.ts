@@ -1,3 +1,4 @@
+
 import { Paginated } from '@feathersjs/feathers'
 
 import { instanceMethods, instancePath, InstanceType } from '@xrengine/common/src/schemas/networking/instance.schema'

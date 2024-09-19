@@ -1,3 +1,4 @@
+
 import getImagePalette from 'image-palette-core'
 import React from 'react'
 import { useTranslation } from 'react-i18next'

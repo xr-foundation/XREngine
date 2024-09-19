@@ -1,3 +1,4 @@
+
 // For more information about this file see https://dove.feathersjs.com/guides/cli/service.schemas.html
 import { resolve, virtual } from '@feathersjs/schema'
 import crypto from 'crypto'

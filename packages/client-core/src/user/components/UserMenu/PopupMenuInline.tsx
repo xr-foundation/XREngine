@@ -1,4 +1,5 @@
-import ClickAwayListener from '@mui/material/ClickAwayListener'
+
+import { ClickAwayListener } from '@mui/material'
 import React from 'react'
 
 import { getMutableState, getState, useHookstate } from '@xrengine/hyperflux'

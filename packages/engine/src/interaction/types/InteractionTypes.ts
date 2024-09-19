@@ -1,3 +1,4 @@
+
 import { Entity } from '@xrengine/ecs/src/Entity'
 
 export type InteractionCheckHandler = (

@@ -1,3 +1,4 @@
+
 // import { AuthState, AuthAction, avatarFetchedReceptor } from '../../src/user/services/AuthService' // make browser globals defined
 
 // import { createEngine } from '@xrengine/ecs/src/Engine'

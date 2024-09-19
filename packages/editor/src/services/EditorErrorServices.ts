@@ -1,3 +1,4 @@
+
 import { defineState } from '@xrengine/hyperflux'
 
 export const EditorErrorState = defineState({

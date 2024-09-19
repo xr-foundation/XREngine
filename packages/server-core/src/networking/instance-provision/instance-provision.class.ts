@@ -1,3 +1,4 @@
+
 import { BadRequest, NotAuthenticated } from '@feathersjs/errors'
 import { Paginated, Params, ServiceInterface } from '@feathersjs/feathers'
 import { KnexAdapterParams } from '@feathersjs/knex'

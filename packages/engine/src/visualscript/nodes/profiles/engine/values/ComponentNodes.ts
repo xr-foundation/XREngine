@@ -1,3 +1,4 @@
+
 import { ComponentMap, defineComponent, removeComponent, setComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { Entity } from '@xrengine/ecs/src/Entity'
 import { Assert, NodeCategory, makeFlowNodeDefinition } from '@xrengine/visual-script'

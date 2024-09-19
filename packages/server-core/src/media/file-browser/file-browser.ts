@@ -1,3 +1,4 @@
+
 import { fileBrowserMethods, fileBrowserPath } from '@xrengine/common/src/schemas/media/file-browser.schema'
 
 import { Application } from '../../../declarations'

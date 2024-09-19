@@ -1,3 +1,4 @@
+
 import { Mesh, Object3D } from 'three'
 
 import { Entity, getComponent, hasComponent, removeComponent } from '@xrengine/ecs'

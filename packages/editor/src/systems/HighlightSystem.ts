@@ -1,3 +1,4 @@
+
 import { removeComponent, setComponent } from '@xrengine/ecs'
 import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
 import { AnimationSystemGroup } from '@xrengine/ecs/src/SystemGroups'

@@ -1,3 +1,4 @@
+
 import { getAllEntities, getEntityComponents } from 'bitecs'
 import React from 'react'
 import { useTranslation } from 'react-i18next'

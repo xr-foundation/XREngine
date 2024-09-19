@@ -1,3 +1,4 @@
+
 import { ColliderComponent } from '@xrengine/spatial/src/physics/components/ColliderComponent'
 import { RigidBodyComponent } from '@xrengine/spatial/src/physics/components/RigidBodyComponent'
 import { TriggerComponent } from '@xrengine/spatial/src/physics/components/TriggerComponent'

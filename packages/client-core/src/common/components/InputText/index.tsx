@@ -1,4 +1,5 @@
-import { SxProps, Theme } from '@mui/material/styles'
+
+import { SxProps, Theme } from '@mui/material'
 import React, { RefObject, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 

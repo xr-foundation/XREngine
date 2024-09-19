@@ -1,3 +1,4 @@
+
 import { defineQuery } from '@xrengine/ecs/src/QueryFunctions'
 import { defineSystem } from '@xrengine/ecs/src/SystemFunctions'
 import { SimulationSystemGroup } from '@xrengine/ecs/src/SystemGroups'

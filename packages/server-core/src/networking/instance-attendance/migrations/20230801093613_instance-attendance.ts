@@ -1,3 +1,4 @@
+
 import type { Knex } from 'knex'
 
 import { instanceAttendancePath } from '@xrengine/common/src/schemas/networking/instance-attendance.schema'

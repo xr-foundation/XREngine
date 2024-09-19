@@ -1,3 +1,4 @@
+
 import i18n from 'i18next'
 
 import config from '@xrengine/common/src/config'

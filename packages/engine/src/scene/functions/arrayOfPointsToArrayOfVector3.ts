@@ -1,3 +1,4 @@
+
 import { Vector3 } from 'three'
 
 export const arrayOfPointsToArrayOfVector3 = (points: ArrayLike<number>) => {

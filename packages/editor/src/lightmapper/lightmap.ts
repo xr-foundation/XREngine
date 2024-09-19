@@ -1,3 +1,4 @@
+
 import { MeshStandardMaterial, Object3D, Scene, WebGLRenderer } from 'three'
 
 import { getComponent, hasComponent } from '@xrengine/ecs/src/ComponentFunctions'

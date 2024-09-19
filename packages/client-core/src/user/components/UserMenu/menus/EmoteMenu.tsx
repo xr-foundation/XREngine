@@ -1,4 +1,5 @@
-import ClickAwayListener from '@mui/material/ClickAwayListener'
+
+import { ClickAwayListener } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 
 import { UUIDComponent } from '@xrengine/ecs'

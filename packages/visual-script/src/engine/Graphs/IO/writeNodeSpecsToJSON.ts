@@ -1,3 +1,4 @@
+
 import { NodeCategory } from '../../Nodes/NodeDefinitions'
 import { NodeConfigurationDescription } from '../../Nodes/Registry/NodeDescription'
 import { IRegistry } from '../../Registry'

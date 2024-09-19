@@ -1,3 +1,4 @@
+
 /* global window self */
 
 /** @deprecated - use import from @xrengine/hyperflux instead */

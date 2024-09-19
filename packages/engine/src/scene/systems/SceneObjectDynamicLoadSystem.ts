@@ -1,3 +1,4 @@
+
 import { PresentationSystemGroup } from '@xrengine/ecs'
 import { getComponent, getMutableComponent, getOptionalComponent } from '@xrengine/ecs/src/ComponentFunctions'
 import { ECSState } from '@xrengine/ecs/src/ECSState'

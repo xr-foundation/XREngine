@@ -1,3 +1,4 @@
+
 import { Hook, HookContext, Paginated } from '@feathersjs/feathers'
 
 import { matchInstancePath } from '@xrengine/common/src/schemas/matchmaking/match-instance.schema'

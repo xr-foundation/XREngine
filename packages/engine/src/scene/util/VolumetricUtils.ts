@@ -1,3 +1,4 @@
+
 import { Engine, getComponent } from '@xrengine/ecs'
 import { ImmutableArray, State, getState } from '@xrengine/hyperflux'
 import { isMobile } from '@xrengine/spatial/src/common/functions/isMobile'

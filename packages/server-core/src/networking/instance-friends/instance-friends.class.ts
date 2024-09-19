@@ -1,3 +1,4 @@
+
 import type { ServiceInterface } from '@feathersjs/feathers'
 import { KnexAdapterParams } from '@feathersjs/knex'
 import { Knex } from 'knex'

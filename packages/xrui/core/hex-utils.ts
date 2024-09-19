@@ -1,3 +1,4 @@
+
 const byteToHex = new Array(0xff)
 
 for (let n = 0; n <= 0xff; ++n) {

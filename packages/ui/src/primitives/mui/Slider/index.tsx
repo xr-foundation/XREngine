@@ -1,3 +1,4 @@
+
 import { Slider as MuiSlider, SliderProps } from '@mui/material'
 import React from 'react'
 

@@ -1,3 +1,4 @@
+
 import { Component, ComponentMap, defineQuery, removeQuery } from '@xrengine/ecs'
 import { TransformComponent } from '@xrengine/spatial'
 import { NodeCategory, SocketsList, makeFunctionNodeDefinition, sequence } from '@xrengine/visual-script'

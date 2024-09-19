@@ -1,3 +1,4 @@
+
 export const defaultMediaSettings = {
   audio: {
     maxBitrate: 32

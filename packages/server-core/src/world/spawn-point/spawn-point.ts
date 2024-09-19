@@ -1,3 +1,4 @@
+
 import { spawnPointMethods, spawnPointPath } from '@xrengine/common/src/schemas/world/spawn-point.schema'
 
 import { Application } from '../../../declarations'

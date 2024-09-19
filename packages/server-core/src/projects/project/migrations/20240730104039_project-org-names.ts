@@ -1,3 +1,4 @@
+
 import { ProjectType, projectPath } from '@xrengine/common/src/schemas/projects/project.schema'
 import type { Knex } from 'knex'
 

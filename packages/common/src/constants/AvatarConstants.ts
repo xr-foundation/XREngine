@@ -1,3 +1,4 @@
+
 export const AVATAR_FILE_ALLOWED_EXTENSIONS = '.glb,.gltf,.vrm,.fbx'
 export const MIN_AVATAR_FILE_SIZE = 0
 export const MAX_AVATAR_FILE_SIZE = 15728640 * 10 // 150 MB

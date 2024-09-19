@@ -1,3 +1,4 @@
+
 import { Entity } from '@xrengine/ecs'
 import { getMutableState, getState, none } from '@xrengine/hyperflux'
 import { EffectReactorProps, PostProcessingEffectState } from '@xrengine/spatial/src/renderer/effects/EffectRegistry'

@@ -1,3 +1,4 @@
+
 export default `float blend(const in float x, const in float y) {
 
 	return (y > 0.0) ? min(x / y, 1.0) : 1.0;

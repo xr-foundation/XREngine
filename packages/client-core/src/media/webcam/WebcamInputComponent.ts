@@ -1,3 +1,4 @@
+
 import { Types } from 'bitecs'
 
 import { defineComponent } from '@xrengine/ecs/src/ComponentFunctions'

@@ -1,3 +1,4 @@
+
 import { getComponent, hasComponent, useQuery } from '@xrengine/ecs'
 import { commitProperty } from '@xrengine/editor/src/components/properties/Util'
 import { EditorControlFunctions } from '@xrengine/editor/src/functions/EditorControlFunctions'

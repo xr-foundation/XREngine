@@ -1,3 +1,4 @@
+
 import { BadRequest, Forbidden, NotAuthenticated, NotFound } from '@feathersjs/errors'
 import { HookContext } from '@feathersjs/feathers/lib'
 import assert from 'assert'

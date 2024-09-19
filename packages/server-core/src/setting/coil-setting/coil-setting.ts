@@ -1,3 +1,4 @@
+
 import { coilSettingMethods, coilSettingPath } from '@xrengine/common/src/schemas/setting/coil-setting.schema'
 
 import { Application } from '../../../declarations'

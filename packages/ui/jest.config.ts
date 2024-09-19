@@ -1,3 +1,4 @@
+
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 
 import type { Config } from 'jest'

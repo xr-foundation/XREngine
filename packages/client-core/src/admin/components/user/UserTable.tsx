@@ -1,3 +1,4 @@
+
 import { Id, NullableId } from '@feathersjs/feathers'
 import { useFind, useMutation, useSearch } from '@xrengine/common'
 import { UserType, userPath } from '@xrengine/common/src/schema.type.module'

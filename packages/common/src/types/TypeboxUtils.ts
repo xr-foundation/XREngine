@@ -1,3 +1,4 @@
+
 import { Kind, ObjectOptions, Static, StringFormatOption, StringOptions, TSchema, Type } from '@feathersjs/typebox'
 
 export interface TTypedString<T extends string, Format extends string = string> extends TSchema, StringOptions<Format> {
