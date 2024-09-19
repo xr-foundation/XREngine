@@ -34,7 +34,7 @@ import { ComponentEditorsState } from '../../services/ComponentEditors'
 import { EditorHelperState, PlacementMode } from '../../services/EditorHelperState'
 import { EditorState } from '../../services/EditorServices'
 import { HierarchyTreeState } from '../../services/HierarchyNodeState'
-import { deleteNode } from './helpers'
+import { deleteNode, HierarchyTreeNodeType } from './helpers'
 import {
   useHierarchyNodes,
   useHierarchyTreeContextMenu,
